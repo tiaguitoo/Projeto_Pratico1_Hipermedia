@@ -1,0 +1,192 @@
+<!-- curso-trasicao.html -->
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>InfoAlunos - Serviço de Informação dos Alunos - v3.1.4</title>
+  <link rel="stylesheet" href="curso-trasicao.css" />
+  <link rel="stylesheet" href="ui-shell.css" />
+</head>
+
+<body>
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="topbar__left">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="topbar__title">
+        <strong>InfoAlunos</strong> - Serviço de Informação dos Alunos - <strong>v3.1.4</strong>
+      </div>
+    </div>
+
+    <div class="topbar__right">
+      <span class="topbar__lang">PT | EN</span>
+      <div class="user__avatar" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- LEFT MENU -->
+    <aside class="sidebar">
+      <nav class="menu">
+        <a class="menu__item" href="#">Início</a>
+        <a class="menu__item" href="#">Geral</a>
+        <a class="menu__item" href="#">Serviços</a>
+        <a class="menu__item" href="#">Concursos</a>
+        <a class="menu__item" href="#">Avaliação</a>
+        <a class="menu__item" href="#">Creditações</a>
+        <a class="menu__item" href="#">Documentos</a>
+        <a class="menu__item" href="#">Aula</a>
+        <a class="menu__item" href="#">Disciplina</a>
+        <a class="menu__item menu__item--active" href="#">Curso</a>
+        <a class="menu__item" href="#">Instituição</a>
+        <a class="menu__item" href="#">Eleições</a>
+      </nav>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="content">
+      <section class="panel panel--tabs" aria-label="Transição">
+        <div class="tabs" role="tablist" aria-label="Abas de Transição">
+          <button class="tab tab--active" type="button" role="tab" aria-selected="true" aria-controls="tab-listagem" id="tabbtn-listagem">
+            Listagem da Transição
+          </button>
+          <button class="tab" type="button" role="tab" aria-selected="false" aria-controls="tab-relatorios" id="tabbtn-relatorios">
+            Relatórios de Transição
+          </button>
+        </div>
+
+        <div class="tabpanes">
+          <!-- TAB 1: LISTAGEM -->
+          <div class="tabpane tabpane--active" id="tab-listagem" role="tabpanel" aria-labelledby="tabbtn-listagem">
+            <div class="inner">
+              <h3 class="section-title">Lista de Transições para Bolonha do Aluno 2140325</h3>
+
+              <div class="message message--error">
+                <span class="message__icon" aria-hidden="true">✖</span>
+                <div class="message__body">
+                  <div><strong>Não existem registos de Transição</strong> para Bolonha para este aluno.</div>
+                  <div class="message__hint">Para qualquer dúvida contacte o Sector Académico.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: RELATÓRIOS -->
+          <div class="tabpane" id="tab-relatorios" role="tabpanel" aria-labelledby="tabbtn-relatorios">
+            <div class="inner">
+              <div class="split">
+                <!-- Left block -->
+                <div class="block">
+                  <div class="block__title">Relatórios por Ano Lectivo</div>
+
+                  <div class="formrow">
+                    <label class="label" for="anoLetivo1">Ano Lectivo</label>
+                    <div class="field">
+                      <select id="anoLetivo1">
+                        <option>2025/26</option>
+                        <option>2024/25</option>
+                        <option>2023/24</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="formrow">
+                    <label class="label" for="relatorio1">Relatório(s):</label>
+                    <div class="field">
+                      <select id="relatorio1">
+                        <option>Transição para Bolonha</option>
+                        <option>Regras de Transição (Bolonha)</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="formrow">
+                    <label class="label" for="formato1">Formato(s):</label>
+                    <div class="field">
+                      <select id="formato1">
+                        <option>PDF</option>
+                        <option>Excel</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="actions actions--right">
+                    <button class="btn" type="button">Gerar Relatório &gt;&gt;</button>
+                  </div>
+                </div>
+
+                <!-- Right block -->
+                <div class="block">
+                  <div class="block__title">Relatórios por Curso</div>
+
+                  <div class="formrow">
+                    <label class="label" for="anoLetivo2">Ano Lectivo</label>
+                    <div class="field">
+                      <select id="anoLetivo2">
+                        <option>2025/26</option>
+                        <option>2024/25</option>
+                        <option>2023/24</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="formrow">
+                    <label class="label" for="curso2">Curso:</label>
+                    <div class="field">
+                      <select id="curso2">
+                        <option>—</option>
+                        <option>Tecnologias e Programação de Sistemas de Informação</option>
+                        <option>Engenharia Informática</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="formrow">
+                    <label class="label" for="relatorio2">Relatório(s):</label>
+                    <div class="field">
+                      <select id="relatorio2">
+                        <option>Regras de Transição (Bolonha)</option>
+                        <option>Transição para Bolonha</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="formrow">
+                    <label class="label" for="formato2">Formato(s):</label>
+                    <div class="field">
+                      <select id="formato2">
+                        <option>PDF</option>
+                        <option>Excel</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="actions actions--right">
+                    <button class="btn" type="button">Gerar Relatório &gt;&gt;</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__left">
+      <div>© Universidade da Madeira - Gabinete de Desenvolvimento de Aplicações Informáticas - <a href="#">Proteção de Dados e Termos de Utilização</a></div>
+      <div>Colégio dos Jesuítas, 9000-081 Funchal | Tel: +351 291 209400 | Fax: +351 291 209410</div>
+      <div>Processado em 0.28 segundos - powered by ✻ hydra framework</div>
+    </div>
+    <div class="footer__right">
+      <div class="footer__logo footer__logo--mada" title="madeira digital"></div>
+      <div class="footer__logo footer__logo--pci" title="PCI"></div>
+      <div class="footer__logo footer__logo--ue" title="UE"></div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,295 @@
+/* ===== BASE (igual aos teus CSS anteriores) ===== */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  background: #f2f2f2;
+}
+
+a { color: #0000ee; }
+
+.skip {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: #fff;
+  border: 1px solid #999;
+  padding: 5px;
+  transform: translateY(-150%);
+}
+.skip:focus { transform: translateY(0); }
+
+.topbar {
+  height: 60px;
+  background: #0a78b8;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.topbar__left{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 40px;
+  height: 30px;
+  background: rgba(255,255,255,0.4);
+}
+
+.user__avatar {
+  width: 32px;
+  height: 32px;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+}
+
+.topbar__right{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.topbar__lang{
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.topbar__sep{ opacity: .9; }
+
+.layout {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  min-height: calc(100vh - 60px);
+}
+
+.sidebar {
+  background: #e6e6e6;
+  border-right: 1px solid #bdbdbd;
+}
+
+.menu__item {
+  display: block;
+  padding: 6px 10px;
+  border-bottom: 1px solid #ccc;
+  text-decoration: none;
+  color: #000;
+}
+
+.menu__item:hover { background: #ddd; }
+.menu__item.is-active { font-weight: bold; }
+
+.menu__group { position: relative; }
+.chev { float: right; }
+
+.menu__flyout {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: #e6e6e6;
+  border: 1px solid #bdbdbd;
+  min-width: 180px;
+  display: none;
+  z-index: 5;
+}
+
+.menu__group:hover .menu__flyout,
+.menu__group:focus-within .menu__flyout {
+  display: block;
+}
+
+.menu__flyitem {
+  display: block;
+  padding: 6px 10px;
+  border-bottom: 1px solid #ccc;
+  text-decoration: none;
+  color: #000;
+}
+
+.menu__flyitem:hover { background: #ddd; }
+
+.main { padding: 10px; }
+
+/* Footer estilo InfoAlunos */
+.footer {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px solid #bdbdbd;
+  background: #ffffff;
+  padding: 8px 10px;
+  font-size: 11px;
+  color: #000;
+}
+
+.footer__left a {
+  color: #0000ee;
+  text-decoration: underline;
+}
+
+.footer__right { display: flex; align-items: flex-end; }
+
+.footer__logo {
+  width: 110px;
+  height: 32px;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+}
+
+/* ===== COMPONENTES (painéis/títulos como no InfoAlunos) ===== */
+.panel{
+  background: #fff;
+  border: 1px solid #bdbdbd;
+  margin-bottom: 10px;
+}
+
+.panel__title{
+  background: #efefef;
+  padding: 6px;
+  font-weight: bold;
+  border-bottom: 1px solid #bdbdbd;
+}
+
+.panel__body{
+  padding: 8px;
+}
+
+/* inputs como no print */
+.ctrl{
+  width: 100%;
+  height: 20px;
+  font-size: 12px;
+  border: 1px solid #8f8f8f;
+  background: #cfe6ff;
+}
+
+.ctrl--select{
+  padding: 0 2px;
+}
+
+/* botão cinza clássico */
+.btn-classic{
+  height: 22px;
+  min-width: 210px;
+  border: 1px solid #9c9c9c;
+  background: linear-gradient(#ffffff, #dcdcdc);
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.btn-classic:hover{
+  filter: brightness(0.98);
+}
+
+/* grelha do formulário (igual disposição do print: labels à esquerda, campos longos e botão na direita) */
+.formgrid{
+  display: grid;
+  grid-template-columns: 260px 1fr 230px;
+  gap: 10px 10px;
+  align-items: center;
+}
+
+.lbl{
+  white-space: nowrap;
+}
+
+.field{
+  width: 100%;
+}
+
+.rightbtn{
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ===== CALENDÁRIO ===== */
+.panel--calendar .panel__body{
+  padding-top: 6px;
+}
+
+.cal-top{
+  display: grid;
+  grid-template-columns: 1fr 230px;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.cal-top__select{
+  width: 100%;
+}
+
+/* moldura grande do calendário */
+.cal-wrap{
+  border: 1px solid #bdbdbd;
+  background: #ffffff;
+}
+
+/* cabeçalho com dias da semana (faixa bege) */
+.cal-head{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  background: #fde9d8;
+  border-bottom: 1px solid #cfcfcf;
+}
+
+.cal-head__cell{
+  text-align: center;
+  font-weight: bold;
+  padding: 6px 4px;
+  border-right: 1px solid #d8d8d8;
+}
+
+.cal-head__cell:last-child{ border-right: none; }
+
+/* grelha dos dias */
+.cal-grid{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: 120px;
+}
+
+.day{
+  position: relative;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  background: linear-gradient(#efefef, #e3e3e3);
+}
+
+.day:nth-child(7n){ border-right: none; }
+
+.day--empty{
+  background: #ffffff;
+}
+
+/* número grande no canto inferior direito, cinza e com “sombra” */
+.day__num{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 28px;
+  color: rgba(0,0,0,0.20);
+  font-family: "Times New Roman", Times, serif;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.9);
+}
+
+/* Responsivo */
+@media (width < 980px){
+  .layout { grid-template-columns: 1fr; }
+  .menu__flyout { position: static; border-left: none; border-right: none; }
+
+  .formgrid{ grid-template-columns: 1fr; }
+  .rightbtn{ justify-content: flex-start; }
+  .btn-classic{ min-width: 180px; }
+
+  .cal-top{ grid-template-columns: 1fr; }
+  .cal-grid{ grid-auto-rows: 90px; }
+}

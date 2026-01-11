@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>InfoAlunos - Curso - Transição</title>
+  <link rel="stylesheet" href="curso-trasicao.css" />
+  <link rel="stylesheet" href="ui-shell.css" />
+</head>
+
+<body>
+  <div class="page">
+    <!-- TOPO -->
+    <header class="topbar">
+    <div class="topbar__left">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="topbar__title">
+        <strong>InfoAlunos</strong> - Serviço de Informação dos Alunos - <strong>v3.1.4</strong>
+      </div>
+    </div>
+
+    <div class="topbar__right">
+      <span class="topbar__lang">PT | EN</span>
+      <div class="user__avatar" aria-hidden="true"></div>
+    </div>
+  </header>
+
+    <!-- CORPO -->
+    <div class="layout">
+      <!-- MENU ESQUERDO -->
+      <aside class="sidebar" aria-label="Menu">
+        <ul class="menu">
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Geral</a></li>
+          <li><a href="#">Serviços</a></li>
+          <li><a href="#">Concursos</a></li>
+          <li><a href="#">Avaliação</a></li>
+          <li><a href="#">Creditações</a></li>
+          <li><a href="#">Documentos</a></li>
+          <li><a href="#">Aula</a></li>
+          <li><a href="#">Disciplina</a></li>
+          <li class="active"><a href="#">Curso</a></li>
+          <li><a href="#">Instituição</a></li>
+          <li><a href="#">Eleições</a></li>
+        </ul>
+      </aside>
+
+      <!-- CONTEÚDO -->
+      <main class="content">
+        <div class="tabs-shell">
+          <!-- radios para tabs -->
+          <input class="tab-radio" type="radio" name="cursoTransicaoTab" id="tabListagem" checked>
+          <input class="tab-radio" type="radio" name="cursoTransicaoTab" id="tabRelatorios">
+
+          <!-- barra de tabs (como no screenshot) -->
+          <div class="tabs-bar">
+            <label class="tab tab-left" for="tabListagem">Listagem da Transição</label>
+            <label class="tab tab-right" for="tabRelatorios">Relatórios de Transição</label>
+          </div>
+
+          <!-- PAINEL 1: LISTAGEM -->
+          <section class="tab-panel panel" id="panelListagem" aria-labelledby="tabListagem">
+            <div class="panel-body">
+              <div class="listagem-title">
+                <span class="listagem-bold">Lista de Transições para Bolonha do Aluno 2140325</span>
+              </div>
+
+              <div class="msg-row">
+                <span class="xicon" aria-hidden="true">✖</span>
+                <div class="msg-text">
+                  <div>Não existem registos de Transição para Bolonha para este aluno.</div>
+                  <div class="msg-small">Para qualquer dúvida contacte o Sector Académico.</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- PAINEL 2: RELATÓRIOS -->
+          <section class="tab-panel panel" id="panelRelatorios" aria-labelledby="tabRelatorios">
+            <div class="panel-body">
+              <div class="relatorios-wrap">
+                <!-- esquerda -->
+                <div class="rel-box">
+                  <div class="rel-box-title">Relatórios por Ano Lectivo</div>
+
+                  <div class="form-grid">
+                    <div class="lbl">Ano Lectivo</div>
+                    <div class="fld">
+                      <select>
+                        <option>2025/26</option>
+                        <option>2024/25</option>
+                        <option>2023/24</option>
+                      </select>
+                    </div>
+
+                    <div class="lbl">Relatório(s):</div>
+                    <div class="fld">
+                      <select>
+                        <option>Transição para Bolonha</option>
+                      </select>
+                    </div>
+
+                    <div class="lbl">Formato(s):</div>
+                    <div class="fld">
+                      <select>
+                        <option>PDF</option>
+                      </select>
+                    </div>
+
+                    <div></div>
+                    <div class="fld right">
+                      <button class="btn" type="button">Gerar Relatório &gt;&gt;</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- direita -->
+                <div class="rel-box">
+                  <div class="rel-box-title">Relatórios por Curso</div>
+
+                  <div class="form-grid">
+                    <div class="lbl">Ano Lectivo</div>
+                    <div class="fld">
+                      <select>
+                        <option>2025/26</option>
+                        <option>2024/25</option>
+                        <option>2023/24</option>
+                      </select>
+                    </div>
+
+                    <div class="lbl">Curso:</div>
+                    <div class="fld">
+                      <select>
+                        <option></option>
+                        <option>CTeSP - Tecnologias e Programação de Sistemas de Informação</option>
+                      </select>
+                    </div>
+
+                    <div class="lbl">Relatório(s):</div>
+                    <div class="fld">
+                      <select>
+                        <option>Regras de Transição (Bolonha)</option>
+                      </select>
+                    </div>
+
+                    <div class="lbl">Formato(s):</div>
+                    <div class="fld">
+                      <select>
+                        <option>PDF</option>
+                      </select>
+                    </div>
+
+                    <div></div>
+                    <div class="fld right">
+                      <button class="btn" type="button">Gerar Relatório &gt;&gt;</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-left">
+        <div><strong>© Universidade da Madeira</strong> - Gabinete de Desenvolvimento de Aplicações Informáticas - <a href="#">Proteção de Dados e Termos de Utilização</a></div>
+        <div>Colégio dos Jesuítas, 9000-081 Funchal | Tel: +351 291 209400 | Fax: +351 291 209410</div>
+        <div>Processado em 0.28 segundos - powered by hydra framework</div>
+      </div>
+
+      <div class="footer-right" aria-hidden="true">
+        <div class="foot-logo"></div>
+        <div class="foot-logo"></div>
+        <div class="foot-logo"></div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

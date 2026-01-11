@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InfoAlunos - Creditações / Novo Processo</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="ui-shell.css" />
+  <link rel="stylesheet" href="creditacoes-novo.css">
+</head>
+
+<body>
+  <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+
+  <!-- TOPO AZUL -->
+  <header class="topbar">
+    <div class="topbar__left">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="topbar__title">
+        <strong>InfoAlunos</strong> - Serviço de Informação dos Alunos - <strong>v3.1.4</strong>
+      </div>
+    </div>
+
+    <div class="topbar__right">
+      <span class="topbar__lang">PT | EN</span>
+      <div class="user__avatar" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Menu principal">
+      <nav class="menu" aria-label="Navegação principal">
+        <a class="menu__item" href="index.html">Início</a>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">Geral <span class="chev" aria-hidden="true">›</span></a>
+          <div class="menu__flyout">
+            <a class="menu__flyitem" href="geral-processos.html">Processos</a>
+            <a class="menu__flyitem" href="geral-dados-pessoais.html">Dados Pessoais</a>
+            <a class="menu__flyitem" href="geral-privacidade.html">Privacidade</a>
+            <a class="menu__flyitem" href="geral-ajuda.html">Ajuda</a>
+          </div>
+        </div>
+
+        <a class="menu__item" href="servicos-pagamentos.html">Serviços</a>
+        <a class="menu__item" href="concursos-candidaturas.html">Concursos</a>
+        <a class="menu__item" href="avaliacao-pautas.html">Avaliação</a>
+
+        <!-- Creditações com submenu -->
+        <div class="menu__group">
+          <a class="menu__item is-active" href="#" aria-haspopup="true">
+            Creditações <span class="chev" aria-hidden="true">›</span>
+          </a>
+          <div class="menu__flyout" role="menu" aria-label="Submenu Creditações">
+            <a class="menu__flyitem" href="creditacoes-lista.html">Lista Processos</a>
+            <a class="menu__flyitem is-subactive" href="creditacoes-novo.html">Novo Processo</a>
+          </div>
+        </div>
+
+        <a class="menu__item" href="#">Documentos</a>
+        <a class="menu__item" href="#">Aula</a>
+        <a class="menu__item" href="#">Disciplina</a>
+        <a class="menu__item" href="#">Curso</a>
+        <a class="menu__item" href="#">Instituição</a>
+        <a class="menu__item" href="#">Eleições</a>
+      </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <main id="conteudo" class="main" role="main" tabindex="-1">
+
+      <!-- TABS (clicáveis sem JS) -->
+      <section class="tabs-wrap" aria-label="Separadores do processo de creditação">
+        <input class="tab-radio" type="radio" name="tabs" id="tab-novo" checked>
+        <input class="tab-radio" type="radio" name="tabs" id="tab-plano">
+        <input class="tab-radio" type="radio" name="tabs" id="tab-docs">
+
+        <div class="tabs">
+          <label class="tab" for="tab-novo">Novo/Alterar</label>
+          <label class="tab" for="tab-plano">Plano de Formação</label>
+          <label class="tab" for="tab-docs">Documentos e Histórico</label>
+        </div>
+
+        <!-- BARRA AMARELA (igual ao print) -->
+        <div class="infobar">
+          <div class="infobar__left">
+            <span class="info-dot" aria-hidden="true">i</span>
+          </div>
+          <div class="infobar__right">
+            <a href="#">[ Preçário ]</a>
+            <a href="#">[ Ajuda e Descrição do Processo ]</a>
+            <a href="#">[ Voltar à Lista ]</a>
+          </div>
+        </div>
+
+        <!-- CONTEÚDOS DAS ABAS -->
+        <div class="tabpanes">
+          <!-- ABA 1: NOVO/ALTERAR (como 1ª imagem) -->
+          <section class="pane pane--novo" aria-label="Novo/Alterar">
+            <div class="cred-toprow">
+              <div class="cred-fields">
+                <div class="field-row">
+                  <label>Ano Letivo (para escolha do Curso): <span class="req">*</span></label>
+                  <select class="input-blue">
+                    <option></option>
+                    <option>2025/26</option>
+                    <option>2024/25</option>
+                  </select>
+                </div>
+
+                <div class="field-row">
+                  <label>Curso (a creditar): <span class="req">*</span></label>
+                  <select class="input-blue">
+                    <option></option>
+                    <option>Curso Exemplo</option>
+                  </select>
+                </div>
+
+                <div class="field-row">
+                  <label>Alterar Estado/Pedido:</label>
+                  <select class="input-blue">
+                    <option></option>
+                    <option>Em preenchimento</option>
+                    <option>Submetido</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="cred-just">
+                <div class="just-row">
+                  <label>Justificação Atual:</label>
+                  <div class="just-current">
+                    <span class="lock" aria-hidden="true">🔒</span>
+                  </div>
+                </div>
+
+                <div class="just-row">
+                  <label>Justificação para alterar estado:</label>
+                  <textarea class="input-blue big"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- “tabelas/zonas” grandes (estilo antigo) -->
+            <div class="section-table">
+              <div class="section-head">
+                <div class="section-head__left">Formação Académica Original</div>
+                <div class="section-head__right">A Creditar (a preencher pelo Dir. Curso)</div>
+              </div>
+
+              <div class="section-body">
+                <div class="mini-grid">
+                  <div class="mini-left">
+                    <div class="mini-row">
+                      <div class="ncell">1</div>
+                      <label>Inst.</label>
+                      <input class="input-blue" type="text">
+                      <label>Curso</label>
+                      <input class="input-blue" type="text">
+                    </div>
+
+                    <div class="mini-row">
+                      <div class="ncell"></div>
+                      <label>UCurr.</label>
+                      <input class="input-blue" type="text">
+                      <label>Prog.</label>
+                      <select class="input-blue"><option></option></select>
+                    </div>
+
+                    <div class="mini-row">
+                      <div class="ncell"></div>
+                      <label>Área</label>
+                      <input class="input-blue" type="text">
+                      <label>Nível</label>
+                      <input class="input-blue short" type="text">
+                      <label>Class.</label>
+                      <input class="input-blue short" type="text">
+                      <label>Qt.</label>
+                      <input class="input-blue short" type="text">
+                      <label>Unid.</label>
+                      <input class="input-blue short" type="text">
+                    </div>
+                  </div>
+
+                  <div class="mini-right">
+                    <!-- só espaço como no sistema -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="note">
+                <span class="warn">"E"</span>: Formação Externa. Quando tem esta indicação a formação não é da Universidade da Madeira e deve ser verificada.
+              </div>
+            </div>
+
+            <div class="section-table">
+              <div class="section-head">
+                <div class="section-head__left">Formação Não Académica</div>
+                <div class="section-head__right">A Creditar (a preencher pelo Dir. Curso)</div>
+              </div>
+
+              <div class="section-body">
+                <div class="row-1">
+                  <div class="ncell">1</div>
+                  <textarea class="input-blue tall"></textarea>
+                  <select class="input-blue prog"><option></option></select>
+                </div>
+              </div>
+            </div>
+
+            <div class="section-table">
+              <div class="section-head">
+                <div class="section-head__left">Módulos/Trabalhos - <strong>RESERVADO AOS SERVIÇOS</strong></div>
+                <div class="section-head__right">A Creditar (a preencher pelo Dir. Curso)</div>
+              </div>
+
+              <div class="section-body">
+                <div class="row-1">
+                  <div class="ncell">1</div>
+                  <textarea class="input-blue tall"></textarea>
+                  <input class="input-blue prog" type="text">
+                </div>
+              </div>
+            </div>
+
+            <div class="files-row">
+              <div class="files-left">
+                <div class="fileline">
+                  <label>Anexar Documento 1:</label>
+                  <input type="file">
+                </div>
+                <div class="fileline">
+                  <label>Anexar Documento 2:</label>
+                  <input type="file">
+                </div>
+                <div class="fileline">
+                  <label>Anexar Documento 3:</label>
+                  <input type="file">
+                </div>
+              </div>
+
+              <div class="files-right">
+                <div class="req-note">Os campos assinalados com <span class="req">*</span> são de preenchimento obrigatório.</div>
+                <div class="actions">
+                  <button class="btn-classic" type="button">Guardar Processo</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- ABA 2: PLANO DE FORMAÇÃO (como 2ª imagem: vazio com mensagem) -->
+          <section class="pane pane--plano" aria-label="Plano de Formação">
+            <div class="msg">
+              <span class="info-dot" aria-hidden="true">i</span>
+              <span>Sem resultados. Seleccione um processo de creditação.</span>
+            </div>
+            <div class="blank-space"></div>
+          </section>
+
+          <!-- ABA 3: DOCUMENTOS E HISTÓRICO (deixar em branco como pediste) -->
+          <section class="pane pane--docs" aria-label="Documentos e Histórico">
+            <div class="blank-space"></div>
+          </section>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer" role="contentinfo">
+        <div class="footer__left">
+          © Universidade da Madeira - Gabinete de Desenvolvimento de Aplicações Informáticas -
+          <a href="#">Proteção de Dados</a> e <a href="#">Termos de Utilização</a><br>
+          Colégio dos Jesuítas, 9000-081 Funchal | Tel: +351 291 209400 | Fax: +351 291 209410<br>
+          Processado em 0.06 segundos - powered by Hydra framework
+        </div>
+        <div class="footer__right" aria-hidden="true">
+          <div class="footer__logo"></div>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+</body>
+</html>

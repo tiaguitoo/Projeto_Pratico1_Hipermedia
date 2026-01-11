@@ -1,0 +1,168 @@
+/* Shared UI shell (topbar + sidebar + footer) 
+   Extracted from documentos-academicos.css to keep the same look across pages.
+*/
+
+:root{
+  --blue:#0b79b7;
+  --blue2:#0b7dbb;
+  --grey:#f3f3f3;
+  --line:#d7d7d7;
+  --peach:#f9e3cf;
+  --text:#1b1b1b;
+}
+
+.skip{
+  position:absolute;
+  left:-999px;
+  top:auto;
+  width:1px;height:1px;
+  overflow:hidden;
+}
+.skip:focus{
+  left:12px; top:12px;
+  width:auto;height:auto;
+  padding:.5rem .75rem;
+  background:#fff;
+  border:2px solid var(--blue);
+  z-index:9999;
+}
+
+/* TOPBAR */
+.topbar{
+  height:64px;
+  background:var(--blue);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 18px;
+}
+.topbar__left{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.logo{
+  width:34px;height:34px;
+  background:#ffffff33;
+  border-radius:2px;
+}
+.topbar__title{
+  font-size:15px;
+  letter-spacing:.2px;
+  white-space:nowrap;
+}
+.topbar__right{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  font-size:14px;
+}
+.topbar__lang{
+  opacity:.95;
+}
+.user__avatar{
+  width:34px;height:34px;
+  border-radius:50%;
+  background:#ffffff33;
+}
+
+/* LAYOUT */
+.layout{
+  display:grid;
+  grid-template-columns:150px 1fr;
+  min-height:calc(100vh - 64px - 60px);
+}
+.sidebar{
+  background:#efefef;
+  border-right:1px solid var(--line);
+}
+.main{
+  padding:14px 14px 26px;
+  background:#fff;
+}
+
+/* SIDEBAR MENU (hover flyouts, sem JS) */
+.menu{
+  font-size:13px;
+  line-height:1;
+}
+.menu__item{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:9px 10px;
+  border-bottom:1px solid #e2e2e2;
+  color:#000;
+  text-decoration:none;
+}
+.menu__item:hover,
+.menu__item:focus{
+  background:#e6e6e6;
+}
+.menu__item.is-active{
+  background:#dcdcdc;
+  font-weight:700;
+}
+.menu__group{ position:relative; }
+.menu__flyout{
+  display:none;
+  position:absolute;
+  left:150px;
+  top:0;
+  min-width:170px;
+  border:1px solid #cfcfcf;
+  background:#fff;
+  box-shadow:0 4px 14px rgba(0,0,0,.12);
+  z-index:50;
+}
+.menu__group:hover .menu__flyout,
+.menu__group:focus-within .menu__flyout{
+  display:block;
+}
+.menu__flyitem{
+  display:block;
+  padding:9px 10px;
+  border-bottom:1px solid #eee;
+  text-decoration:none;
+  color:#000;
+}
+.menu__flyitem:hover,
+.menu__flyitem:focus{
+  background:#f3f3f3;
+}
+.chev{ opacity:.8; }
+
+/* FOOTER */
+.footer{
+  height:60px;
+  border-top:1px solid var(--line);
+  background:#fff;
+  display:flex;
+  justify-content:space-between;
+  padding:10px 14px;
+  font-size:11px;
+  color:#222;
+}
+.footer a{ color:#0b79b7; text-decoration:none; }
+.footer__right{
+  display:flex;
+  align-items:flex-end;
+  gap:10px;
+}
+.footer__logo{
+  width:54px; height:22px;
+  background:#d9d9d9;
+  border-radius:2px;
+}
+.footer__badge{
+  width:26px; height:22px;
+  background:#d9d9d9;
+  border-radius:2px;
+}
+
+@media (max-width: 980px){
+  .layout{ grid-template-columns: 1fr; }
+  .sidebar{ display:none; }
+  .menu__flyout{ left:0; position:static; box-shadow:none; border:none; }
+}

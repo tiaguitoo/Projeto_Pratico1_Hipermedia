@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>InfoAlunos - Curso - Histórico de Matrículas</title>
+
+  <link rel="stylesheet" href="curso-historico-matriculas.css" />
+  <link rel="stylesheet" href="ui-shell.css" />
+</head>
+
+<body>
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <div class="topbar__left">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="topbar__title">
+        <strong>InfoAlunos</strong> - Serviço de Informação dos Alunos - <strong>v3.1.4</strong>
+      </div>
+    </div>
+
+    <div class="topbar__right">
+      <span class="topbar__lang">PT | EN</span>
+      <div class="user__avatar" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <nav class="menu">
+        <a class="menu__item" href="#">Início</a>
+        <a class="menu__item" href="#">Geral <span class="chev">›</span></a>
+        <a class="menu__item" href="#">Serviços <span class="chev">›</span></a>
+        <a class="menu__item" href="#">Concursos <span class="chev">›</span></a>
+        <a class="menu__item" href="#">Avaliação <span class="chev">›</span></a>
+        <a class="menu__item" href="#">Créditações <span class="chev">›</span></a>
+        <a class="menu__item" href="#">Documentos <span class="chev">›</span></a>
+        <a class="menu__item" href="#">Aula <span class="chev">›</span></a>
+        <a class="menu__item" href="#">Disciplina <span class="chev">›</span></a>
+        <a class="menu__item is-active" href="#">Curso <span class="chev">›</span></a>
+        <a class="menu__item" href="#">Instituição <span class="chev">›</span></a>
+        <a class="menu__item" href="#">Eleições</a>
+      </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+      <!-- Pesquisa de Cursos -->
+      <section class="panel">
+        <div class="panel__head">Pesquisa de Cursos</div>
+        <div class="panel__body">
+
+          <div class="form-grid">
+            <div class="form-row">
+              <label class="label">Curso</label>
+              <div class="field">
+                <input class="input" type="text" />
+                <button class="btn btn--grey">Pesquisar...</button>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label class="label">Ano Lectivo</label>
+              <div class="field">
+                <input class="input" type="text" />
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Matrículas / Inscrições em Cursos -->
+      <section class="panel">
+        <div class="panel__head panel__head--split">
+          <span>Matrículas / Inscrições em Cursos</span>
+          <div class="panel__links">
+            <a href="#">Ir para Documentos Académicos</a>
+            <span class="dot">·</span>
+            <a href="#">Ajuda/Help</a>
+          </div>
+        </div>
+
+        <div class="panel__body">
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th style="width:70px;">LY</th>
+                  <th>Curso</th>
+                  <th style="width:240px;">Ramo</th>
+                  <th style="width:90px;">ALP</th>
+                  <th>Ingresso</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2025/26</td>
+                  <td>Tecnologias e Programação de Sistemas de Informação</td>
+                  <td>Sem Ramos - Especialidades</td>
+                  <td>2020/21</td>
+                  <td>
+                    Titulares de curso de ensino secundário ou de habilitação legalmente equivalente
+                    (para acesso ao curso técnico superior profissional)
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="note-right">
+            AL - Ano Lectivo | ALP - Ano Lectivo do Plano
+          </div>
+        </div>
+      </section>
+
+      <!-- Inscrições em Disciplinas -->
+      <section class="panel">
+        <div class="panel__head">Inscrições em Disciplinas</div>
+
+        <div class="panel__body">
+
+          <div class="filter-row">
+            <label class="label">Tipo de avaliação</label>
+            <div class="field">
+              <select class="select">
+                <option value=""></option>
+                <option>Época Normal</option>
+                <option>Época Recurso</option>
+              </select>
+              <button class="btn btn--grey">Pesquisar...</button>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table class="table table--striped">
+              <thead>
+                <tr>
+                  <th style="width:90px;">AL</th>
+                  <th style="width:240px;">Curso</th>
+                  <th>Disciplina</th>
+                  <th style="width:40px;">A</th>
+                  <th style="width:60px;">S</th>
+                  <th style="width:220px;">Época</th>
+                  <th style="width:130px;">Data Insc.</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>2025/26</td>
+                  <td>Tec Pro Sis Inf</td>
+                  <td>Técnicas de Expressão do Português</td>
+                  <td>1</td>
+                  <td>S1</td>
+                  <td>Época Normal</td>
+                  <td>2025-09-18</td>
+                </tr>
+                <tr>
+                  <td>2025/26</td>
+                  <td>Tec Pro Sis Inf</td>
+                  <td>Matemática</td>
+                  <td>1</td>
+                  <td>S1</td>
+                  <td>Época Normal</td>
+                  <td>2025-09-18</td>
+                </tr>
+                <tr>
+                  <td>2025/26</td>
+                  <td>Tec Pro Sis Inf</td>
+                  <td>Introdução à Programação</td>
+                  <td>1</td>
+                  <td>S1</td>
+                  <td>Época Normal</td>
+                  <td>2025-09-18</td>
+                </tr>
+                <tr>
+                  <td>2025/26</td>
+                  <td>Tec Pro Sis Inf</td>
+                  <td>Sistemas Operativos e Redes</td>
+                  <td>1</td>
+                  <td>S1</td>
+                  <td>Época Normal</td>
+                  <td>2025-09-18</td>
+                </tr>
+                <tr>
+                  <td>2025/26</td>
+                  <td>Tec Pro Sis Inf</td>
+                  <td>Design Hipermédia</td>
+                  <td>1</td>
+                  <td>S1</td>
+                  <td>Época Normal</td>
+                  <td>2025-09-18</td>
+                </tr>
+                <tr>
+                  <td>2025/26</td>
+                  <td>Tec Pro Sis Inf</td>
+                  <td>Programação Orientada por Objetos</td>
+                  <td>1</td>
+                  <td>S2</td>
+                  <td>Época Normal</td>
+                  <td>2025-09-18</td>
+                </tr>
+                <tr>
+                  <td>2025/26</td>
+                  <td>Tec Pro Sis Inf</td>
+                  <td>Desenvolvimento Web - Back-End</td>
+                  <td>1</td>
+                  <td>S2</td>
+                  <td>Época Normal</td>
+                  <td>2025-09-18</td>
+                </tr>
+                <tr>
+                  <td>2025/26</td>
+                  <td>Tec Pro Sis Inf</td>
+                  <td>Desenvolvimento Web - Front-End</td>
+                  <td>1</td>
+                  <td>S2</td>
+                  <td>Época Normal</td>
+                  <td>2025-09-18</td>
+                </tr>
+                <tr>
+                  <td>2025/26</td>
+                  <td>Tec Pro Sis Inf</td>
+                  <td>Inglês Técnico</td>
+                  <td>1</td>
+                  <td>S2</td>
+                  <td>Época Normal</td>
+                  <td>2025-09-18</td>
+                </tr>
+                <tr>
+                  <td>2025/26</td>
+                  <td>Tec Pro Sis Inf</td>
+                  <td>Sistemas Gestores de Bases de Dados I</td>
+                  <td>1</td>
+                  <td>S2</td>
+                  <td>Época Normal</td>
+                  <td>2025-09-18</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="hint">
+            AL - Ano Lectivo | A - Ano | S - Semestre
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__left">
+      © Universidade da Madeira - Gabinete de Desenvolvimento de Aplicações Informáticas<br>
+      Colégio dos Jesuítas, 9000-081 Funchal | Tel: +351 291 209400 | Fax: +351 291 209410<br>
+      <a href="#">Proteção de Dados e Termos de Utilização</a><br>
+      Processado em 0.09 segundos - powered by hydra framework
+    </div>
+
+    <div class="footer__right">
+      <div class="footer__logo"></div>
+      <div class="footer__badge"></div>
+    </div>
+  </footer>
+</body>
+</html>

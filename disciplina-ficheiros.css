@@ -1,0 +1,363 @@
+/* =========================================================
+   disciplina-ficheiros.css
+   (layout e look & feel igual às páginas anteriores)
+   ========================================================= */
+
+/* Base */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:12px;
+  color:#000;
+  background:#fff;
+}
+
+a{ color:#00f; text-decoration:underline; }
+a:hover{ text-decoration:none; }
+
+.skip{
+  position:absolute;
+  left:-9999px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+.skip:focus{
+  left:12px;
+  top:12px;
+  width:auto;
+  height:auto;
+  padding:8px 10px;
+  background:#fff;
+  border:1px solid #000;
+  z-index:9999;
+}
+
+/* =========================================================
+   TOPBAR
+   ========================================================= */
+.topbar{
+  height:78px;
+  background:#0a77a8;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 14px;
+}
+.topbar__left{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-width:0;
+}
+.logo{
+  width:140px;
+  height:42px;
+  background:rgba(255,255,255,.12);
+  border-radius:2px;
+}
+.topbar__title{
+  font-size:18px;
+  font-weight:bold;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.topbar__right{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.topbar__lang{
+  font-size:12px;
+  font-weight:bold;
+  opacity:.95;
+}
+.user__avatar{
+  width:46px;
+  height:46px;
+  border-radius:999px;
+  background:rgba(255,255,255,.18);
+  border:2px solid rgba(255,255,255,.35);
+}
+
+/* =========================================================
+   LAYOUT (sidebar + main)
+   ========================================================= */
+.layout{
+  min-height:calc(100vh - 78px - 64px);
+  display:flex;
+}
+
+/* Sidebar */
+.sidebar{
+  width:175px;
+  background:#e6e6e6;
+  border-right:1px solid #cfcfcf;
+  padding:0;
+}
+.menu{ padding:0; margin:0; }
+.menu__item{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:22px;
+  padding:0 8px;
+  color:#000;
+  text-decoration:none;
+  border-bottom:1px solid #ddd;
+  background:transparent;
+}
+.menu__item:hover{
+  background:#dcdcdc;
+  text-decoration:none;
+}
+.menu__item.is-active{
+  background:#d0d0d0;
+  font-weight:bold;
+}
+.menu__group{ position:relative; }
+.chev{ font-size:14px; line-height:1; }
+
+/* Flyout (opcional – fica igual às anteriores: só aparece no hover) */
+.menu__flyout{
+  display:none;
+  position:absolute;
+  left:175px;
+  top:0;
+  min-width:190px;
+  background:#f2f2f2;
+  border:1px solid #cfcfcf;
+  z-index:50;
+}
+.menu__group:hover .menu__flyout{ display:block; }
+.menu__flyitem{
+  display:block;
+  padding:6px 10px;
+  color:#000;
+  text-decoration:none;
+  border-bottom:1px solid #e2e2e2;
+}
+.menu__flyitem:hover{
+  background:#e7e7e7;
+  text-decoration:none;
+}
+
+/* Main */
+.main{
+  flex:1;
+  padding:14px 14px 10px;
+  background:#fff;
+}
+
+/* =========================================================
+   PANEL / BOX (estilo “moldura” clássico)
+   ========================================================= */
+.panel{
+  border:1px solid #cfcfcf;
+  background:#fff;
+  box-shadow:0 0 0 1px #f6f6f6 inset;
+}
+.panel--tight .panel__body{ padding:10px 12px; }
+.panel__body{ padding:12px; }
+
+.section__title{
+  font-weight:bold;
+  margin-bottom:8px;
+}
+
+/* =========================================================
+   FORM CONTROLS (inputs azuis claros)
+   ========================================================= */
+.ctl{
+  height:20px;
+  border:1px solid #bfbfbf;
+  background:#cfe4ff;            /* azul claro típico */
+  padding:0 4px;
+  font-size:12px;
+}
+.ctl--wide{ width:100%; }
+
+select.ctl{
+  padding-right:18px;
+}
+.btn{
+  height:22px;
+  padding:0 12px;
+  border:1px solid #a9a9a9;
+  background:linear-gradient(#f7f7f7, #dfdfdf);
+  border-radius:2px;
+  cursor:pointer;
+  font-size:12px;
+}
+.btn:hover{
+  background:linear-gradient(#ffffff, #e5e5e5);
+}
+.btn--wide{ min-width:140px; }
+
+/* Grid para o formulário do topo */
+.form__grid{
+  display:grid;
+  grid-template-columns: 240px 1fr;
+  gap:10px 12px;
+  align-items:center;
+}
+.form__grid--2{
+  grid-template-columns: 260px 1fr;
+}
+.form__row{ display:contents; }
+.form__row--right{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  grid-column:2;
+}
+.form__row--full{
+  grid-column:1 / -1;
+  display:grid;
+  grid-template-columns: 240px 1fr;
+  gap:12px;
+  align-items:center;
+}
+.form__label{
+  font-weight:normal;
+  white-space:nowrap;
+}
+.form__field{ min-width:0; }
+
+.mt10{ margin-top:10px; }
+
+/* =========================================================
+   TABS (2 abas: Docentes / Aluno)
+   ========================================================= */
+.tabs{ position:relative; }
+.tabs__radio{ display:none; }
+
+.tabs__bar{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:0;
+  margin:0;
+  align-items:end;
+}
+
+/* Aba */
+.tabs__tab{
+  user-select:none;
+  text-align:center;
+  padding:7px 8px 6px;
+  background:#efefef;
+  border:1px solid #cfcfcf;
+  border-bottom:none;
+  font-weight:bold;
+  cursor:pointer;
+}
+.tabs__tab--orange{ color:#d97a00; }
+
+/* Painel que “recebe” as abas */
+.tabs__content{
+  border:1px solid #cfcfcf;
+  background:#fff;
+  padding:0;
+}
+
+/* Mostrar o conteúdo consoante o rádio */
+.tabs__panel{ display:none; padding:14px 12px 12px; }
+#tab-docentes:checked ~ .tabs__content .tabs__panel[data-panel="docentes"]{ display:block; }
+#tab-aluno:checked ~ .tabs__content .tabs__panel[data-panel="aluno"]{ display:block; }
+
+/* Aba ativa: fica “branca” e encaixada */
+#tab-docentes:checked ~ .tabs__bar label[for="tab-docentes"],
+#tab-aluno:checked ~ .tabs__bar label[for="tab-aluno"]{
+  background:#fff;
+  position:relative;
+  top:1px; /* dá aquele encaixe na borda */
+}
+
+/* =========================================================
+   File Filter (linha “Filtrar por Categoria / Filtrar Lista”)
+   ========================================================= */
+.filefilter{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:10px 4px 8px;
+}
+.filefilter__left{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  flex:1;
+}
+.filefilter__lbl{ white-space:nowrap; }
+.filefilter__ctl{
+  width:520px;
+  max-width:100%;
+  background:#f1f1f1;            /* na imagem fica mais “cinza” */
+  border-color:#cfcfcf;
+}
+
+/* =========================================================
+   Mensagens info (ícone + texto)
+   ========================================================= */
+.msg{
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+  padding:10px 4px 0;
+}
+.msg__icon{
+  width:16px;
+  height:16px;
+  line-height:16px;
+  text-align:center;
+  font-size:14px;
+}
+
+/* =========================================================
+   FOOTER (igual ao clássico das páginas)
+   ========================================================= */
+.footer{
+  height:64px;
+  border-top:1px solid #cfcfcf;
+  background:#fff;
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  padding:6px 10px;
+  gap:10px;
+}
+.footer__left{
+  font-size:11px;
+  line-height:14px;
+}
+.footer__right{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.footer__logo{
+  width:90px;
+  height:34px;
+  background:rgba(0,0,0,.06);
+}
+.footer__badge{
+  width:34px;
+  height:34px;
+  background:rgba(0,0,0,.06);
+}
+
+@media (max-width: 980px){
+  .sidebar{ display:none; }
+  .menu__flyout{ display:none !important; }
+  .layout{ min-height:calc(100vh - 78px - 64px); }
+  .form__grid, .form__row--full{
+    grid-template-columns: 160px 1fr;
+  }
+  .filefilter{ flex-direction:column; align-items:stretch; }
+  .btn--wide{ width:100%; }
+}

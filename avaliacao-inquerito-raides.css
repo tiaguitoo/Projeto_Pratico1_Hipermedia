@@ -1,0 +1,307 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  background: #f2f2f2;
+}
+
+a { color: #0000ee; }
+
+/* Acessibilidade */
+.skip {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: #fff;
+  border: 1px solid #999;
+  padding: 5px;
+  transform: translateY(-150%);
+}
+.skip:focus { transform: translateY(0); }
+
+.sr-only{
+  position:absolute;
+  width:1px;height:1px;
+  padding:0;margin:-1px;
+  overflow:hidden;clip:rect(0,0,0,0);
+  border:0;
+}
+
+/* Topbar e layout base */
+.topbar {
+  height: 60px;
+  background: #0a78b8;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.logo {
+  width: 40px;
+  height: 30px;
+  background: rgba(255,255,255,0.4);
+}
+
+.user__avatar {
+  width: 32px;
+  height: 32px;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  min-height: calc(100vh - 60px);
+}
+
+.sidebar {
+  background: #e6e6e6;
+  border-right: 1px solid #bdbdbd;
+}
+
+.menu__item {
+  display: block;
+  padding: 6px 10px;
+  border-bottom: 1px solid #ccc;
+  text-decoration: none;
+  color: #000;
+}
+
+.menu__item:hover { background: #ddd; }
+.menu__item.is-active { font-weight: bold; }
+
+.menu__group { position: relative; }
+.chev { float: right; }
+
+.menu__flyout {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: #e6e6e6;
+  border: 1px solid #bdbdbd;
+  min-width: 180px;
+  display: none;
+}
+
+.menu__group:hover .menu__flyout,
+.menu__group:focus-within .menu__flyout {
+  display: block;
+}
+
+.menu__flyitem {
+  display: block;
+  padding: 6px 10px;
+  border-bottom: 1px solid #ccc;
+  text-decoration: none;
+  color: #000;
+}
+.menu__flyitem:hover { background: #ddd; }
+
+.menu__flyitem.is-subactive {
+  font-weight: bold;
+  background: #ddd;
+}
+
+.main { padding: 12px; }
+
+/* =========================
+   RAIDES (moderno como no print)
+========================= */
+
+.raides-top {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 6px;
+}
+
+.raides-select {
+  width: min(980px, 100%);
+  height: 40px;
+  border: 1px solid #cfd6df;
+  background: #fff;
+  border-radius: 6px;
+  padding: 0 12px;
+  font-size: 16px;
+}
+
+.raides-title {
+  text-align: center;
+  color: #1b66c9;
+  font-size: 20px;
+  margin: 18px 0 12px;
+  font-weight: bold;
+}
+
+.raides-intro {
+  max-width: 980px;
+  margin: 0 auto 14px;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* Card */
+.card {
+  max-width: 980px;
+  margin: 0 auto 14px;
+  background: #fff;
+  border: 1px solid #e2e6ee;
+  border-radius: 6px;
+  padding: 16px 16px 18px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.card__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.step {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #1b66c9;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.card__title {
+  margin: 0;
+  color: #1b66c9;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.card__hint {
+  margin: 0 0 10px;
+  color: #555;
+}
+
+/* 2 colunas (secção 1) */
+.card__grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.pair__label { color: #222; margin-bottom: 2px; }
+.pair__value { color: #333; }
+
+/* opções radio com “caixa” */
+.choice {
+  border: 1px solid #e1e7f0;
+  border-radius: 6px;
+  padding: 14px 14px;
+  margin-bottom: 10px;
+}
+
+.choice--selected {
+  border-color: #1b66c9;
+  box-shadow: 0 0 0 1px rgba(27,102,201,0.12);
+}
+
+.choice__row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.choice input[type="radio"] {
+  width: 18px;
+  height: 18px;
+}
+
+.sep {
+  border: none;
+  border-top: 1px solid #e6eaf2;
+  margin: 12px 0;
+}
+
+/* linhas label + select */
+.form-rows {
+  display: grid;
+  gap: 12px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 18px;
+  align-items: center;
+}
+
+.form-row label { color: #222; }
+
+.form-row select {
+  height: 38px;
+  border: 1px solid #cfd6df;
+  border-radius: 6px;
+  background: #fff;
+  padding: 0 10px;
+  font-size: 14px;
+}
+
+/* botão submit (verde) */
+.actions {
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  padding: 4px 0 8px;
+}
+
+.btn-submit {
+  background: #198754;
+  border: 1px solid #157347;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btn-submit:hover { filter: brightness(1.03); }
+
+/* Footer estilo InfoAlunos */
+.footer {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px solid #bdbdbd;
+  background: #ffffff;
+  padding: 8px 10px;
+  font-size: 11px;
+  color: #000;
+}
+
+.footer__left a {
+  color: #0000ee;
+  text-decoration: underline;
+}
+
+.footer__right { display: flex; align-items: flex-end; }
+
+.footer__logo {
+  width: 110px;
+  height: 32px;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+}
+
+/* Responsivo */
+@media (width < 980px) {
+  .card__grid-2 { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .actions { justify-content: stretch; }
+  .btn-submit { width: 100%; }
+}

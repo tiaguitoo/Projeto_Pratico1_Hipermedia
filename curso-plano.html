@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>InfoAlunos - Curso - Planos de Conclusão</title>
+  <link rel="stylesheet" href="curso-plano.css" />
+  <link rel="stylesheet" href="ui-shell.css" />
+</head>
+
+<body>
+  <div class="page">
+    <!-- TOPO -->
+    <header class="topbar">
+    <div class="topbar__left">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="topbar__title">
+        <strong>InfoAlunos</strong> - Serviço de Informação dos Alunos - <strong>v3.1.4</strong>
+      </div>
+    </div>
+
+    <div class="topbar__right">
+      <span class="topbar__lang">PT | EN</span>
+      <div class="user__avatar" aria-hidden="true"></div>
+    </div>
+  </header>
+
+    <div class="layout">
+      <!-- MENU -->
+      <aside class="sidebar" aria-label="Menu">
+        <ul class="menu">
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Geral</a></li>
+          <li><a href="#">Serviços</a></li>
+          <li><a href="#">Concursos</a></li>
+          <li><a href="#">Avaliação</a></li>
+          <li><a href="#">Creditações</a></li>
+          <li><a href="#">Documentos</a></li>
+          <li><a href="#">Aula</a></li>
+          <li><a href="#">Disciplina</a></li>
+          <li class="active"><a href="#">Curso</a></li>
+          <li><a href="#">Instituição</a></li>
+          <li><a href="#">Eleições</a></li>
+        </ul>
+      </aside>
+
+      <!-- CONTEÚDO -->
+      <main class="content">
+        <div class="panel">
+          <!-- Linha: Curso - Planos de Conclusão -->
+          <div class="row row-tight">
+            <div class="lbl-col">
+              <div class="section-title">Curso - Planos de Conclusão</div>
+              <div class="field-lbl">Curso</div>
+            </div>
+
+            <div class="field-col">
+              <select class="select-wide">
+                <option>
+                  Tecnologias e Programação de Sistemas de Informação (Curso Técnico Superior Profissional, 2025/26, Sem Ramos - Especialidades)
+                </option>
+              </select>
+            </div>
+
+            <div class="btn-col">
+              <button class="btn" type="button">Listar Plano Conclusão...</button>
+            </div>
+          </div>
+
+          <div class="hr"></div>
+
+          <!-- Linha: Relatórios -->
+          <div class="row row-tight">
+            <div class="lbl-col">
+              <div class="section-title">Relatórios</div>
+              <div class="field-lbl">Ano Lectivo</div>
+            </div>
+
+            <div class="field-col">
+              <div class="grid-3">
+                <select>
+                  <option>2025/26</option>
+                  <option>2024/25</option>
+                </select>
+
+                <div class="mini-group">
+                  <div class="mini-lbl">Relatório(s):</div>
+                  <select>
+                    <option>Ficha de Aprovação para Bolonha</option>
+                  </select>
+                </div>
+
+                <div class="mini-group">
+                  <div class="mini-lbl">Formato(s):</div>
+                  <select>
+                    <option>PDF</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="btn-col">
+              <button class="btn" type="button">Gerar Relatório &gt;&gt;</button>
+            </div>
+          </div>
+
+          <div class="hr"></div>
+
+          <!-- Aviso -->
+          <div class="alert-row">
+            <span class="xicon" aria-hidden="true">✖</span>
+            <div class="alert-text">
+              O aluno <strong>NÃO</strong> está em condições de <strong>CONCLUIR</strong> o curso selecionado.
+              <span class="bracket">[ Sujeito à <strong>CONFIRMAÇÃO</strong> pela Unidade de Assuntos Académicos! ]</span>
+            </div>
+          </div>
+
+          <!-- Tabela: Quadro de resumo -->
+          <div class="subheader">Quadro de RESUMO Verificação das Regras de Conclusão de Curso</div>
+          <div class="table-wrap">
+            <table class="tbl">
+              <thead>
+                <tr>
+                  <th class="w-regra">Regra</th>
+                  <th>Área Científica</th>
+                  <th class="w-nivel">Nível</th>
+                  <th class="w-ects">ECTS<br>Minimo</th>
+                  <th class="w-ects">ECTS<br>Aplicados</th>
+                  <th class="w-flag"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1388</td>
+                  <td>(178) Língua e Literatura Materna</td>
+                  <td>(1) Básico<br>(2) Intermédio<br>(3) Avançado<br>(5) Especialista<br>(15) TeSP</td>
+                  <td class="right">5</td>
+                  <td class="right">0</td>
+                  <td class="flag"><span class="xmark">✖</span></td>
+                </tr>
+                <tr class="alt">
+                  <td>1390</td>
+                  <td>(10) Matemática</td>
+                  <td>(1) Básico<br>(2) Intermédio<br>(3) Avançado<br>(5) Especialista<br>(15) TeSP</td>
+                  <td class="right">5.5</td>
+                  <td class="right">0</td>
+                  <td class="flag"><span class="xmark">✖</span></td>
+                </tr>
+                <tr>
+                  <td>1391</td>
+                  <td>(179) Línguas e Literaturas Estrangeiras</td>
+                  <td>(1) Básico<br>(2) Intermédio<br>(3) Avançado<br>(5) Especialista<br>(15) TeSP</td>
+                  <td class="right">5</td>
+                  <td class="right">0</td>
+                  <td class="flag"><span class="xmark">✖</span></td>
+                </tr>
+                <tr class="alt">
+                  <td>1392</td>
+                  <td>(211) Ciências Informáticas</td>
+                  <td>(1) Básico<br>(2) Intermédio<br>(3) Avançado<br>(5) Especialista<br>(15) TeSP</td>
+                  <td class="right">18</td>
+                  <td class="right">0</td>
+                  <td class="flag"><span class="xmark">✖</span></td>
+                </tr>
+                <tr>
+                  <td>1393</td>
+                  <td>(211) Ciências Informáticas</td>
+                  <td>(1) Básico<br>(2) Intermédio<br>(3) Avançado<br>(5) Especialista<br>(15) TeSP</td>
+                  <td class="right">86.5</td>
+                  <td class="right">0</td>
+                  <td class="flag"><span class="xmark">✖</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="meta">Média Ponderada = <strong>0</strong></div>
+
+          <!-- Unidades utilizadas -->
+          <div class="subheader">Unidades Curriculares Utilizadas na Média</div>
+          <div class="table-wrap">
+            <table class="tbl">
+              <thead>
+                <tr>
+                  <th>Unidade Curricular</th>
+                  <th class="w-area">Área<br>Científica</th>
+                  <th class="w-nivel2">Nível</th>
+                  <th class="w-nota">Nota</th>
+                  <th class="w-ects2">ECTS da<br>U.C.</th>
+                  <th class="w-ects2">ECTS<br>Utilizados</th>
+                  <th class="w-ects2">ECTS Não<br>Utilizados</th>
+                  <th class="w-nota2">Nota x<br>ECTS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td colspan="8" class="empty"> </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Tabelas inferiores lado a lado -->
+          <div class="two-cols">
+            <div class="col">
+              <div class="table-caption">Regras de Conclusão Curso</div>
+              <div class="table-wrap">
+                <table class="tbl compact">
+                  <thead>
+                    <tr>
+                      <th>Área Científica</th>
+                      <th class="w-ects">ECTS<br>Minimo</th>
+                      <th class="w-ects">ECTS<br>Aplicados</th>
+                      <th class="w-flag"></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Língua e Literatura Materna</td>
+                      <td class="right">5</td>
+                      <td class="right">0</td>
+                      <td class="flag"><span class="xmark">✖</span></td>
+                    </tr>
+                    <tr class="alt">
+                      <td>Matemática</td>
+                      <td class="right">5.5</td>
+                      <td class="right">0</td>
+                      <td class="flag"><span class="xmark">✖</span></td>
+                    </tr>
+                    <tr>
+                      <td>Línguas e Literaturas Estrangeiras</td>
+                      <td class="right">5</td>
+                      <td class="right">0</td>
+                      <td class="flag"><span class="xmark">✖</span></td>
+                    </tr>
+                    <tr class="alt">
+                      <td>Ciências Informáticas</td>
+                      <td class="right">18</td>
+                      <td class="right">0</td>
+                      <td class="flag"><span class="xmark">✖</span></td>
+                    </tr>
+                    <tr>
+                      <td>Ciências Informáticas</td>
+                      <td class="right">86.5</td>
+                      <td class="right">0</td>
+                      <td class="flag"><span class="xmark">✖</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="table-caption">Unidades Curriculares Aprovadas</div>
+              <div class="table-wrap">
+                <table class="tbl compact">
+                  <thead>
+                    <tr>
+                      <th>Unidade Curricular</th>
+                      <th class="w-class">Classificação</th>
+                      <th class="w-ects">ECTS</th>
+                      <th class="w-ects">ECTS Aplicados</th>
+                      <th class="w-area">Área Científica</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td colspan="5" class="empty">
+                        <span class="xmark">✖</span> Não existem ECTS Aprovados
+                      </td>
+                    </tr>
+                    <tr class="alt">
+                      <td colspan="5" class="empty">
+                        <span class="xmark">✖</span> Não existem ECTS Aprovados
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="5" class="empty">
+                        <span class="xmark">✖</span> Não existem ECTS Aprovados
+                      </td>
+                    </tr>
+                    <tr class="alt">
+                      <td colspan="5" class="empty">
+                        <span class="xmark">✖</span> Não existem ECTS Aprovados
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="5" class="empty">
+                        <span class="xmark">✖</span> Não existem ECTS Aprovados
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-left">
+        <div><strong>© Universidade da Madeira</strong> - Gabinete de Desenvolvimento de Aplicações Informáticas - <a href="#">Proteção de Dados e Termos de Utilização</a></div>
+        <div>Colégio dos Jesuítas, 9000-081 Funchal | Tel: +351 291 209400 | Fax: +351 291 209410</div>
+        <div>Processado em 0.07 segundos - powered by hydra framework</div>
+      </div>
+
+      <div class="footer-right" aria-hidden="true">
+        <div class="foot-logo"></div>
+        <div class="foot-logo"></div>
+        <div class="foot-logo"></div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

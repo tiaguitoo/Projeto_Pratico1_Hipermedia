@@ -1,0 +1,161 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  background: #f2f2f2;
+}
+
+a { color: #0000ee; }
+
+.skip {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: #fff;
+  border: 1px solid #999;
+  padding: 5px;
+  transform: translateY(-150%);
+}
+.skip:focus { transform: translateY(0); }
+
+.topbar {
+  height: 60px;
+  background: #0a78b8;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.logo {
+  width: 40px;
+  height: 30px;
+  background: rgba(255,255,255,0.4);
+}
+
+.user__avatar {
+  width: 32px;
+  height: 32px;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  min-height: calc(100vh - 60px);
+}
+
+.sidebar {
+  background: #e6e6e6;
+  border-right: 1px solid #bdbdbd;
+}
+
+.menu__item {
+  display: block;
+  padding: 6px 10px;
+  border-bottom: 1px solid #ccc;
+  text-decoration: none;
+  color: #000;
+}
+
+.menu__item:hover { background: #ddd; }
+.menu__item.is-active { font-weight: bold; }
+
+.menu__group { position: relative; }
+.chev { float: right; }
+
+.menu__flyout {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: #e6e6e6;
+  border: 1px solid #bdbdbd;
+  min-width: 180px;
+  display: none;
+}
+
+.menu__group:hover .menu__flyout,
+.menu__group:focus-within .menu__flyout {
+  display: block;
+}
+
+.menu__flyitem {
+  display: block;
+  padding: 6px 10px;
+  border-bottom: 1px solid #ccc;
+  text-decoration: none;
+  color: #000;
+}
+
+.menu__flyitem:hover { background: #ddd; }
+
+.menu__flyitem.is-subactive {
+  font-weight: bold;
+  background: #ddd;
+}
+
+.main { padding: 10px; }
+
+/* =========================
+   Creditações / Lista (área cinzenta grande)
+========================= */
+
+.workarea {
+  background: #efefef;
+  border: 1px solid #bdbdbd;
+  min-height: 520px;
+}
+
+.workarea__header {
+  background: #ffffff;
+  border-bottom: 1px solid #bdbdbd;
+  padding: 10px 12px;
+  width: 100%;
+}
+
+.workarea__title {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.workarea__icon {
+  color: #0a63c9;
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* Footer estilo InfoAlunos */
+.footer {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px solid #bdbdbd;
+  background: #ffffff;
+  padding: 8px 10px;
+  font-size: 11px;
+  color: #000;
+}
+
+.footer__left a {
+  color: #0000ee;
+  text-decoration: underline;
+}
+
+.footer__right { display: flex; align-items: flex-end; }
+
+.footer__logo {
+  width: 110px;
+  height: 32px;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+}
+
+/* Responsivo */
+@media (width < 980px) {
+  .layout { grid-template-columns: 1fr; }
+  .menu__flyout { position: static; border-left: none; border-right: none; }
+}

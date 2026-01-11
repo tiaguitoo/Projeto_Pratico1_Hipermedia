@@ -1,0 +1,366 @@
+/* ===== BASE (igual aos teus CSS anteriores) ===== */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  background: #f2f2f2;
+}
+
+a { color: #0000ee; }
+
+.skip {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: #fff;
+  border: 1px solid #999;
+  padding: 5px;
+  transform: translateY(-150%);
+}
+.skip:focus { transform: translateY(0); }
+
+.topbar {
+  height: 60px;
+  background: #0a78b8;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.topbar__left{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 40px;
+  height: 30px;
+  background: rgba(255,255,255,0.4);
+}
+
+.user__avatar {
+  width: 32px;
+  height: 32px;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+}
+
+.topbar__right{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.topbar__lang{
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.topbar__sep{ opacity: .9; }
+
+.layout {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  min-height: calc(100vh - 60px);
+}
+
+.sidebar {
+  background: #e6e6e6;
+  border-right: 1px solid #bdbdbd;
+}
+
+.menu__item {
+  display: block;
+  padding: 6px 10px;
+  border-bottom: 1px solid #ccc;
+  text-decoration: none;
+  color: #000;
+}
+
+.menu__item:hover { background: #ddd; }
+.menu__item.is-active { font-weight: bold; }
+
+.menu__group { position: relative; }
+.chev { float: right; }
+
+.menu__flyout {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: #e6e6e6;
+  border: 1px solid #bdbdbd;
+  min-width: 180px;
+  display: none;
+  z-index: 5;
+}
+
+.menu__group:hover .menu__flyout,
+.menu__group:focus-within .menu__flyout {
+  display: block;
+}
+
+.menu__flyitem {
+  display: block;
+  padding: 6px 10px;
+  border-bottom: 1px solid #ccc;
+  text-decoration: none;
+  color: #000;
+}
+
+.menu__flyitem:hover { background: #ddd; }
+
+.menu__flyitem.is-subactive{
+  font-weight: bold;
+  background: #ddd;
+}
+
+.main { padding: 10px; }
+
+/* Footer estilo InfoAlunos */
+.footer {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px solid #bdbdbd;
+  background: #ffffff;
+  padding: 8px 10px;
+  font-size: 11px;
+  color: #000;
+}
+
+.footer__left a {
+  color: #0000ee;
+  text-decoration: underline;
+}
+
+.footer__right { display: flex; align-items: flex-end; }
+
+.footer__logo {
+  width: 110px;
+  height: 32px;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+}
+
+/* ===== PÁGINA: Documentos / Declarações (estilo “novo”) ===== */
+.main--new{
+  background: transparent;
+}
+
+.course-select{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 8px;
+}
+
+.course-select__input{
+  width: min(1200px, 92%);
+  height: 44px;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  background: #fff;
+  padding: 8px 14px;
+  font-size: 16px;
+}
+
+.title-blue{
+  text-align: center;
+  color: #1b73d1;
+  margin: 32px 0 16px;
+  font-size: 22px;
+}
+
+.intro{
+  width: min(1100px, 85%);
+  margin: 0 auto 24px;
+  color: #333;
+  font-size: 15px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.cards{
+  width: min(900px, 85%);
+  margin: 0 auto 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.card{
+  background: #fff;
+  border: 1px solid #d8d8d8;
+  border-radius: 6px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+  padding: 22px 14px 18px;
+  text-align: center;
+  min-height: 260px;
+}
+
+.doc-ico{
+  width: 78px;
+  height: 78px;
+  margin: 12px auto 18px;
+  border: 2px solid #333;
+  background: #fff;
+  position: relative;
+}
+
+.doc-ico::before{
+  content:"";
+  position:absolute;
+  left: 16px;
+  top: 18px;
+  width: 46px;
+  height: 2px;
+  background:#333;
+  box-shadow: 0 10px 0 #333, 0 20px 0 #333, 0 30px 0 #333;
+  opacity: .9;
+}
+
+.doc-ico::after{
+  content:"";
+  position:absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #333;
+  border-radius: 50%;
+}
+
+.card__text{
+  font-size: 16px;
+  color: #222;
+  margin-bottom: 16px;
+}
+
+.btn-primary{
+  border: 1px solid #1b73d1;
+  background: #1b73d1;
+  color: #fff;
+  border-radius: 6px;
+  padding: 9px 22px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-primary:hover{ filter: brightness(0.98); }
+
+.btn-soft{
+  border: 1px solid #cfcfcf;
+  background: #d9d9d9;
+  color: #fff;
+  border-radius: 6px;
+  padding: 9px 22px;
+  font-size: 16px;
+}
+
+.btn-soft:disabled{
+  opacity: 0.9;
+  cursor: not-allowed;
+}
+
+/* Aviso amarelo */
+.alert{
+  width: min(1100px, 85%);
+  margin: 10px auto 18px;
+  background: #fff2bf;
+  border: 1px solid #e7c56a;
+  border-radius: 6px;
+  padding: 14px 16px;
+  display: grid;
+  grid-template-columns: 30px 1fr 30px;
+  gap: 12px;
+  align-items: start;
+}
+
+.alert__icon{
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #d7a12a;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alert__text{
+  color: #6b520a;
+  font-size: 15px;
+}
+
+.alert__close{
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  color: #6b520a;
+}
+
+/* Histórico */
+.history{
+  width: min(1100px, 85%);
+  margin: 22px auto 10px;
+  color: #1b73d1;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.clock{
+  width: 22px;
+  height: 22px;
+  border: 2px solid #1b73d1;
+  border-radius: 50%;
+  position: relative;
+}
+
+.clock::before{
+  content:"";
+  position:absolute;
+  left: 50%;
+  top: 50%;
+  width: 2px;
+  height: 7px;
+  background:#1b73d1;
+  transform: translate(-50%,-100%);
+}
+
+.clock::after{
+  content:"";
+  position:absolute;
+  left: 50%;
+  top: 50%;
+  width: 7px;
+  height: 2px;
+  background:#1b73d1;
+  transform: translate(0,-50%);
+}
+
+.history-space{
+  width: min(1100px, 85%);
+  margin: 0 auto;
+  min-height: 140px;
+  background: transparent;
+}
+
+/* Responsivo */
+@media (width < 980px){
+  .layout { grid-template-columns: 1fr; }
+  .menu__flyout { position: static; border-left: none; border-right: none; }
+
+  .cards{ grid-template-columns: 1fr; }
+  .intro, .alert, .history, .history-space{ width: 92%; }
+  .course-select__input{ width: 92%; }
+}

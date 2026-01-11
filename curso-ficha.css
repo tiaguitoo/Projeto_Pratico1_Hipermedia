@@ -1,0 +1,251 @@
+/* =========================================================
+   curso-ficha.css
+   (igual ao look clássico das páginas anteriores)
+   ========================================================= */
+
+/* Base */
+*{ box-sizing:border-box; }
+html, body{ height:100%; }
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:12px;
+  color:#000;
+  background:#fff;
+}
+a{ color:#00f; text-decoration:underline; }
+a:hover{ text-decoration:none; }
+
+/* =========================================================
+   TOPBAR (igual)
+   ========================================================= */
+.topbar{
+  height:78px;
+  background:#0a77a8;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 14px;
+}
+.topbar__left{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  min-width:0;
+}
+.logo{
+  width:140px;
+  height:42px;
+  background:rgba(255,255,255,.12);
+  border-radius:2px;
+}
+.topbar__title{
+  font-size:18px;
+  font-weight:bold;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.topbar__right{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.topbar__lang{
+  font-size:12px;
+  font-weight:bold;
+  opacity:.95;
+}
+.user__avatar{
+  width:46px;
+  height:46px;
+  border-radius:999px;
+  background:rgba(255,255,255,.18);
+  border:2px solid rgba(255,255,255,.35);
+}
+
+/* =========================================================
+   LAYOUT
+   ========================================================= */
+.layout{
+  min-height:calc(100vh - 78px - 64px);
+  display:flex;
+}
+
+/* Sidebar */
+.sidebar{
+  width:175px;
+  background:#e6e6e6;
+  border-right:1px solid #cfcfcf;
+}
+.menu{ padding:0; margin:0; }
+.menu__item{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  height:22px;
+  padding:0 8px;
+  color:#000;
+  text-decoration:none;
+  border-bottom:1px solid #ddd;
+}
+.menu__item:hover{ background:#dcdcdc; text-decoration:none; }
+.menu__item.is-active{ background:#d0d0d0; font-weight:bold; }
+.chev{ font-size:14px; line-height:1; }
+
+/* Main */
+.main{
+  flex:1;
+  padding:14px;
+  background:#fff;
+}
+
+/* =========================================================
+   HEADERS / SECTIONS
+   ========================================================= */
+.section-title{
+  font-weight:bold;
+  margin:2px 0 8px;
+}
+
+/* Barra topo da tabela (com botão imprimir à direita) */
+.headbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:6px;
+}
+.headbar__left{
+  font-weight:bold;
+}
+.headbar__right{
+  display:flex;
+  justify-content:flex-end;
+}
+
+/* Botões (igual ao clássico) */
+.btn{
+  height:22px;
+  padding:0 14px;
+  border:1px solid #a9a9a9;
+  background:linear-gradient(#f7f7f7, #dfdfdf);
+  border-radius:2px;
+  cursor:pointer;
+  font-size:12px;
+}
+.btn:hover{ background:linear-gradient(#ffffff, #e5e5e5); }
+.btn--print{ min-width:120px; }
+
+/* =========================================================
+   TABLE (header pêssego + zebra + bordas)
+   ========================================================= */
+.table-wrap{
+  border:1px solid #cfcfcf;
+  background:#fff;
+}
+table{
+  width:100%;
+  border-collapse:collapse;
+  table-layout:fixed;
+}
+th, td{
+  border-right:1px solid #e0e0e0;
+  border-bottom:1px solid #e0e0e0;
+  padding:3px 6px;
+  vertical-align:top;
+  word-wrap:break-word;
+}
+th{
+  background:#fde6d5; /* pêssego */
+  font-weight:bold;
+  text-align:center;
+}
+tr:nth-child(even) td{
+  background:#efefef;
+}
+tr:nth-child(odd) td{
+  background:#fff;
+}
+
+/* Linhas de “nota/legenda” por baixo da tabela */
+.legend{
+  padding:6px 8px;
+  font-size:11px;
+  background:#fff;
+}
+.legend b{ font-weight:bold; }
+
+/* =========================================================
+   BLOCO “Unidades Curriculares Inscrito/Aprovadas”
+   ========================================================= */
+.block{
+  margin-top:14px;
+}
+.block__header{
+  font-weight:bold;
+  margin:0 0 6px 0;
+}
+.block__subheader{
+  border:1px solid #cfcfcf;
+  border-bottom:none;
+  background:#eaf6ff;              /* azul clarinho do header da caixa */
+  padding:6px 8px;
+  font-weight:bold;
+}
+
+/* caixa grande azul clarinho (como na imagem) */
+.block__body{
+  border:1px solid #cfcfcf;
+  background:#eaf6ff;
+  padding:10px;
+}
+
+/* tabela dentro do bloco (mantém header pêssego) */
+.block__body .table-wrap{
+  border:1px solid #cfcfcf;
+}
+.block__body th{ background:#fde6d5; }
+.block__body tr:nth-child(even) td{ background:#e9e9e9; }
+.block__body tr:nth-child(odd) td{ background:#fff; }
+
+/* =========================================================
+   FOOTER (sempre no fundo)
+   ========================================================= */
+.footer{
+  height:64px;
+  border-top:1px solid #cfcfcf;
+  background:#fff;
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  padding:6px 10px;
+  gap:10px;
+}
+.footer__left{
+  font-size:11px;
+  line-height:14px;
+}
+.footer__right{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.footer__logo{
+  width:90px;
+  height:34px;
+  background:rgba(0,0,0,.06);
+}
+.footer__badge{
+  width:34px;
+  height:34px;
+  background:rgba(0,0,0,.06);
+}
+
+@media (max-width: 980px){
+  .sidebar{ display:none; }
+  .layout{ min-height:calc(100vh - 78px - 64px); }
+  .btn--print{ width:100%; }
+  table{ table-layout:auto; }
+}

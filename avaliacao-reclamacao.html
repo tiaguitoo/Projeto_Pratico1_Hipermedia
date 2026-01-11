@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InfoAlunos - Avaliação / Reclamação de Notas</title>
+  <link rel="stylesheet" href="avaliacao-reclamacao.css">
+  <link rel="stylesheet" href="ui-shell.css" />
+</head>
+
+<body>
+  <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+
+  <header class="topbar">
+    <div class="topbar__left">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="topbar__title">
+        <strong>InfoAlunos</strong> - Serviço de Informação dos Alunos - <strong>v3.1.4</strong>
+      </div>
+    </div>
+
+    <div class="topbar__right">
+      <span class="topbar__lang">PT | EN</span>
+      <div class="user__avatar" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" aria-label="Menu principal">
+      <nav class="menu" aria-label="Navegação principal">
+        <a class="menu__item" href="index.html">Início</a>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">Geral <span class="chev" aria-hidden="true">›</span></a>
+          <div class="menu__flyout">
+            <a class="menu__flyitem" href="geral-processos.html">Processos</a>
+            <a class="menu__flyitem" href="geral-dados-pessoais.html">Dados Pessoais</a>
+            <a class="menu__flyitem" href="geral-privacidade.html">Privacidade</a>
+            <a class="menu__flyitem" href="geral-ajuda.html">Ajuda</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">Serviços <span class="chev" aria-hidden="true">›</span></a>
+          <div class="menu__flyout">
+            <a class="menu__flyitem" href="servicos-requerimentos.html">Requerimentos</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item is-active" href="#" aria-haspopup="true">
+            Avaliação <span class="chev" aria-hidden="true">›</span>
+          </a>
+          <div class="menu__flyout">
+            <a class="menu__flyitem" href="avaliacao-pautas.html">Pautas</a>
+            <a class="menu__flyitem is-subactive" href="avaliacao-reclamacao.html">Reclamação de Notas</a>
+          </div>
+        </div>
+
+        <a class="menu__item" href="#">Documentos</a>
+        <a class="menu__item" href="#">Curso</a>
+      </nav>
+    </aside>
+
+    <main id="conteudo" class="main" role="main" tabindex="-1">
+
+      <section class="req-shell" aria-label="Reclamação de Notas">
+
+        <!-- radios (sem JS) -->
+        <input class="tab-radio" type="radio" name="tab" id="tab-lista" checked>
+        <input class="tab-radio" type="radio" name="tab" id="tab-detalhe">
+
+        <!-- ABAS -->
+        <div class="req-tabs" role="tablist" aria-label="Separadores">
+          <label class="req-tab req-tab--left" for="tab-lista" role="tab" aria-controls="painel-lista">
+            Lista de Requerimentos
+          </label>
+          <label class="req-tab req-tab--right" for="tab-detalhe" role="tab" aria-controls="painel-detalhe">
+            Submeter Novo/Detalhe
+          </label>
+        </div>
+
+        <!-- CONTEÚDO ABA 1 -->
+        <div id="painel-lista" class="req-panel req-panel--lista" role="tabpanel">
+          <p class="req-note">
+            Para inserir uma nova reclamação clique no tabulador 'Submeter Novo/Detalhe'.
+          </p>
+
+          <div class="req-empty">
+            <span class="info-dot" aria-hidden="true">i</span>
+            <span>Sem resultados</span>
+          </div>
+        </div>
+
+        <!-- CONTEÚDO ABA 2 -->
+        <div id="painel-detalhe" class="req-panel req-panel--detalhe" role="tabpanel">
+
+          <!-- bloco “Despacho” (topo com inputs cinza) -->
+          <div class="blk">
+            <div class="blk__title">Despacho</div>
+
+            <div class="grid-2">
+              <div class="grid-2__col">
+                <div class="row">
+                  <label for="data-desp">Data do Despacho:</label>
+                  <input id="data-desp" type="text" value="">
+                </div>
+                <div class="row">
+                  <label for="despacho">Despacho:</label>
+                  <input id="despacho" type="text" value="">
+                </div>
+                <div class="row row--tall">
+                  <label for="justif">Justificação:</label>
+                  <textarea id="justif" rows="3"></textarea>
+                </div>
+              </div>
+
+              <div class="grid-2__col">
+                <div class="row">
+                  <label for="cod-ent">Cod. Entrada</label>
+                  <input id="cod-ent" type="text" value="">
+                </div>
+                <div class="row">
+                  <label for="data-ent">Data Entrada:</label>
+                  <input id="data-ent" type="text" value="">
+                </div>
+                <div class="row">
+                  <label for="origem">Origem:</label>
+                  <input id="origem" type="text" value="">
+                </div>
+                <div class="row">
+                  <label for="data-fix">Data de afixação:</label>
+                  <input id="data-fix" type="text" value="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- bloco “Pedido” -->
+          <div class="blk blk--pedido">
+            <div class="blk__title">Pedido</div>
+
+            <div class="pedido-grid">
+              <div class="pedido-left">
+                <div class="row">
+                  <label for="ano">Ano Lectivo:</label>
+                  <select id="ano">
+                    <option></option>
+                    <option>2025/26</option>
+                    <option>2024/25</option>
+                  </select>
+                </div>
+
+                <div class="row">
+                  <label for="disc">Disciplina:</label>
+                  <input id="disc" type="text" value="">
+                </div>
+
+                <div class="row">
+                  <label for="pauta">Pauta:</label>
+                  <input id="pauta" type="text" value="">
+                </div>
+              </div>
+
+              <div class="pedido-right">
+                <div class="row">
+                  <label for="naluno">Nº Aluno:</label>
+                  <input id="naluno" class="is-blue" type="text" value="">
+                </div>
+
+                <div class="row">
+                  <label for="entidade">Entidade</label>
+                  <input id="entidade" class="is-blue" type="text" value="">
+                </div>
+
+                <div class="row">
+                  <label for="data-ped">Data do Pedido:</label>
+                  <input id="data-ped" type="text" value="">
+                </div>
+              </div>
+
+              <div class="pedido-assunto">
+                <div class="row row--assunto">
+                  <label for="assunto">Assunto</label>
+                  <textarea id="assunto" class="is-blue" rows="3"></textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- botões -->
+          <div class="btnbar" aria-label="Ações">
+            <button class="btn-classic" type="button">Limpar Campos (Novo Pedido)</button>
+            <button class="btn-classic" type="button">Cancelar Processo</button>
+            <button class="btn-classic" type="button">Guardar Processo</button>
+          </div>
+
+          <div class="bottom-labels" aria-hidden="true">
+            <span>Emolumentos do Processo</span>
+            <span>Histórico dos Estados do Processo</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer" role="contentinfo">
+        <div class="footer__left">
+          © Universidade da Madeira - Gabinete de Desenvolvimento de Aplicações Informáticas -
+          <a href="#">Proteção de Dados</a> e <a href="#">Termos de Utilização</a><br>
+          Colégio dos Jesuítas, 9000-081 Funchal | Tel: +351 291 209400 | Fax: +351 291 209410<br>
+          Processado em 0.10 segundos - powered by Hydra framework
+        </div>
+        <div class="footer__right" aria-hidden="true">
+          <div class="footer__logo"></div>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+</body>
+</html>

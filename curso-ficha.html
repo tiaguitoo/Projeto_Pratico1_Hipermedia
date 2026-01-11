@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>InfoAlunos - Curso - Ficha</title>
+
+  <link rel="stylesheet" href="curso-ficha.css">
+  <link rel="stylesheet" href="ui-shell.css" />
+</head>
+<body>
+
+<!-- =========================================================
+     TOPBAR
+========================================================= -->
+<header class="topbar">
+    <div class="topbar__left">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="topbar__title">
+        <strong>InfoAlunos</strong> - Serviço de Informação dos Alunos - <strong>v3.1.4</strong>
+      </div>
+    </div>
+
+    <div class="topbar__right">
+      <span class="topbar__lang">PT | EN</span>
+      <div class="user__avatar" aria-hidden="true"></div>
+    </div>
+  </header>
+
+<!-- =========================================================
+     LAYOUT
+========================================================= -->
+<div class="layout">
+
+  <!-- ================= SIDEBAR ================= -->
+  <aside class="sidebar">
+    <nav class="menu">
+      <a class="menu__item" href="#">Início</a>
+      <a class="menu__item" href="#">Geral <span class="chev">›</span></a>
+      <a class="menu__item" href="#">Serviços <span class="chev">›</span></a>
+      <a class="menu__item" href="#">Concursos <span class="chev">›</span></a>
+      <a class="menu__item" href="#">Avaliação <span class="chev">›</span></a>
+      <a class="menu__item is-active" href="#">Créditações <span class="chev">›</span></a>
+      <a class="menu__item" href="#">Documentos <span class="chev">›</span></a>
+      <a class="menu__item" href="#">Aula <span class="chev">›</span></a>
+      <a class="menu__item" href="#">Disciplina <span class="chev">›</span></a>
+      <a class="menu__item" href="#">Curso <span class="chev">›</span></a>
+      <a class="menu__item" href="#">Instituição <span class="chev">›</span></a>
+      <a class="menu__item" href="#">Eleições</a>
+    </nav>
+  </aside>
+
+  <!-- ================= MAIN ================= -->
+  <main class="main">
+
+    <!-- ================= HISTÓRICO ================= -->
+    <div class="headbar">
+      <div class="headbar__left">Histórico de Inscrições do Aluno</div>
+      <div class="headbar__right">
+        <button class="btn btn--print">Imprimir</button>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Ano Lect</th>
+            <th>Curso</th>
+            <th>Tipo</th>
+            <th>Especialidade</th>
+            <th>Ano</th>
+            <th>Ingresso</th>
+            <th>Est</th>
+            <th>Inscrição</th>
+            <th>Conclusão</th>
+            <th>Diploma</th>
+            <th>Dipl. Entregue</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2025/26</td>
+            <td>11024.10.0 - Tec Prog Sist Inf</td>
+            <td>Curso Técnico Superior Profissional</td>
+            <td>S/Ramos - Esp.</td>
+            <td>1</td>
+            <td>
+              Titulares de curso de ensino secundário ou de habilitação legalmente equivalente
+            </td>
+            <td>A</td>
+            <td>18-09-2025</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="legend">
+      <b>Estado da Inscrição:</b> T - Temporária | A - Activo | C - Congelado | I - Inactivo
+    </div>
+
+    <!-- ================= UNIDADES CURRICULARES ================= -->
+    <div class="block">
+      <div class="block__header">
+        Unidades Curriculares Inscrito/Aprovadas
+      </div>
+
+      <div class="block__subheader">
+        Ano Lectivo: <b>2025/26</b> &nbsp; - &nbsp;
+        Curso: <b>Tecnologias e Programação de Sistemas de Informação</b> &nbsp; - &nbsp;
+        Diploma: <b>CTeSP</b> &nbsp; - &nbsp;
+        Plano: <b>2020/21</b>
+      </div>
+
+      <div class="block__body">
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Disciplina</th>
+                <th>Ano</th>
+                <th>Período</th>
+                <th>ECTS/UC</th>
+                <th>AC</th>
+                <th>Nível</th>
+                <th>Op. Comp</th>
+                <th>Nota</th>
+                <th>Aprov.</th>
+                <th>Melhoria</th>
+                <th>Dt. Melh.</th>
+                <th>Avaliação</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Design Hipermédia</td>
+                <td>1</td>
+                <td>S1</td>
+                <td>6.50</td>
+                <td>CIN</td>
+                <td>T</td>
+                <td>N</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Introdução à Programação</td>
+                <td>1</td>
+                <td>S1</td>
+                <td>6.50</td>
+                <td>CIN</td>
+                <td>T</td>
+                <td>N</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Matemática</td>
+                <td>1</td>
+                <td>S1</td>
+                <td>5.50</td>
+                <td>MAT</td>
+                <td>T</td>
+                <td>N</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<footer class="footer">
+  <div class="footer__left">
+    © Universidade da Madeira - Gabinete de Desenvolvimento de Aplicações Informáticas<br>
+    Colégio dos Jesuítas, 9000-081 Funchal | Tel: +351 291 209400 | Fax: +351 291 209410<br>
+    <a href="#">Proteção de Dados e Termos de Utilização</a><br>
+    Processado em 0.1 segundos - powered by hydra framework
+  </div>
+
+  <div class="footer__right">
+    <div class="footer__logo"></div>
+    <div class="footer__badge"></div>
+  </div>
+</footer>
+
+</body>
+</html>

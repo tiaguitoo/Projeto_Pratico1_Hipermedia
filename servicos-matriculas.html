@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InfoAlunos - Serviços / Matrículas</title>
+  <link rel="stylesheet" href="servicos-matriculas.css">
+  <link rel="stylesheet" href="ui-shell.css" />
+</head>
+
+<body>
+  <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+
+  <!-- TOPO AZUL -->
+  <header class="topbar">
+    <div class="topbar__left">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="topbar__title">
+        <strong>InfoAlunos</strong> - Serviço de Informação dos Alunos - <strong>v3.1.4</strong>
+      </div>
+    </div>
+
+    <div class="topbar__right">
+      <span class="topbar__lang">PT | EN</span>
+      <div class="user__avatar" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Menu principal">
+      <nav class="menu" aria-label="Navegação principal">
+        <a class="menu__item" href="index.html">Início</a>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">Geral <span class="chev" aria-hidden="true">›</span></a>
+          <div class="menu__flyout" role="menu" aria-label="Submenu Geral">
+            <a class="menu__flyitem" href="geral-processos.html">Processos</a>
+            <a class="menu__flyitem" href="geral-dados-pessoais.html">Dados Pessoais</a>
+            <a class="menu__flyitem" href="geral-privacidade.html">Privacidade</a>
+            <a class="menu__flyitem" href="geral-ajuda.html">Ajuda</a>
+          </div>
+        </div>
+
+        <!-- Serviços ativo -->
+        <div class="menu__group">
+          <a class="menu__item is-active" href="#" aria-haspopup="true">Serviços <span class="chev" aria-hidden="true">›</span></a>
+          <div class="menu__flyout" role="menu" aria-label="Submenu Serviços">
+            <a class="menu__flyitem" href="servicos-pagamentos.html">Pagamentos</a>
+            <a class="menu__flyitem is-subactive" href="servicos-matriculas.html">Matrículas</a>
+            <a class="menu__flyitem" href="#">Inscrição em Turmas</a>
+            <a class="menu__flyitem" href="#">Requerimentos</a>
+            <a class="menu__flyitem" href="#">Cartão Universitário</a>
+            <a class="menu__flyitem" href="#">SASUMa - Bolsas</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">Concursos <span class="chev" aria-hidden="true">›</span></a>
+          <div class="menu__flyout"><a class="menu__flyitem" href="#">Candidaturas</a></div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">Avaliação <span class="chev" aria-hidden="true">›</span></a>
+          <div class="menu__flyout">
+            <a class="menu__flyitem" href="#">Pautas</a>
+            <a class="menu__flyitem" href="#">Reclamação de Notas</a>
+            <a class="menu__flyitem" href="#">Inquéritos</a>
+            <a class="menu__flyitem" href="#">Resultado de Inquéritos</a>
+            <a class="menu__flyitem" href="#">Inquérito RAIDES</a>
+          </div>
+        </div>
+
+        <a class="menu__item" href="#">Creditações</a>
+        <a class="menu__item" href="#">Documentos</a>
+        <a class="menu__item" href="#">Aula</a>
+        <a class="menu__item" href="#">Disciplina</a>
+        <a class="menu__item" href="#">Curso</a>
+        <a class="menu__item" href="#">Instituição</a>
+        <a class="menu__item" href="#">Eleições</a>
+      </nav>
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <main id="conteudo" class="main" role="main" tabindex="-1">
+
+      <section class="mat-wrap" aria-label="Matrículas - Seleccionar inscrição">
+        <h1 class="mat-title">Seleccione uma Inscrição</h1>
+
+        <div class="mat-field">
+          <label for="curso" class="mat-label">Curso</label>
+          <select id="curso" name="curso" class="mat-select">
+            <option>(11024) Tecnologias e Programação de Sistemas de Informação - Sem Ramos - Especialidades - Curso Técnico Superior Profissional</option>
+            <option>(11025) Outro Curso Exemplo</option>
+          </select>
+        </div>
+
+        <div class="mat-subtitle">Seleccione o tipo de inscrição que pretende efetuar</div>
+
+        <section class="mat-box" aria-label="Opção de inscrição">
+          <div class="mat-box__inner">
+            <div class="mat-radio">
+              <input type="radio" id="insc1" name="inscricao" checked>
+            </div>
+
+            <div class="mat-content">
+              <div class="mat-box__title">
+                Alteração da Inscrição - 1º, 2º, 3º Ciclo, CTeSP - 2º Semestre (2025/26)
+              </div>
+
+              <div class="mat-meta">
+                <div>Período de Inscrição: 08-01-2026 a 19-02-2026</div>
+                <div>Alteração sem emolumentos até 11-02-2026</div>
+                <div>[PT]</div>
+              </div>
+
+              <p class="mat-text">
+                Os dados pessoais aqui submetidos são para uso exclusivo da Universidade da Madeira e, nos cursos em parceria,
+                das correspondentes entidades, e não serão nunca divulgados a terceiros nem utilizados para outros fins que não
+                sejam os aqui estipulados, no estrito cumprimento da legislação existente sobre a proteção de dados pessoais.
+              </p>
+
+              <p class="mat-text">
+                Assim, sem prejuízo do atrás referido, os seus dados pessoais poderão ser utilizados no âmbito do cumprimento
+                das necessidades de prossecução da missão das instituições envolvidas.
+              </p>
+
+              <div class="mat-meta">
+                <div>[EN]</div>
+              </div>
+
+              <p class="mat-text">
+                The personal data submitted here are for the exclusive use of the University of Madeira and its partners and will never be disclosed
+                to third parties nor used for purposes other than those stipulated herein.
+              </p>
+
+              <div class="mat-confirm">
+                <strong>Confirme os seus dados de faturação:</strong>
+                <div class="mat-blur">
+                  Rua Exemplo, 27<br>
+                  9000-000 Funchal<br>
+                  Portugal
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="mat-actions">
+          <button class="mat-btn" type="button">
+            Iniciar Inscrição <span class="mat-arrow" aria-hidden="true">›</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Rodapé -->
+      <footer class="footer" role="contentinfo">
+        <div class="footer__left">
+          © Universidade da Madeira - Gabinete de Desenvolvimento de Aplicações Informáticas -
+          <a href="#">Proteção de Dados</a> e <a href="#">Termos de Utilização</a><br>
+          Colégio dos Jesuítas, 9000-081 Funchal | Tel: +351 291 209400 | Fax: +351 291 209410<br>
+          Processado em 0.78 segundos - powered by Hydra framework
+        </div>
+        <div class="footer__right" aria-hidden="true">
+          <div class="footer__logo"></div>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+</body>
+</html>

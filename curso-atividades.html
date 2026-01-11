@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>InfoAlunos - Curso - Actividades</title>
+  <link rel="stylesheet" href="curso-atividades.css" />
+  <link rel="stylesheet" href="ui-shell.css" />
+</head>
+
+<body>
+  <div class="page">
+    <!-- TOPO -->
+    <header class="topbar">
+    <div class="topbar__left">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="topbar__title">
+        <strong>InfoAlunos</strong> - Serviço de Informação dos Alunos - <strong>v3.1.4</strong>
+      </div>
+    </div>
+
+    <div class="topbar__right">
+      <span class="topbar__lang">PT | EN</span>
+      <div class="user__avatar" aria-hidden="true"></div>
+    </div>
+  </header>
+
+    <div class="layout">
+      <!-- MENU -->
+      <aside class="sidebar" aria-label="Menu">
+        <ul class="menu">
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Geral</a></li>
+          <li><a href="#">Serviços</a></li>
+          <li><a href="#">Concursos</a></li>
+          <li><a href="#">Avaliação</a></li>
+          <li><a href="#">Creditações</a></li>
+          <li><a href="#">Documentos</a></li>
+          <li><a href="#">Aula</a></li>
+          <li><a href="#">Disciplina</a></li>
+          <li class="active"><a href="#">Curso</a></li>
+          <li><a href="#">Instituição</a></li>
+          <li><a href="#">Eleições</a></li>
+        </ul>
+      </aside>
+
+      <!-- CONTEÚDO -->
+      <main class="content">
+        <div class="panel">
+          <div class="panel-header">
+            <div class="panel-title">Editar Actividade Académicas do Aluno</div>
+
+            <div class="panel-text">
+              <p>
+                Nesta área o aluno deve introduzir, caso existam, as actividades académicas (no máximo de cinco, de acordo com a Recomendação nº4/2008 do CRUP)
+                em que esteve envolvido de modo a que possam ser incluídas no Suplemento ao Diploma (apenas para os cursos adaptados a Bolonha).
+                As actividades são descritas em Português e Inglês e <strong>devendo ser entregues</strong>, posteriormente, ao Director de Curso os documentos comprovativos das mesmas.
+              </p>
+              <p>
+                No Sidoc (<a href="https://sidoc.uma.pt" target="_blank" rel="noreferrer">https://sidoc.uma.pt</a>) o Director de Curso, a partir dos documentos entregues,
+                confirma as actividades introduzidas pelo aluno bloqueando-as, remetendo em seguida os documentos para o Sector Académico, onde serão anexados ao respectivo processo.
+              </p>
+              <p>
+                Posteriormente o Sector Académico, antes de emitir o Suplemento ao Diploma, valida as actividades confirmadas pelo Director de Curso.
+              </p>
+            </div>
+          </div>
+
+          <!-- ACTIVIDADE 1 -->
+          <section class="activity">
+            <div class="activity-title">Actividade&nbsp;&nbsp;1</div>
+
+            <div class="activity-grid">
+              <div class="field field-wide">
+                <label>Tipo de Actividade:</label>
+                <div class="input-row">
+                  <input class="input" type="text" />
+                  <button class="drop" aria-label="Abrir lista" type="button">▾</button>
+                </div>
+              </div>
+
+              <div class="field">
+                <label>Data Início (AAAA-MM-DD)</label>
+                <input class="input" type="text" />
+              </div>
+
+              <div class="field">
+                <label>Data Fim (AAAA-MM-DD)</label>
+                <input class="input" type="text" />
+              </div>
+
+              <div class="field">
+                <label>Local (PT) <span class="flag pt" aria-hidden="true"></span></label>
+                <input class="input" type="text" />
+              </div>
+
+              <div class="field">
+                <label>Local (EN) <span class="flag en" aria-hidden="true"></span></label>
+                <input class="input" type="text" />
+              </div>
+
+              <div class="field">
+                <label>Descrição (PT)</label>
+                <textarea class="textarea"></textarea>
+              </div>
+
+              <div class="field">
+                <label>Descrição (EN)</label>
+                <textarea class="textarea"></textarea>
+              </div>
+            </div>
+          </section>
+
+          <!-- ACTIVIDADE 2 -->
+          <section class="activity activity-alt">
+            <div class="activity-title">Actividade&nbsp;&nbsp;2</div>
+
+            <div class="activity-grid">
+              <div class="field field-wide">
+                <label>Tipo de Actividade:</label>
+                <div class="input-row">
+                  <input class="input" type="text" />
+                  <button class="drop" aria-label="Abrir lista" type="button">▾</button>
+                </div>
+              </div>
+
+              <div class="field">
+                <label>Data Início (AAAA-MM-DD)</label>
+                <input class="input" type="text" />
+              </div>
+
+              <div class="field">
+                <label>Data Fim (AAAA-MM-DD)</label>
+                <input class="input" type="text" />
+              </div>
+
+              <div class="field">
+                <label>Local (PT) <span class="flag pt" aria-hidden="true"></span></label>
+                <input class="input" type="text" />
+              </div>
+
+              <div class="field">
+                <label>Local (EN) <span class="flag en" aria-hidden="true"></span></label>
+                <input class="input" type="text" />
+              </div>
+
+              <div class="field">
+                <label>Descrição (PT)</label>
+                <textarea class="textarea"></textarea>
+              </div>
+
+              <div class="field">
+                <label>Descrição (EN)</label>
+                <textarea class="textarea"></textarea>
+              </div>
+            </div>
+          </section>
+
+          <!-- ACTIVIDADE 3 -->
+          <section class="activity">
+            <div class="activity-title">Actividade&nbsp;&nbsp;3</div>
+
+            <div class="activity-grid">
+              <div class="field field-wide">
+                <label>Tipo de Actividade:</label>
+                <div class="input-row">
+                  <input class="input" type="text" />
+                  <button class="drop" aria-label="Abrir lista" type="button">▾</button>
+                </div>
+              </div>
+
+              <div class="field">
+                <label>Data Início (AAAA-MM-DD)</label>
+                <input class="input" type="text" />
+              </div>
+
+              <div class="field">
+                <label>Data Fim (AAAA-MM-DD)</label>
+                <input class="input" type="text" />
+              </div>
+
+              <div class="field">
+                <label>Local (PT) <span class="flag pt" aria-hidden="true"></span></label>
+                <input class="input" type="text" />
+              </div>
+
+              <div class="field">
+                <label>Local (EN) <span class="flag en" aria-hidden="true"></span></label>
+                <input class="input" type="text" />
+              </div>
+
+              <div class="field">
+                <label>Descrição (PT)</label>
+                <textarea class="textarea"></textarea>
+              </div>
+
+              <div class="field">
+                <label>Descrição (EN)</label>
+                <textarea class="textarea"></textarea>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-left">
+        <div><strong>© Universidade da Madeira</strong> - Gabinete de Desenvolvimento de Aplicações Informáticas - <a href="#">Proteção de Dados e Termos de Utilização</a></div>
+        <div>Colégio dos Jesuítas, 9000-081 Funchal | Tel: +351 291 209400 | Fax: +351 291 209410</div>
+        <div>Processado em 0.07 segundos - powered by hydra framework</div>
+      </div>
+
+      <div class="footer-right" aria-hidden="true">
+        <div class="foot-logo"></div>
+        <div class="foot-logo"></div>
+        <div class="foot-logo"></div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

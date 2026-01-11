@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InfoAlunos - Marcar Presença</title>
+  <link rel="stylesheet" href="aula-presenca.css">
+  <link rel="stylesheet" href="ui-shell.css" />
+</head>
+
+<body>
+  <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+
+  <header class="topbar">
+    <div class="topbar__left">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="topbar__title">
+        <strong>InfoAlunos</strong> - Serviço de Informação dos Alunos - <strong>v3.1.4</strong>
+      </div>
+    </div>
+
+    <div class="topbar__right">
+      <span class="topbar__lang">PT | EN</span>
+      <div class="user__avatar" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" aria-label="Menu principal">
+      <nav class="menu" aria-label="Navegação principal">
+        <a class="menu__item" href="index.html">Início</a>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">Geral <span class="chev" aria-hidden="true">›</span></a>
+          <div class="menu__flyout">
+            <a class="menu__flyitem" href="geral-processos.html">Processos</a>
+            <a class="menu__flyitem" href="geral-dados-pessoais.html">Dados Pessoais</a>
+            <a class="menu__flyitem" href="geral-privacidade.html">Privacidade</a>
+            <a class="menu__flyitem" href="geral-ajuda.html">Ajuda</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">Serviços <span class="chev" aria-hidden="true">›</span></a>
+          <div class="menu__flyout">
+            <a class="menu__flyitem" href="servicos-pagamentos.html">Pagamentos</a>
+            <a class="menu__flyitem" href="servicos-matriculas.html">Matrículas</a>
+            <a class="menu__flyitem" href="servicos-inscricoes.html">Inscrição em Turmas</a>
+            <a class="menu__flyitem" href="servicos-requerimentos.html">Requerimentos</a>
+            <a class="menu__flyitem" href="servicos-cartao.html">Cartão Universitário</a>
+          </div>
+        </div>
+
+        <a class="menu__item" href="concursos-candidaturas.html">Concursos</a>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">Avaliação <span class="chev" aria-hidden="true">›</span></a>
+          <div class="menu__flyout">
+            <a class="menu__flyitem" href="avaliacao-pautas.html">Pautas</a>
+            <a class="menu__flyitem" href="avaliacao-reclamacao.html">Reclamação de Notas</a>
+            <a class="menu__flyitem" href="avaliacao-inquerito.html">Inquéritos</a>
+            <a class="menu__flyitem" href="avaliacao-resultado-inquerito.html">Resultado de Inquéritos</a>
+            <a class="menu__flyitem" href="avaliacao-inquerito-raides.html">Inquérito RAIDES</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">Creditações <span class="chev" aria-hidden="true">›</span></a>
+          <div class="menu__flyout">
+            <a class="menu__flyitem" href="creditacoes-lista.html">Lista Processos</a>
+            <a class="menu__flyitem" href="creditacoes-novo.html">Novo Processo</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">Documentos <span class="chev" aria-hidden="true">›</span></a>
+          <div class="menu__flyout">
+            <a class="menu__flyitem" href="documentos-academicos.html">Académicos</a>
+            <a class="menu__flyitem" href="documentos-declaracoes.html">Declarações</a>
+          </div>
+        </div>
+
+        <a class="menu__item is-active" href="aula-presenca.html">Aula</a>
+        <a class="menu__item" href="#">Disciplina</a>
+        <a class="menu__item" href="#">Curso</a>
+        <a class="menu__item" href="#">Instituição</a>
+        <a class="menu__item" href="#">Eleições</a>
+      </nav>
+    </aside>
+
+    <main id="conteudo" class="main main--presence" role="main" tabindex="-1">
+      <section class="presence" aria-label="Marcar Presença">
+        <h1 class="presence__title">Marcar Presença</h1>
+
+        <form class="presence__form" action="#" method="post">
+          <div class="pin" role="group" aria-label="Código de presença">
+            <label class="sr-only" for="p1">Dígito 1</label>
+            <input id="p1" class="pin__box" inputmode="numeric" maxlength="1" aria-label="Dígito 1">
+
+            <label class="sr-only" for="p2">Dígito 2</label>
+            <input id="p2" class="pin__box" inputmode="numeric" maxlength="1" aria-label="Dígito 2">
+
+            <label class="sr-only" for="p3">Dígito 3</label>
+            <input id="p3" class="pin__box" inputmode="numeric" maxlength="1" aria-label="Dígito 3">
+
+            <label class="sr-only" for="p4">Dígito 4</label>
+            <input id="p4" class="pin__box" inputmode="numeric" maxlength="1" aria-label="Dígito 4">
+          </div>
+
+          <button class="btn-outline" type="button">Confirmar</button>
+        </form>
+      </section>
+
+      <footer class="footer" role="contentinfo">
+        <div class="footer__left">
+          © Universidade da Madeira - Gabinete de Desenvolvimento de Aplicações Informáticas -
+          <a href="#">Proteção de Dados</a> e <a href="#">Termos de Utilização</a><br>
+          Colégio dos Jesuítas, 9000-081 Funchal | Tel: +351 291 209400 | Fax: +351 291 209410<br>
+          Processado em 0.06 segundos - powered by Hydra framework
+        </div>
+        <div class="footer__right" aria-hidden="true">
+          <div class="footer__logo"></div>
+        </div>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>

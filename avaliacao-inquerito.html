@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InfoAlunos - Avaliação / Inquéritos</title>
+  <link rel="stylesheet" href="avaliacao-inquerito.css">
+  <link rel="stylesheet" href="ui-shell.css" />
+</head>
+<body>
+  <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+
+  <!-- TOPO AZUL -->
+  <header class="topbar">
+    <div class="topbar__left">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="topbar__title">
+        <strong>InfoAlunos</strong> - Serviço de Informação dos Alunos - <strong>v3.1.4</strong>
+      </div>
+    </div>
+
+    <div class="topbar__right">
+      <span class="topbar__lang">PT | EN</span>
+      <div class="user__avatar" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Menu principal">
+      <nav class="menu" aria-label="Navegação principal">
+        <a class="menu__item" href="index.html">Início</a>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">Geral <span class="chev" aria-hidden="true">›</span></a>
+          <div class="menu__flyout">
+            <a class="menu__flyitem" href="geral-processos.html">Processos</a>
+            <a class="menu__flyitem" href="geral-dados-pessoais.html">Dados Pessoais</a>
+            <a class="menu__flyitem" href="geral-privacidade.html">Privacidade</a>
+            <a class="menu__flyitem" href="geral-ajuda.html">Ajuda</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item is-active" href="#" aria-haspopup="true">
+            Avaliação <span class="chev" aria-hidden="true">›</span>
+          </a>
+          <div class="menu__flyout" role="menu" aria-label="Submenu Avaliação">
+            <a class="menu__flyitem" href="avaliacao-pautas.html">Pautas</a>
+            <a class="menu__flyitem" href="avaliacao-reclamacao.html">Reclamação de Notas</a>
+            <a class="menu__flyitem is-subactive" href="avaliacao-inquerito.html">Inquéritos</a>
+            <a class="menu__flyitem" href="#">Resultado de Inquéritos</a>
+            <a class="menu__flyitem" href="#">Inquérito RAIDES</a>
+          </div>
+        </div>
+
+        <a class="menu__item" href="#">Serviços</a>
+        <a class="menu__item" href="#">Documentos</a>
+        <a class="menu__item" href="#">Curso</a>
+      </nav>
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <main id="conteudo" class="main" role="main" tabindex="-1">
+
+      <!-- Pesquisa -->
+      <section class="box" aria-label="Pesquisa de Inquéritos">
+        <div class="box__title">Pesquisa de Inquéritos</div>
+
+        <div class="inq-grid">
+          <label for="inq">Inquérito</label>
+          <select id="inq" name="inq">
+            <option></option>
+            <option>Design Hipermédia</option>
+            <option>Programação</option>
+          </select>
+          <button class="btn-classic" type="button">Pesquisar...</button>
+        </div>
+      </section>
+
+      <!-- Detalhe -->
+      <section class="box box--detail" aria-label="Inquérito - Detalhe">
+        <div class="box__title">Inquérito - Detalhe</div>
+
+        <div class="msg">
+          <span class="info-dot" aria-hidden="true">i</span>
+          <span>Deve ser seleccionado o inquérito ou o Utilizador não tem acesso ao inquérito escolhido.</span>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer" role="contentinfo">
+        <div class="footer__left">
+          © Universidade da Madeira - Gabinete de Desenvolvimento de Aplicações Informáticas -
+          <a href="#">Proteção de Dados</a> e <a href="#">Termos de Utilização</a><br>
+          Colégio dos Jesuítas, 9000-081 Funchal | Tel: +351 291 209400 | Fax: +351 291 209410<br>
+          Processado em 0.08 segundos - powered by Hydra framework
+        </div>
+        <div class="footer__right" aria-hidden="true">
+          <div class="footer__logo"></div>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+</body>
+</html>

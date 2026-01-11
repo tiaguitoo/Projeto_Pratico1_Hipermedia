@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>InfoAlunos - Disciplina / Fichas</title>
+  <link rel="stylesheet" href="disciplina-ficha.css" />
+  <link rel="stylesheet" href="ui-shell.css" />
+</head>
+
+<body>
+  <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <div class="topbar__left">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="topbar__title">
+        <strong>InfoAlunos</strong> - Serviço de Informação dos Alunos - <strong>v3.1.4</strong>
+      </div>
+    </div>
+
+    <div class="topbar__right">
+      <span class="topbar__lang">PT | EN</span>
+      <div class="user__avatar" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <!-- LAYOUT -->
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Menu lateral">
+      <nav class="menu">
+        <a class="menu__item" href="#">Início</a>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#">
+            Geral <span class="chev">›</span>
+          </a>
+          <div class="menu__flyout" role="menu" aria-label="Geral">
+            <a class="menu__flyitem" href="#">Processos</a>
+            <a class="menu__flyitem" href="#">Dados Pessoais</a>
+            <a class="menu__flyitem" href="#">Privacidade</a>
+            <a class="menu__flyitem" href="#">Ajuda</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#">
+            Serviços <span class="chev">›</span>
+          </a>
+          <div class="menu__flyout" role="menu" aria-label="Serviços">
+            <a class="menu__flyitem" href="#">Pagamentos</a>
+            <a class="menu__flyitem" href="#">Matrículas</a>
+            <a class="menu__flyitem" href="#">Inscrições</a>
+            <a class="menu__flyitem" href="#">Requerimentos</a>
+            <a class="menu__flyitem" href="#">Cartão</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#">
+            Concursos <span class="chev">›</span>
+          </a>
+          <div class="menu__flyout" role="menu" aria-label="Concursos">
+            <a class="menu__flyitem" href="#">Candidaturas</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#">
+            Avaliação <span class="chev">›</span>
+          </a>
+          <div class="menu__flyout" role="menu" aria-label="Avaliação">
+            <a class="menu__flyitem" href="#">Pautas</a>
+            <a class="menu__flyitem" href="#">Reclamação</a>
+            <a class="menu__flyitem" href="#">Inquérito</a>
+            <a class="menu__flyitem" href="#">Resultado Inquérito</a>
+            <a class="menu__flyitem" href="#">Inquérito RAIDES</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#">
+            Creditações <span class="chev">›</span>
+          </a>
+          <div class="menu__flyout" role="menu" aria-label="Creditações">
+            <a class="menu__flyitem" href="#">Lista</a>
+            <a class="menu__flyitem" href="#">Novo</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#">
+            Documentos <span class="chev">›</span>
+          </a>
+          <div class="menu__flyout" role="menu" aria-label="Documentos">
+            <a class="menu__flyitem" href="#">Académicos</a>
+            <a class="menu__flyitem" href="#">Declarações</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#">
+            Aula <span class="chev">›</span>
+          </a>
+          <div class="menu__flyout" role="menu" aria-label="Aula">
+            <a class="menu__flyitem" href="#">Presença</a>
+            <a class="menu__flyitem" href="#">Calendário</a>
+            <a class="menu__flyitem" href="#">Sumários</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item is-active" href="#">
+            Disciplina <span class="chev">›</span>
+          </a>
+          <div class="menu__flyout" role="menu" aria-label="Disciplina">
+            <a class="menu__flyitem" href="#">Fichas</a>
+          </div>
+        </div>
+
+        <a class="menu__item" href="#">Curso</a>
+        <a class="menu__item" href="#">Instituição</a>
+        <a class="menu__item" href="#">Eleições</a>
+      </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <main id="conteudo" class="main">
+      <!-- Pesquisa -->
+      <section class="panel panel--tight">
+        <div class="panel__body">
+          <div class="form__grid form__grid--2">
+            <div class="form__row">
+              <div class="form__label">Ano Lectivo</div>
+              <div class="form__field">
+                <select class="ctl ctl--wide">
+                  <option>2025/26</option>
+                  <option>2024/25</option>
+                  <option>2023/24</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form__row form__row--right">
+              <button class="btn btn--wide" type="button">Pesquisar...</button>
+            </div>
+
+            <div class="form__row form__row--full">
+              <div class="form__label">Disciplina</div>
+              <div class="form__field">
+                <select class="ctl ctl--wide">
+                  <option>Design Hipermédia_CTeSP_TPSI [ S1 ]</option>
+                  <option>Desenvolvimento Web...</option>
+                  <option>Base de Dados...</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lista de Disciplinas -->
+      <section class="panel mt10">
+        <div class="panel__body">
+          <div class="section__title">Lista de Disciplinas</div>
+
+          <table class="tbl tbl--peach">
+            <thead>
+              <tr>
+                <th style="width:70px">AL</th>
+                <th>Course</th>
+                <th style="width:220px">Curso</th>
+                <th style="width:180px">Especialidade</th>
+                <th style="width:70px">ALP</th>
+                <th style="width:40px">S</th>
+                <th style="width:55px">UC</th>
+                <th style="width:65px">CH</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2025/26</td>
+                <td><a href="#">Design Hipermédia</a></td>
+                <td>Tec Pro Sis Inf</td>
+                <td><a href="#">S/Ramos - Esp.</a></td>
+                <td>2020/21</td>
+                <td>S1</td>
+                <td>6.50</td>
+                <td>182.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ABAS (6) -->
+      <section class="panel mt10">
+        <div class="panel__body">
+          <div class="tabs">
+            <!-- radios (sem JS) -->
+            <input class="tabs__radio" type="radio" name="tabs" id="tab-obj" checked />
+            <input class="tabs__radio" type="radio" name="tabs" id="tab-bib" />
+            <input class="tabs__radio" type="radio" name="tabs" id="tab-prog" />
+            <input class="tabs__radio" type="radio" name="tabs" id="tab-out" />
+            <input class="tabs__radio" type="radio" name="tabs" id="tab-doc" />
+            <input class="tabs__radio" type="radio" name="tabs" id="tab-arq" />
+
+            <!-- barra de abas -->
+            <div class="tabs__bar" role="tablist" aria-label="Abas da ficha da disciplina">
+              <label class="tabs__tab" for="tab-obj" role="tab">Objectivos / Avaliação</label>
+              <label class="tabs__tab" for="tab-bib" role="tab">Bibliografia</label>
+              <label class="tabs__tab" for="tab-prog" role="tab">Programa</label>
+              <label class="tabs__tab" for="tab-out" role="tab">Outros Dados</label>
+              <label class="tabs__tab" for="tab-doc" role="tab">Corpo Docente</label>
+              <label class="tabs__tab" for="tab-arq" role="tab">Documentos</label>
+            </div>
+
+            <!-- conteudos -->
+            <div class="tabs__content">
+              <!-- 1) Objectivos / Avaliação -->
+              <div class="tabs__panel" data-panel="obj">
+                <div class="grid2">
+                  <div>
+                    <div class="subttl">Objectivos da Disciplina:</div>
+                    <div class="boxgrey boxgrey--tall">
+                      <ol class="ol">
+                        <li>Compreender o conceito de multimédia e hipermédia.</li>
+                        <li>Compreender o processo de design para contextos e dispositivos específicos.</li>
+                        <li>Conhecer normas e standards para a web.</li>
+                        <li>Conhecer métodos para organização e gestão de conteúdos web.</li>
+                        <li>Adquirir noções de design, tecnologias e usabilidade na web.</li>
+                        <li>Identificar princípios básicos para desenvolvimento de websites.</li>
+                        <li>Desenvolver competências para criação de websites (apresentação/formatação).</li>
+                        <li>Conhecer técnicas básicas para manipulação do DOM.</li>
+                      </ol>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="subttl">Tradução em Inglês dos Objectivos :</div>
+                    <div class="boxgrey boxgrey--tall">
+                      <ol class="ol">
+                        <li>Understand the concept of multimedia and hypermedia.</li>
+                        <li>Understand the design process for specific contexts and devices.</li>
+                        <li>Know the concepts of norms and standards for the web.</li>
+                        <li>Know methods for organizing and managing web content.</li>
+                        <li>Acquire notions of design, technologies and usability on the web.</li>
+                        <li>Identify the basic principles for website development.</li>
+                        <li>Develop skills for creating websites using presentation/formatting languages.</li>
+                        <li>Know basic techniques for DOM manipulation.</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="grid2 mt10">
+                  <div>
+                    <div class="subttl">Critérios de avaliação:</div>
+                    <div class="boxgrey boxgrey--mid">
+                      <div>Tipo de Classificação: Quantitativa (0-20)</div>
+                      <div>Metodologia de Avaliação: De acordo com o previsto para os CTeSP.</div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="subttl">Tradução para Inglês dos Critérios de avaliação:</div>
+                    <div class="boxgrey boxgrey--mid">
+                      <div>Classification Type: Quantitative (0-20)</div>
+                      <div>Evaluation Methodology: In accordance with the expected for Professional Higher Technical Courses.</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="printbar mt10">
+                  <span>Relatório a imprimir</span>
+                  <select class="ctl">
+                    <option>Ficha(s) de Disciplina(s)</option>
+                  </select>
+                  <button class="btn" type="button">Imprimir</button>
+                </div>
+              </div>
+
+              <!-- 2) Bibliografia -->
+              <div class="tabs__panel" data-panel="bib">
+                <div class="subttl">Bibliografia Principal:</div>
+                <div class="boxgrey boxgrey--tall">
+                  <div>Robbins, J. N. (2018). <em>Learning Web Design</em>. O’Reilly.</div>
+                  <div>Duckett, J. (2011). <em>HTML &amp; CSS: Design and build websites</em>. John Wiley &amp; Sons.</div>
+                </div>
+
+                <div class="subttl mt10">Outras Fontes Bibliográficas/Documentos de Apoio:</div>
+                <div class="boxgrey boxgrey--tall"></div>
+
+                <div class="printbar mt10">
+                  <span>Relatório a imprimir</span>
+                  <select class="ctl">
+                    <option>Ficha(s) de Disciplina(s)</option>
+                  </select>
+                  <button class="btn" type="button">Imprimir</button>
+                </div>
+              </div>
+
+              <!-- 3) Programa -->
+              <div class="tabs__panel" data-panel="prog">
+                <div class="grid2">
+                  <div>
+                    <div class="subttl">Programa resumido:</div>
+                    <div class="boxgrey boxgrey--tall"></div>
+                  </div>
+                  <div>
+                    <div class="subttl">Tradução para Inglês do Programa resumido:</div>
+                    <div class="boxgrey boxgrey--tall"></div>
+                  </div>
+                </div>
+
+                <div class="mt10">
+                  <div class="form__row inline">
+                    <span class="subttl inline__lbl">Escolha o Tipo de Programa:</span>
+                    <select class="ctl ctl--wide2">
+                      <option>Programa (9 itens)</option>
+                    </select>
+                  </div>
+
+                  <table class="tbl tbl--peach mt10">
+                    <thead>
+                      <tr>
+                        <th style="width:32px"></th>
+                        <th style="width:220px">Item (ex: 1, 1.2,...)</th>
+                        <th>Tópico</th>
+                        <th style="width:320px">Tradução para Inglês do Tópico de Programa</th>
+                        <th style="width:85px">Horas de Contacto</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>1</td><td></td><td class="tdblue">Princípios de design hipermédia.</td><td class="tdblue">Hypermedia design principles.</td><td></td></tr>
+                      <tr><td>2</td><td></td><td class="tdblue">Desenvolvimento com linguagens de apresentação.</td><td class="tdblue">Development with presentation languages.</td><td></td></tr>
+                      <tr><td>3</td><td></td><td class="tdblue">Procedimentos de marcação semântica.</td><td class="tdblue">Procedures for semantic content marking.</td><td></td></tr>
+                      <tr><td>4</td><td></td><td class="tdblue">Desenvolvimento com linguagens de formatação.</td><td class="tdblue">Development with formatting languages.</td><td></td></tr>
+                      <tr><td>5</td><td></td><td class="tdblue">Estratégias de design responsivo/adaptativo.</td><td class="tdblue">Responsive/adaptive design strategies.</td><td></td></tr>
+                      <tr><td>6</td><td></td><td class="tdblue">Configuração de ambiente e templates.</td><td class="tdblue">Configuration of environment and templates.</td><td></td></tr>
+                      <tr><td>7</td><td></td><td class="tdblue">Manipulação do DOM com Javascript.</td><td class="tdblue">DOM manipulation with Javascript.</td><td></td></tr>
+                      <tr><td>8</td><td></td><td class="tdblue">Princípios de UX/UI.</td><td class="tdblue">Principles of UX/UI.</td><td></td></tr>
+                      <tr><td>9</td><td></td><td class="tdblue">Implementação de um website.</td><td class="tdblue">Implementation of a website.</td><td></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="printbar mt10">
+                  <span>Relatório a imprimir</span>
+                  <select class="ctl">
+                    <option>Ficha(s) de Disciplina(s)</option>
+                  </select>
+                  <button class="btn" type="button">Imprimir</button>
+                </div>
+              </div>
+
+              <!-- 4) Outros Dados -->
+              <div class="tabs__panel" data-panel="out">
+                <div class="grid2">
+                  <div>
+                    <div class="subttl">Atendimento:</div>
+                    <div class="boxgrey boxgrey--tall">
+                      Atendimento aos alunos decorre às terças-feiras, das 18h00 às 20h00
+                    </div>
+                  </div>
+
+                  <div>
+                    <div class="subttl">Tradução do Atendimento:</div>
+                    <div class="boxgrey boxgrey--tall"></div>
+                  </div>
+                </div>
+
+                <div class="grid2 mt10">
+                  <div>
+                    <div class="subttl">Observações:</div>
+                    <div class="boxgrey boxgrey--tall"></div>
+                  </div>
+
+                  <div>
+                    <div class="subttl">Tradução das Observações:</div>
+                    <div class="boxgrey boxgrey--tall"></div>
+                  </div>
+                </div>
+
+                <div class="printbar mt10">
+                  <span>Relatório a imprimir</span>
+                  <select class="ctl">
+                    <option>Ficha(s) de Disciplina(s)</option>
+                  </select>
+                  <button class="btn" type="button">Imprimir</button>
+                </div>
+              </div>
+
+              <!-- 5) Corpo Docente -->
+              <div class="tabs__panel" data-panel="doc">
+                <table class="tbl tbl--peach">
+                  <thead>
+                    <tr>
+                      <th>Docente</th>
+                      <th>Centro</th>
+                      <th style="width:160px">Função</th>
+                      <th style="width:210px">eMail</th>
+                      <th style="width:90px">Extensão</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Beatriz Rodrigues Jardim Rino Peres</td>
+                      <td>Escola Superior de Tecnologias e Gestão</td>
+                      <td>Ensino teórico-prático</td>
+                      <td><a href="#">beatriz.peres@staff.uma.pt</a></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>Frederica Margarida Camacho Gonçalves</td>
+                      <td>Escola Superior de Tecnologias e Gestão</td>
+                      <td>Ensino teórico-prático</td>
+                      <td><a href="#">frederica.goncalves@staff.uma.pt</a></td>
+                      <td>5035</td>
+                    </tr>
+                    <tr>
+                      <td>Marco Miguel de Olival Olim</td>
+                      <td>Escola Superior de Tecnologias e Gestão</td>
+                      <td>Ensino teórico-prático</td>
+                      <td><a href="#">molim@staff.uma.pt</a></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="printbar mt10">
+                  <span>Relatório a imprimir</span>
+                  <select class="ctl">
+                    <option>Ficha(s) de Disciplina(s)</option>
+                  </select>
+                  <button class="btn" type="button">Imprimir</button>
+                </div>
+              </div>
+
+              <!-- 6) Documentos -->
+              <div class="tabs__panel" data-panel="arq">
+                <div class="docrow">
+                  <div class="form__row inline">
+                    <span class="subttl inline__lbl">Filtrar por Categoria</span>
+                    <select class="ctl">
+                      <option></option>
+                      <option>Guias</option>
+                      <option>Ficheiros</option>
+                    </select>
+                    <button class="btn btn--wide" type="button">Filtrar Lista</button>
+                  </div>
+
+                  <div class="docrow__right">
+                    <a href="#" class="link-action">[ Gerir Ficheiros da Disciplina ]</a>
+                    <span class="iconset" aria-hidden="true">⬇︎</span>
+                  </div>
+                </div>
+
+                <div class="msg mt10">
+                  <span class="msg__icon" aria-hidden="true">ℹ️</span>
+                  Não foram encontrados ficheiros para a selecção efectuada ou não escolheu uma disciplina.
+                </div>
+
+                <div class="printbar mt10">
+                  <span>Relatório a imprimir</span>
+                  <select class="ctl">
+                    <option>Ficha(s) de Disciplina(s)</option>
+                  </select>
+                  <button class="btn" type="button">Imprimir</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /tabs -->
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__left">
+      <div>© Universidade da Madeira - Gabinete de Desenvolvimento de Aplicações Informáticas - <a href="#">Proteção de Dados e Termos de Utilização</a></div>
+      <div>Colégio dos Jesuítas, 9000-081 Funchal | Tel: +351 291 209400 | Fax: +351 291 209410</div>
+      <div>Processado em 0.38 segundos - powered by hydra framework</div>
+    </div>
+
+    <div class="footer__right">
+      <div class="footer__logo" aria-hidden="true"></div>
+      <div class="footer__badge" aria-hidden="true"></div>
+      <div class="footer__badge" aria-hidden="true"></div>
+    </div>
+  </footer>
+</body>
+</html>

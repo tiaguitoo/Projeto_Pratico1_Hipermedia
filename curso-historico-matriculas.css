@@ -1,0 +1,240 @@
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+  background: #f2f2f2;
+}
+
+/* TOPBAR */
+.topbar{
+  height: 64px;
+  background: #0676a8;
+  color: #fff;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 0 18px;
+}
+.topbar__left{ display:flex; align-items:center; gap:14px; }
+.topbar__title{ font-weight:700; font-size:18px; white-space:nowrap; }
+.topbar__right{ display:flex; align-items:center; gap:14px; }
+.topbar__lang{ font-size:12px; opacity: .95; }
+
+.logo{
+  width: 140px;
+  height: 34px;
+  background: rgba(255,255,255,.15);
+  border-radius: 3px;
+}
+
+.avatar{
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.18);
+  border: 1px solid rgba(255,255,255,.25);
+}
+
+/* LAYOUT */
+.layout{
+  min-height: calc(100vh - 64px);
+  display:flex;
+}
+
+/* SIDEBAR */
+.sidebar{
+  width: 180px;
+  background: #e6e6e6;
+  border-right: 1px solid #cfcfcf;
+}
+.menu{ padding: 8px 0; }
+.menu__item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding: 6px 8px;
+  font-size: 12px;
+  color: #000;
+  text-decoration:none;
+  border-bottom: 1px solid #dedede;
+}
+.menu__item:hover{ background:#dcdcdc; }
+.menu__item.is-active{
+  font-weight: 700;
+  background:#d5d5d5;
+}
+.chev{ color:#333; }
+
+/* MAIN */
+.main{
+  flex:1;
+  padding: 14px 18px 0 18px;
+}
+
+/* FOOTER */
+.footer{
+  background:#fff;
+  border-top: 1px solid #cfcfcf;
+  padding: 10px 12px;
+  display:flex;
+  justify-content:space-between;
+  gap: 12px;
+  font-size: 11px;
+  line-height: 1.25;
+}
+.footer a{ color:#06c; text-decoration:underline; }
+.footer__right{ display:flex; align-items:flex-end; gap:10px; }
+.footer__logo{
+  width: 70px; height: 28px;
+  background:#e9f7ef;
+  border: 1px solid #c9e6d7;
+}
+.footer__badge{
+  width: 40px; height: 28px;
+  background:#eef3ff;
+  border: 1px solid #d4ddff;
+}
+
+/* =========================================================
+   BOTÕES / INPUTS (clássico)
+========================================================= */
+.btn{
+  border: 1px solid #bdbdbd;
+  background: linear-gradient(#ffffff,#e9e9e9);
+  color:#111;
+  height: 28px;
+  padding: 0 14px;
+  border-radius: 3px;
+  font-size: 12px;
+  cursor:pointer;
+}
+.btn:hover{ filter: brightness(0.98); }
+
+.btn--grey{
+  min-width: 120px;
+}
+
+.input, .select{
+  width: 100%;
+  height: 22px;
+  border: 1px solid #bcbcbc;
+  background: #d9ebff; /* azul clarinho típico */
+  padding: 0 6px;
+  font-size: 12px;
+  outline: none;
+}
+.select{
+  appearance: auto;
+  background: #d9ebff;
+}
+
+/* =========================================================
+   PANELS (caixas com título)
+========================================================= */
+.panel{
+  background:#fff;
+  border: 1px solid #cfcfcf;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.panel__head{
+  background: #efefef;
+  border-bottom: 1px solid #cfcfcf;
+  padding: 6px 10px;
+  font-weight: 700;
+  font-size: 12px;
+}
+.panel__head--split{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap: 10px;
+}
+.panel__links{
+  font-weight: 400;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.panel__links a{
+  color:#06c;
+  text-decoration: underline;
+}
+.panel__links .dot{ color:#666; margin: 0 6px; }
+
+.panel__body{
+  padding: 10px;
+}
+
+/* Form layout */
+.form-grid{
+  display:flex;
+  flex-direction:column;
+  gap: 6px;
+}
+.form-row{
+  display:grid;
+  grid-template-columns: 90px 1fr;
+  gap: 10px;
+  align-items:center;
+}
+.label{
+  font-size: 12px;
+  color:#111;
+}
+.field{
+  display:flex;
+  gap: 10px;
+  align-items:center;
+}
+.field .input{ flex: 1; }
+.field .select{ flex: 1; }
+
+/* Filter row */
+.filter-row{
+  display:grid;
+  grid-template-columns: 120px 1fr;
+  gap: 10px;
+  align-items:center;
+  margin-bottom: 10px;
+}
+
+/* Tables */
+.table-wrap{
+  border: 1px solid #d7d7d7;
+  background:#fff;
+}
+.table{
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+.table thead th{
+  background: #fde7d4; /* header pêssego */
+  border-bottom: 1px solid #d7d7d7;
+  padding: 5px 6px;
+  text-align: left;
+  font-weight: 700;
+}
+.table tbody td{
+  border-top: 1px solid #ededed;
+  padding: 4px 6px;
+  vertical-align: top;
+}
+.table--striped tbody tr:nth-child(even){
+  background: #f3f3f3;
+}
+
+/* small notes */
+.note-right{
+  text-align: right;
+  font-size: 11px;
+  margin-top: 6px;
+}
+.hint{
+  font-size: 11px;
+  margin-top: 6px;
+}

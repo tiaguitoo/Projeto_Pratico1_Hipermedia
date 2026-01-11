@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InfoAlunos - Serviços / Cartão Universitário</title>
+  <link rel="stylesheet" href="servicos-cartao.css">
+  <link rel="stylesheet" href="ui-shell.css" />
+</head>
+
+<body>
+  <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+
+  <!-- TOPO AZUL -->
+  <header class="topbar">
+    <div class="topbar__left">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="topbar__title">
+        <strong>InfoAlunos</strong> - Serviço de Informação dos Alunos - <strong>v3.1.4</strong>
+      </div>
+    </div>
+
+    <div class="topbar__right">
+      <span class="topbar__lang">PT | EN</span>
+      <div class="user__avatar" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Menu principal">
+      <nav class="menu" aria-label="Navegação principal">
+        <a class="menu__item" href="menu-inicial.html">Início</a>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">Geral <span class="chev" aria-hidden="true">›</span></a>
+          <div class="menu__flyout">
+            <a class="menu__flyitem" href="geral-processos.html">Processos</a>
+            <a class="menu__flyitem" href="geral-dados-pessoais.html">Dados Pessoais</a>
+            <a class="menu__flyitem" href="geral-privacidade.html">Privacidade</a>
+            <a class="menu__flyitem" href="geral-ajuda.html">Ajuda</a>
+          </div>
+        </div>
+
+        <!-- Serviços ativo -->
+        <div class="menu__group">
+          <a class="menu__item is-active" href="#" aria-haspopup="true">
+            Serviços <span class="chev" aria-hidden="true">›</span>
+          </a>
+          <div class="menu__flyout" role="menu" aria-label="Submenu Serviços">
+            <a class="menu__flyitem" href="servicos-pagamentos.html">Pagamentos</a>
+            <a class="menu__flyitem" href="servicos-matriculas.html">Matrículas</a>
+            <a class="menu__flyitem" href="servicos-inscricoes.html">Inscrição em Turmas</a>
+            <a class="menu__flyitem" href="servicos-requerimentos.html">Requerimentos</a>
+            <a class="menu__flyitem is-subactive" href="servicos-cartao.html">Cartão Universitário</a>
+            <a class="menu__flyitem" href="#">SASUMa - Bolsas</a>
+          </div>
+        </div>
+
+        <a class="menu__item" href="#">Concursos</a>
+        <a class="menu__item" href="#">Avaliação</a>
+        <a class="menu__item" href="#">Creditações</a>
+        <a class="menu__item" href="#">Documentos</a>
+        <a class="menu__item" href="#">Aula</a>
+        <a class="menu__item" href="#">Disciplina</a>
+        <a class="menu__item" href="#">Curso</a>
+        <a class="menu__item" href="#">Instituição</a>
+        <a class="menu__item" href="#">Eleições</a>
+      </nav>
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <main id="conteudo" class="main" role="main" tabindex="-1">
+
+      <header class="card-head">
+        <h1 class="card-title">Dados para emissão do Cartão</h1>
+      </header>
+
+      <section class="card-wrap" aria-label="Dados do cartão universitário">
+        <div class="card-box">
+
+          <!-- esquerda: dados -->
+          <section class="card-left" aria-label="Dados do aluno para emissão">
+            <div class="linefield">
+              <div class="lf-label">Nome</div>
+              <div class="lf-value">Nome do Aluno</div>
+            </div>
+
+            <div class="linefield">
+              <div class="lf-label">Cartão de cidadão</div>
+              <div class="lf-value">00000000 0 ZZ0</div>
+            </div>
+
+            <div class="linefield">
+              <div class="lf-label">Departamento</div>
+              <div class="lf-value">CCT</div>
+            </div>
+
+            <div class="linefield">
+              <div class="lf-label">Curso</div>
+              <div class="lf-value">Tecnologias e Programação de Sistemas de Informação</div>
+            </div>
+
+            <div class="linefield linefield--morada">
+              <div class="lf-label">Morada</div>
+              <div class="lf-value">
+                Rua Exemplo, 27<br>
+                9000-000 Funchal<br>
+                Portugal
+              </div>
+            </div>
+          </section>
+
+          <!-- direita: mock do cartão + estado -->
+          <section class="card-right" aria-label="Pré-visualização do cartão e estado">
+            <div class="uni-card" aria-label="Cartão universitário (mock)">
+              <div class="uni-card__top">
+                <div class="uni-card__brand">
+                  UNIVERSIDADE<br>DA MADEIRA
+                </div>
+                <div class="uni-card__photo" aria-hidden="true"></div>
+              </div>
+
+              <div class="uni-card__mid">
+                <div class="uni-card__nfc" aria-hidden="true"></div>
+                <div class="uni-card__num">0000 0000 0000 0000</div>
+              </div>
+
+              <div class="uni-card__bottom">
+                <div class="uni-card__role">Aluno</div>
+                <div class="uni-card__name">Nome do Aluno</div>
+              </div>
+            </div>
+
+            <div class="linefield linefield--estado">
+              <div class="lf-label">Estado atual</div>
+              <div class="lf-value">Aguarda Pedido de Cartão</div>
+            </div>
+          </section>
+
+        </div>
+      </section>
+
+      <!-- Rodapé -->
+      <footer class="footer" role="contentinfo">
+        <div class="footer__left">
+          © Universidade da Madeira - Gabinete de Desenvolvimento de Aplicações Informáticas -
+          <a href="#">Proteção de Dados</a> e <a href="#">Termos de Utilização</a><br>
+          Colégio dos Jesuítas, 9000-081 Funchal | Tel: +351 291 209400 | Fax: +351 291 209410<br>
+          Processado em 0.22 segundos - powered by Hydra framework
+        </div>
+        <div class="footer__right" aria-hidden="true">
+          <div class="footer__logo"></div>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+</body>
+</html>

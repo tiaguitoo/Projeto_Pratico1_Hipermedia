@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InfoAlunos - Avaliação / Inquérito RAIDES</title>
+  <link rel="stylesheet" href="avaliacao-inquerito-raides.css">
+  <link rel="stylesheet" href="ui-shell.css" />
+</head>
+
+<body>
+  <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+
+  <!-- TOPO AZUL -->
+  <header class="topbar">
+    <div class="topbar__left">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="topbar__title">
+        <strong>InfoAlunos</strong> - Serviço de Informação dos Alunos - <strong>v3.1.4</strong>
+      </div>
+    </div>
+
+    <div class="topbar__right">
+      <span class="topbar__lang">PT | EN</span>
+      <div class="user__avatar" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Menu principal">
+      <nav class="menu" aria-label="Navegação principal">
+        <a class="menu__item" href="index.html">Início</a>
+
+        <div class="menu__group">
+          <a class="menu__item is-active" href="#" aria-haspopup="true">
+            Avaliação <span class="chev" aria-hidden="true">›</span>
+          </a>
+          <div class="menu__flyout" role="menu" aria-label="Submenu Avaliação">
+            <a class="menu__flyitem" href="avaliacao-pautas.html">Pautas</a>
+            <a class="menu__flyitem" href="avaliacao-reclamacao.html">Reclamação de Notas</a>
+            <a class="menu__flyitem" href="avaliacao-inquerito.html">Inquéritos</a>
+            <a class="menu__flyitem" href="avaliacao-resultado-inquerito.html">Resultado de Inquéritos</a>
+            <a class="menu__flyitem is-subactive" href="avaliacao-inquerito-raides.html">Inquérito RAIDES</a>
+          </div>
+        </div>
+
+        <a class="menu__item" href="#">Geral</a>
+        <a class="menu__item" href="#">Serviços</a>
+        <a class="menu__item" href="#">Documentos</a>
+        <a class="menu__item" href="#">Curso</a>
+      </nav>
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <main id="conteudo" class="main" role="main" tabindex="-1">
+
+      <!-- Select do curso (topo) -->
+      <section class="raides-top">
+        <label class="sr-only" for="curso">Curso</label>
+        <select id="curso" class="raides-select">
+          <option>2025/26 - CTeSP - Tecnologias e Programação de Sistemas de Informação</option>
+          <option>2024/25 - CTeSP - Tecnologias e Programação de Sistemas de Informação</option>
+        </select>
+      </section>
+
+      <h1 class="raides-title">Avaliação / Inquérito RAIDES</h1>
+
+      <p class="raides-intro">
+        Este Inquérito destina-se à recolha de dados, de acordo com as regras estabelecidas pela Direção-Geral de Estatísticas da Educação e Ciência, sendo de preenchimento obrigatório.
+      </p>
+
+      <!-- CARD 1 -->
+      <section class="card" aria-label="Informações sobre o Ingresso">
+        <div class="card__head">
+          <span class="step" aria-hidden="true">1</span>
+          <h2 class="card__title">Informações sobre o Ingresso</h2>
+        </div>
+
+        <div class="card__grid-2">
+          <div class="pair">
+            <div class="pair__label"><strong>Ano Letivo de Ingresso:</strong></div>
+            <div class="pair__value">2025/26</div>
+          </div>
+
+          <div class="pair">
+            <div class="pair__label"><strong>Forma de Ingresso:</strong></div>
+            <div class="pair__value">
+              Titulares de curso de ensino secundário ou de habilitação legalmente equivalente (para acesso ao curso técnico superior profissional)
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARD 2 -->
+      <section class="card" aria-label="Informações relativas à escolaridade completa mais elevada">
+        <div class="card__head">
+          <span class="step" aria-hidden="true">2</span>
+          <h2 class="card__title">Informações relativas à escolaridade completa mais elevada</h2>
+        </div>
+
+        <p class="card__hint">
+          Caso a sua escolaridade mais elevada corresponda a algumas das opções abaixo apresentadas deverá, selecioná-la.
+        </p>
+
+        <div class="choice choice--selected">
+          <label class="choice__row">
+            <input type="radio" name="esc" checked>
+            <span>2025 - Ensino Secundário ou Equivalente (12º Ano Escolaridade) - Portugal</span>
+          </label>
+        </div>
+
+        <div class="choice">
+          <label class="choice__row">
+            <input type="radio" name="esc">
+            <span>Caso a opção que procura não se encontre na lista acima, deve selecionar esta opção e inserir a informação na secção seguinte</span>
+          </label>
+        </div>
+
+        <hr class="sep">
+
+        <div class="form-rows">
+          <div class="form-row">
+            <label for="nivel">Qual o nível de escolaridade mais elevado que possui?</label>
+            <select id="nivel">
+              <option>Ensino secundário (12.º ano de escolaridade completo) ou equivalente</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="pais">Em que país completou essa escolaridade?</label>
+            <select id="pais">
+              <option>Portugal</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="ano-civil">Em que ano civil concluiu esse nível de escolaridade?</label>
+            <select id="ano-civil">
+              <option>2025</option>
+              <option>2024</option>
+              <option>2023</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="tipo-estab">Qual o tipo de estabelecimento (público ou privado) frequentado no secundário?</label>
+            <select id="tipo-estab">
+              <option>Privado</option>
+              <option>Público</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARD 3 -->
+      <section class="card" aria-label="Informações relativas aos pais do aluno">
+        <div class="card__head">
+          <span class="step" aria-hidden="true">3</span>
+          <h2 class="card__title">Informações relativas aos pais do aluno</h2>
+        </div>
+
+        <div class="form-rows">
+          <div class="form-row">
+            <label for="pai-hab">Qual a habilitação académica do seu pai?</label>
+            <select id="pai-hab">
+              <option>3 Ciclo do ensino básico ou equivalente (9º Ano Escolaridade)</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="mae-hab">Qual a habilitação académica da sua mãe?</label>
+            <select id="mae-hab">
+              <option>Ensino Secundário ou Equivalente (12º Ano Escolaridade)</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="pai-sit">Qual a situação profissional do seu pai?</label>
+            <select id="pai-sit">
+              <option>Trabalhador por Conta de Outrem</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="mae-sit">Qual a situação profissional da sua mãe?</label>
+            <select id="mae-sit">
+              <option>Trabalhador por Conta de Outrem</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="pai-prof">Qual a profissão do seu pai?</label>
+            <select id="pai-prof">
+              <option>Não Sabe / Não se Aplica</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="mae-prof">Qual a profissão da sua mãe?</label>
+            <select id="mae-prof">
+              <option>Empregados de escritório, secretários em geral e operadores de processamento de dados</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <!-- CARD 4 -->
+      <section class="card" aria-label="Informações relativas ao aluno">
+        <div class="card__head">
+          <span class="step" aria-hidden="true">4</span>
+          <h2 class="card__title">Informações relativas ao aluno</h2>
+        </div>
+
+        <div class="form-rows">
+          <div class="form-row">
+            <label for="sit-prof">Qual a sua situação profissional?</label>
+            <select id="sit-prof">
+              <option>Estudante</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="prof-atual">Qual a sua profissão atual (ou anterior, em caso de reforma ou desemprego)</label>
+            <select id="prof-atual">
+              <option>Não Sabe / Não se Aplica</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="pais-sec">Em que país concluiu o ensino secundário?</label>
+            <select id="pais-sec">
+              <option>Portugal</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="deslocado">Está deslocado da sua residência familiar?</label>
+            <select id="deslocado">
+              <option>Não</option>
+              <option>Sim</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <div class="actions">
+        <button class="btn-submit" type="button">Submeter inquérito</button>
+      </div>
+
+      <!-- FOOTER -->
+      <footer class="footer" role="contentinfo">
+        <div class="footer__left">
+          © Universidade da Madeira - Gabinete de Desenvolvimento de Aplicações Informáticas -
+          <a href="#">Proteção de Dados</a> e <a href="#">Termos de Utilização</a><br>
+          Colégio dos Jesuítas, 9000-081 Funchal | Tel: +351 291 209400 | Fax: +351 291 209410<br>
+          Processado em 0.10 segundos - powered by Hydra framework
+        </div>
+        <div class="footer__right" aria-hidden="true">
+          <div class="footer__logo"></div>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+</body>
+</html>

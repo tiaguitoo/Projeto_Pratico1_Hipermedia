@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InfoAlunos - Avaliação / Pautas</title>
+  <link rel="stylesheet" href="avaliacao-pautas.css">
+  <link rel="stylesheet" href="ui-shell.css" />
+</head>
+
+<body>
+  <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+
+  <!-- TOPO AZUL -->
+  <header class="topbar">
+    <div class="topbar__left">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="topbar__title">
+        <strong>InfoAlunos</strong> - Serviço de Informação dos Alunos - <strong>v3.1.4</strong>
+      </div>
+    </div>
+
+    <div class="topbar__right">
+      <span class="topbar__lang">PT | EN</span>
+      <div class="user__avatar" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Menu principal">
+      <nav class="menu" aria-label="Navegação principal">
+        <a class="menu__item" href="index.html">Início</a>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">Geral <span class="chev" aria-hidden="true">›</span></a>
+          <div class="menu__flyout">
+            <a class="menu__flyitem" href="geral-processos.html">Processos</a>
+            <a class="menu__flyitem" href="geral-dados-pessoais.html">Dados Pessoais</a>
+            <a class="menu__flyitem" href="geral-privacidade.html">Privacidade</a>
+            <a class="menu__flyitem" href="geral-ajuda.html">Ajuda</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">Serviços <span class="chev" aria-hidden="true">›</span></a>
+          <div class="menu__flyout">
+            <a class="menu__flyitem" href="servicos-pagamentos.html">Pagamentos</a>
+            <a class="menu__flyitem" href="servicos-matriculas.html">Matrículas</a>
+            <a class="menu__flyitem" href="servicos-inscricoes.html">Inscrição em Turmas</a>
+            <a class="menu__flyitem" href="servicos-requerimentos.html">Requerimentos</a>
+            <a class="menu__flyitem" href="servicos-cartao.html">Cartão Universitário</a>
+          </div>
+        </div>
+
+        <!-- Avaliação ativo -->
+        <div class="menu__group">
+          <a class="menu__item is-active" href="#" aria-haspopup="true">
+            Avaliação <span class="chev" aria-hidden="true">›</span>
+          </a>
+          <div class="menu__flyout" role="menu" aria-label="Submenu Avaliação">
+            <a class="menu__flyitem is-subactive" href="avaliacao-pautas.html">Pautas</a>
+            <a class="menu__flyitem" href="#">Reclamação de Notas</a>
+            <a class="menu__flyitem" href="#">Inquéritos</a>
+            <a class="menu__flyitem" href="#">Resultado de Inquéritos</a>
+            <a class="menu__flyitem" href="#">Inquérito RAIDES</a>
+          </div>
+        </div>
+
+        <a class="menu__item" href="#">Creditações</a>
+        <a class="menu__item" href="#">Documentos</a>
+        <a class="menu__item" href="#">Aula</a>
+        <a class="menu__item" href="#">Disciplina</a>
+        <a class="menu__item" href="#">Curso</a>
+        <a class="menu__item" href="#">Instituição</a>
+        <a class="menu__item" href="#">Eleições</a>
+      </nav>
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <main id="conteudo" class="main" role="main" tabindex="-1">
+
+      <!-- bloco pesquisa -->
+      <section class="box" aria-label="Pesquisa de Disciplinas">
+        <div class="box__title">Pesquisa de Disciplinas</div>
+
+        <div class="form-grid">
+          <label for="ano">Ano Lectivo</label>
+          <select id="ano" name="ano">
+            <option>2025/26</option>
+            <option>2024/25</option>
+          </select>
+          <button class="btn-classic" type="button">Pesquisar...</button>
+
+          <label for="disc">Disciplina</label>
+          <select id="disc" name="disc">
+            <option>Desenvolvimento Web - Back-End_CTeSP_TPSI [ S2 ]</option>
+            <option>Outra disciplina</option>
+          </select>
+          <span></span>
+        </div>
+
+        <div class="box__title box__title--sub">Pesquisa de Avaliações</div>
+
+        <div class="form-grid form-grid--one">
+          <label for="tipo">Tipo Avaliação</label>
+          <select id="tipo" name="tipo">
+            <option></option>
+            <option>Época Normal</option>
+            <option>Recurso</option>
+          </select>
+          <button class="btn-classic" type="button">Pesquisar...</button>
+        </div>
+      </section>
+
+      <!-- Lista de Pautas -->
+      <section class="box" aria-label="Lista de Pautas">
+        <div class="box__title">Lista de Pautas</div>
+
+        <div class="msg">
+          <span class="info-dot" aria-hidden="true">i</span>
+          <span>Seleccione uma disciplina e/ou tipo de avaliação!</span>
+        </div>
+
+        <div class="inner" aria-label="Alunos associados às pautas">
+          <div class="inner__title">Alunos associados às pautas</div>
+
+          <div class="msg msg--indent">
+            <span class="info-dot" aria-hidden="true">i</span>
+            <span>Seleccione uma ou mais pautas!</span>
+          </div>
+
+          <div class="msg msg--indent">
+            <span class="info-dot" aria-hidden="true">i</span>
+            <span>Sem resultados</span>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__left">
+      <div>© Universidade da Madeira - Gabinete de Desenvolvimento de Aplicações Informáticas - <a href="#">Proteção de Dados e Termos de Utilização</a></div>
+      <div>Colégio dos Jesuítas, 9000-081 Funchal | Tel: +351 291 209400 | Fax: +351 291 209410</div>
+      <div>Processado em 0.38 segundos - powered by hydra framework</div>
+    </div>
+
+    <div class="footer__right">
+      <div class="footer__logo" aria-hidden="true"></div>
+      <div class="footer__badge" aria-hidden="true"></div>
+      <div class="footer__badge" aria-hidden="true"></div>
+    </div>
+  </footer>
+</body>
+</html>

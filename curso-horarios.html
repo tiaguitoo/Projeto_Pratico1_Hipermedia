@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>InfoAlunos - Curso - Horários</title>
+
+  <link rel="stylesheet" href="curso-horarios.css" />
+  <link rel="stylesheet" href="ui-shell.css" />
+</head>
+
+<body>
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <div class="topbar__left">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="topbar__title">
+        <strong>InfoAlunos</strong> - Serviço de Informação dos Alunos - <strong>v3.1.4</strong>
+      </div>
+    </div>
+
+    <div class="topbar__right">
+      <span class="topbar__lang">PT | EN</span>
+      <div class="user__avatar" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <nav class="menu">
+        <a class="menu__item" href="#">Início</a>
+        <a class="menu__item" href="#">Geral <span class="chev">›</span></a>
+        <a class="menu__item" href="#">Serviços <span class="chev">›</span></a>
+        <a class="menu__item" href="#">Concursos <span class="chev">›</span></a>
+        <a class="menu__item" href="#">Avaliação <span class="chev">›</span></a>
+        <a class="menu__item" href="#">Créditações <span class="chev">›</span></a>
+        <a class="menu__item" href="#">Documentos <span class="chev">›</span></a>
+        <a class="menu__item" href="#">Aula <span class="chev">›</span></a>
+        <a class="menu__item" href="#">Disciplina <span class="chev">›</span></a>
+        <a class="menu__item is-active" href="#">Curso <span class="chev">›</span></a>
+        <a class="menu__item" href="#">Instituição <span class="chev">›</span></a>
+        <a class="menu__item" href="#">Eleições</a>
+      </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+      <section class="card schedule">
+
+        <!-- Toolbar (top inside card) -->
+        <div class="schedule__toolbar">
+          <button class="btn btn--ghost btn--pill">Hoje</button>
+
+          <div class="schedule__nav">
+            <button class="icon-btn" aria-label="Semana anterior">‹</button>
+            <button class="icon-btn" aria-label="Semana seguinte">›</button>
+          </div>
+
+          <div class="schedule__range">
+            <span class="range__text">12 jan. - 18 jan. 2026</span>
+            <span class="range__caret">▼</span>
+          </div>
+
+          <div class="schedule__spacer"></div>
+
+          <div class="schedule__actions">
+            <button class="btn btn--primary btn--pill">Aulas</button>
+            <button class="btn btn--ghost btn--pill">Avaliação</button>
+            <button class="icon-btn" aria-label="Exportar">⤓</button>
+            <button class="icon-btn" aria-label="Imprimir">🖨</button>
+          </div>
+        </div>
+
+        <!-- Grid -->
+        <div class="timetable">
+          <!-- Header row: empty corner + days -->
+          <div class="timetable__head">
+            <div class="corner"></div>
+
+            <div class="day">
+              <div class="day__num">12</div>
+              <div class="day__name">SEGUNDA-FEIRA</div>
+            </div>
+
+            <div class="day">
+              <div class="day__num">13</div>
+              <div class="day__name">TERÇA-FEIRA</div>
+            </div>
+
+            <div class="day">
+              <div class="day__num">14</div>
+              <div class="day__name">QUARTA-FEIRA</div>
+            </div>
+
+            <div class="day">
+              <div class="day__num">15</div>
+              <div class="day__name">QUINTA-FEIRA</div>
+            </div>
+
+            <div class="day">
+              <div class="day__num">16</div>
+              <div class="day__name">SEXTA-FEIRA</div>
+            </div>
+          </div>
+
+          <!-- Body: time column + grid canvas (events absolutely placed) -->
+          <div class="timetable__body">
+
+            <!-- Time column -->
+            <div class="times">
+              <div class="time">07:30</div>
+              <div class="time">08:00</div>
+              <div class="time">08:30</div>
+              <div class="time">09:00</div>
+              <div class="time">09:30</div>
+              <div class="time">10:00</div>
+              <div class="time">10:30</div>
+              <div class="time">11:00</div>
+              <div class="time">11:30</div>
+              <div class="time">12:00</div>
+              <div class="time">12:30</div>
+              <div class="time">13:00</div>
+              <div class="time">13:30</div>
+              <div class="time">14:00</div>
+              <div class="time">14:30</div>
+              <div class="time">15:00</div>
+              <div class="time">15:30</div>
+              <div class="time">16:00</div>
+              <div class="time">16:30</div>
+              <div class="time">17:00</div>
+              <div class="time">17:30</div>
+              <div class="time">18:00</div>
+              <div class="time">18:30</div>
+              <div class="time">19:00</div>
+              <div class="time">19:30</div>
+              <div class="time">20:00</div>
+              <div class="time">20:30</div>
+              <div class="time">21:00</div>
+              <div class="time">21:30</div>
+            </div>
+
+            <!-- Canvas grid -->
+            <div class="canvas">
+              <!-- vertical day separators are background; same for horizontal lines -->
+
+              <!-- Events
+                   Positioning:
+                   --day: 1..5 (seg..sex)
+                   --start: row index from top (0 = 07:30)
+                   --dur: number of 30-min slots
+              -->
+
+              <!-- Segunda: Design Hipermédia 17:30-19:30 (4 slots) -->
+              <article class="event event--teal" style="--day:1; --start:20; --dur:4;">
+                <div class="event__time">17:30-19:30</div>
+                <div class="event__title">Design Hipermédia_CTeSP_TPSI</div>
+                <div class="event__meta">[H] Sala de aula n.º 29 - Piso 2</div>
+              </article>
+
+              <!-- Segunda: Design Hipermédia 20:00-21:00 (2 slots) -->
+              <article class="event event--teal2" style="--day:1; --start:25; --dur:2;">
+                <div class="event__time">20:00-21:00</div>
+                <div class="event__title">Design Hipermédia_CTeSP_TPSI</div>
+              </article>
+
+              <!-- Quarta: Técnicas de Expressão 11:00-13:00 (4 slots) -->
+              <article class="event event--purple" style="--day:3; --start:7; --dur:4;">
+                <div class="event__time">11:00-13:00</div>
+                <div class="event__title">Técnicas de Expressão do Português_CTeSP_TPSI</div>
+                <div class="event__meta">[TP] Sala de aula n.º 14 - Piso 1</div>
+              </article>
+
+              <!-- Quarta: SO e Redes 14:00-16:00 (4 slots) -->
+              <article class="event event--red" style="--day:3; --start:13; --dur:4;">
+                <div class="event__time">14:00-16:00</div>
+                <div class="event__title">Sistemas Operativos e Redes_CTeSP_TPSI</div>
+                <div class="event__meta">[H] Laboratório n.º 2 (Telecomunicações e Redes) - DME - Piso 2</div>
+              </article>
+
+              <!-- Quarta: Design Hipermédia 16:00-17:00 (2 slots) -->
+              <article class="event event--teal" style="--day:3; --start:17; --dur:2;">
+                <div class="event__time">16:00-17:00</div>
+                <div class="event__title">Design Hipermédia_CTeSP_TPSI</div>
+              </article>
+
+              <!-- Quarta: Design Hipermédia 17:00-18:00 (2 slots) -->
+              <article class="event event--teal2" style="--day:3; --start:19; --dur:2;">
+                <div class="event__time">17:00-18:00</div>
+                <div class="event__title">Design Hipermédia_CTeSP_TPSI</div>
+              </article>
+
+              <!-- Quinta: SO e Redes 09:00-11:00 (4 slots) -->
+              <article class="event event--red2" style="--day:4; --start:3; --dur:4;">
+                <div class="event__time">09:00-11:00</div>
+                <div class="event__title">Sistemas Operativos e Redes_CTeSP_TPSI</div>
+                <div class="event__meta">[H] (Ed. Castanheiro) Centro de Simulação Empresarial - Piso 0</div>
+              </article>
+
+              <!-- Quinta: Design Hipermédia 14:00-16:00 (4 slots) -->
+              <article class="event event--aqua" style="--day:4; --start:13; --dur:4;">
+                <div class="event__time">14:00-16:00</div>
+                <div class="event__title">Design Hipermédia_CTeSP_TPSI</div>
+                <div class="event__meta">[Frequência] (Ed. Castanheiro) Centro de Simulação Empresarial - Piso 0</div>
+              </article>
+
+              <!-- Quinta: Matemática 16:00-18:00 (4 slots) -->
+              <article class="event event--blue" style="--day:4; --start:17; --dur:4;">
+                <div class="event__time">16:00-18:00</div>
+                <div class="event__title">Matemática_CTeSP_TPSI</div>
+                <div class="event__meta">[TP] (Ed. Castanheiro) Sala 16 - Piso 0</div>
+              </article>
+
+              <!-- Quinta: Técnicas 18:00-20:00 (4 slots) -->
+              <article class="event event--purple2" style="--day:4; --start:21; --dur:4;">
+                <div class="event__time">18:00-20:00</div>
+                <div class="event__title">Técnicas de Expressão do Português_CTeSP_TPSI</div>
+                <div class="event__meta">[TP] (Ed. Castanheiro) Sala 16 - Piso 0</div>
+              </article>
+
+              <!-- Sexta: Introdução Prog 08:00-09:00 (2 slots) -->
+              <article class="event event--orange" style="--day:5; --start:1; --dur:2;">
+                <div class="event__time">08:00-09:00</div>
+                <div class="event__title">Introdução à Programação_CTeSP_TPSI</div>
+              </article>
+
+              <!-- Sexta: Introdução Prog 09:00-12:00 (6 slots) -->
+              <article class="event event--orange2" style="--day:5; --start:3; --dur:6;">
+                <div class="event__time">09:00-12:00</div>
+                <div class="event__title">Introdução à Programação_CTeSP_TPSI</div>
+                <div class="event__meta">[H] Sala de Aula n.º 31 - Piso 2</div>
+              </article>
+
+              <!-- Sexta: Técnicas 14:00-18:00 (8 slots) -->
+              <article class="event event--purple" style="--day:5; --start:13; --dur:8;">
+                <div class="event__time">14:00-18:00</div>
+                <div class="event__title">Técnicas de Expressão do Português_CTeSP_TPSI</div>
+                <div class="event__meta">[TP] Sala de aula n.º 14 - Piso 1</div>
+              </article>
+
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <div class="bottom-actions">
+        <button class="btn btn--primary">Consultar outros horários</button>
+        <button class="btn btn--primary">Consultar horário mensal</button>
+      </div>
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__left">
+      © Universidade da Madeira - Gabinete de Desenvolvimento de Aplicações Informáticas<br>
+      Colégio dos Jesuítas, 9000-081 Funchal | Tel: +351 291 209400 | Fax: +351 291 209410<br>
+      <a href="#">Proteção de Dados e Termos de Utilização</a><br>
+      Processado em 0.1 segundos - powered by hydra framework
+    </div>
+
+    <div class="footer__right">
+      <div class="footer__logo"></div>
+      <div class="footer__badge"></div>
+    </div>
+  </footer>
+</body>
+</html>

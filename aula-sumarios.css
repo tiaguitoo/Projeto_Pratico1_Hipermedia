@@ -1,0 +1,285 @@
+/* ===== BASE (igual aos teus CSS anteriores) ===== */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  background: #f2f2f2;
+}
+
+a { color: #0000ee; }
+
+.skip {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: #fff;
+  border: 1px solid #999;
+  padding: 5px;
+  transform: translateY(-150%);
+}
+.skip:focus { transform: translateY(0); }
+
+.topbar {
+  height: 60px;
+  background: #0a78b8;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.topbar__left{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 40px;
+  height: 30px;
+  background: rgba(255,255,255,0.4);
+}
+
+.user__avatar {
+  width: 32px;
+  height: 32px;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+}
+
+.topbar__right{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.topbar__lang{
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.topbar__sep{ opacity: .9; }
+
+.layout {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  min-height: calc(100vh - 60px);
+}
+
+.sidebar {
+  background: #e6e6e6;
+  border-right: 1px solid #bdbdbd;
+}
+
+.menu__item {
+  display: block;
+  padding: 6px 10px;
+  border-bottom: 1px solid #ccc;
+  text-decoration: none;
+  color: #000;
+}
+
+.menu__item:hover { background: #ddd; }
+.menu__item.is-active { font-weight: bold; }
+
+.menu__group { position: relative; }
+.chev { float: right; }
+
+.menu__flyout {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: #e6e6e6;
+  border: 1px solid #bdbdbd;
+  min-width: 180px;
+  display: none;
+  z-index: 5;
+}
+
+.menu__group:hover .menu__flyout,
+.menu__group:focus-within .menu__flyout {
+  display: block;
+}
+
+.menu__flyitem {
+  display: block;
+  padding: 6px 10px;
+  border-bottom: 1px solid #ccc;
+  text-decoration: none;
+  color: #000;
+}
+
+.menu__flyitem:hover { background: #ddd; }
+
+.main { padding: 10px; }
+
+/* Footer estilo InfoAlunos */
+.footer {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px solid #bdbdbd;
+  background: #ffffff;
+  padding: 8px 10px;
+  font-size: 11px;
+  color: #000;
+}
+
+.footer__left a {
+  color: #0000ee;
+  text-decoration: underline;
+}
+
+.footer__right { display: flex; align-items: flex-end; }
+
+.footer__logo {
+  width: 110px;
+  height: 32px;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+}
+
+/* ===== COMPONENTES (painéis/títulos) ===== */
+.panel{
+  background: #fff;
+  border: 1px solid #bdbdbd;
+  margin-bottom: 10px;
+}
+
+.panel__title{
+  background: #efefef;
+  padding: 6px;
+  font-weight: bold;
+  border-bottom: 1px solid #bdbdbd;
+}
+
+.panel__body{
+  padding: 8px;
+}
+
+/* controlos */
+.ctrl{
+  width: 100%;
+  height: 20px;
+  font-size: 12px;
+  border: 1px solid #8f8f8f;
+  background: #cfe6ff;
+}
+
+.ctrl--select{ padding: 0 2px; }
+.ctrl--text{ padding: 0 4px; background: #efefef; }
+
+/* botão clássico */
+.btn-classic{
+  height: 22px;
+  min-width: 210px;
+  border: 1px solid #9c9c9c;
+  background: linear-gradient(#ffffff, #dcdcdc);
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.btn-classic:hover{ filter: brightness(0.98); }
+
+/* grelha base de formulários (como nos prints) */
+.formgrid{
+  display: grid;
+  gap: 10px 10px;
+  align-items: center;
+}
+
+.formgrid--search{
+  grid-template-columns: 260px 1fr 230px;
+}
+
+.lbl{ white-space: nowrap; }
+.field{ width: 100%; }
+
+.rightbtn{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.lbl--mini{
+  font-weight: normal;
+  margin-bottom: 3px;
+}
+
+/* Turmas/Aulas: 2 colunas + botão */
+.formgrid--turmas{
+  grid-template-columns: 260px 1fr 230px;
+  align-items: end;
+}
+
+.rightbtn--middle{ align-self: end; }
+
+/* ===== Painel grande dividido ===== */
+.panel--big .panel__body{
+  padding: 0;
+}
+
+.panel__body--split{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  min-height: 210px;
+}
+
+.split{
+  padding: 10px;
+}
+
+.split--left{
+  border-right: 1px solid #d3d3d3;
+}
+
+.block{
+  margin-bottom: 12px;
+}
+
+.block__title{
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+/* mensagens “info” como no print */
+.info{
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  color: #000;
+  font-size: 12px;
+}
+
+.info__icon{
+  width: 16px;
+  display: inline-flex;
+  justify-content: center;
+}
+
+/* Responsivo */
+@media (width < 980px){
+  .layout { grid-template-columns: 1fr; }
+  .menu__flyout { position: static; border-left: none; border-right: none; }
+
+  .formgrid--search,
+  .formgrid--turmas{
+    grid-template-columns: 1fr;
+  }
+
+  .rightbtn{ justify-content: flex-start; }
+  .btn-classic{ min-width: 180px; }
+
+  .panel__body--split{
+    grid-template-columns: 1fr;
+  }
+
+  .split--left{
+    border-right: none;
+    border-bottom: 1px solid #d3d3d3;
+  }
+}

@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InfoAlunos - Geral / Ajuda</title>
+  <link rel="stylesheet" href="geral-ajuda.css">
+  <link rel="stylesheet" href="ui-shell.css" />
+</head>
+
+<body>
+  <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+
+  <!-- TOPO AZUL -->
+  <header class="topbar">
+    <div class="topbar__left">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="topbar__title">
+        <strong>InfoAlunos</strong> - Serviço de Informação dos Alunos - <strong>v3.1.4</strong>
+      </div>
+    </div>
+
+    <div class="topbar__right">
+      <span class="topbar__lang">PT | EN</span>
+      <div class="user__avatar" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Menu principal">
+      <nav class="menu" aria-label="Navegação principal">
+        <a class="menu__item" href="index.html">Início</a>
+
+        <!-- Geral -->
+        <div class="menu__group">
+          <a class="menu__item is-active" href="#" aria-haspopup="true">
+            Geral <span class="chev" aria-hidden="true">›</span>
+          </a>
+          <div class="menu__flyout" role="menu" aria-label="Submenu Geral">
+            <a class="menu__flyitem" href="geral-processos.html">Processos</a>
+            <a class="menu__flyitem" href="geral-dados-pessoais.html">Dados Pessoais</a>
+            <a class="menu__flyitem" href="geral-privacidade.html">Privacidade</a>
+            <a class="menu__flyitem is-subactive" href="geral-ajuda.html">Ajuda</a>
+          </div>
+        </div>
+
+        <!-- Serviços -->
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">
+            Serviços <span class="chev" aria-hidden="true">›</span>
+          </a>
+          <div class="menu__flyout" role="menu" aria-label="Submenu Serviços">
+            <a class="menu__flyitem" href="#">Pagamentos</a>
+            <a class="menu__flyitem" href="#">Matrículas</a>
+            <a class="menu__flyitem" href="#">Inscrição em Turmas</a>
+            <a class="menu__flyitem" href="#">Requerimentos</a>
+            <a class="menu__flyitem" href="#">Cartão Universitário</a>
+            <a class="menu__flyitem" href="#">SASUMa - Bolsas</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">
+            Concursos <span class="chev" aria-hidden="true">›</span>
+          </a>
+          <div class="menu__flyout"><a class="menu__flyitem" href="#">Candidaturas</a></div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">
+            Avaliação <span class="chev" aria-hidden="true">›</span>
+          </a>
+          <div class="menu__flyout">
+            <a class="menu__flyitem" href="#">Pautas</a>
+            <a class="menu__flyitem" href="#">Reclamação de Notas</a>
+            <a class="menu__flyitem" href="#">Inquéritos</a>
+            <a class="menu__flyitem" href="#">Resultado de Inquéritos</a>
+            <a class="menu__flyitem" href="#">Inquérito RAIDES</a>
+          </div>
+        </div>
+
+        <a class="menu__item" href="#">Creditações</a>
+        <a class="menu__item" href="#">Documentos</a>
+        <a class="menu__item" href="#">Aula</a>
+        <a class="menu__item" href="#">Disciplina</a>
+        <a class="menu__item" href="#">Curso</a>
+        <a class="menu__item" href="#">Instituição</a>
+        <a class="menu__item" href="#">Eleições</a>
+      </nav>
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <main id="conteudo" class="main" role="main" tabindex="-1">
+      <section class="help-grid" aria-label="Ajuda e contactos">
+
+        <!-- Contactos (esquerda) -->
+        <section class="panel help-contacts" aria-label="Contactos">
+          <div class="panel__title">Contactos</div>
+          <div class="panel__body help-contacts__body">
+
+            <h2 class="c-h2">Reitoria da Universidade da Madeira</h2>
+            <p class="c-p">
+              Colégio dos Jesuítas - Rua dos Ferreiros<br>
+              9000-082 Funchal - Portugal<br>
+              Tel: (+351) 291 209400<br>
+              Email: <a href="#">gabinete@reitoria.uma.pt</a>
+            </p>
+
+            <h2 class="c-h2">Campus Universitário da Penteada</h2>
+            <p class="c-p">
+              Caminho da Penteada 9020-105 Funchal<br>
+              Tel: (+351) 291 705000
+            </p>
+
+            <h2 class="c-h2">Gabinete de Apoio ao Estudante</h2>
+            <p class="c-p">
+              Campus Universitário da Penteada<br>
+              9020-105 Funchal<br>
+              Tel: (+351) 291 705270<br>
+              Url: <a href="#">https://www.uma.pt/.../gabinete-de-apoio-ao-estudante/</a><br>
+              Email: <a href="#">apoio.estudante@mail.uma.pt</a>
+            </p>
+
+          </div>
+        </section>
+
+        <!-- Contacto Directo (direita) -->
+        <section class="panel help-direct" aria-label="Contacto Directo">
+          <div class="panel__title">Contacto Directo</div>
+          <div class="panel__body">
+
+            <p class="hint">
+              Se preferir, pode contactar-nos directamente a partir deste formulário.
+              Seleccione o destinatário, escreva a mensagem e já está!
+            </p>
+
+            <form class="form" action="#" method="post">
+              <div class="form-row">
+                <label for="para">Para:</label>
+                <select id="para" name="para">
+                  <option>Gabinete de Apoio ao Estudante</option>
+                  <option>Reitoria</option>
+                  <option>Serviços Académicos</option>
+                </select>
+              </div>
+
+              <div class="form-row">
+                <label for="nome">Nome:</label>
+                <input id="nome" name="nome" type="text" value="Tiago Nuno Sousa Freitas">
+              </div>
+
+              <div class="form-row">
+                <label for="email">E-Mail:</label>
+                <input id="email" name="email" type="email" value="">
+              </div>
+
+              <div class="form-row">
+                <label for="assunto">Assunto:</label>
+                <input id="assunto" name="assunto" type="text" value="">
+              </div>
+
+              <div class="form-row form-row--msg">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="9"></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button class="btn-send" type="submit">Enviar</button>
+              </div>
+            </form>
+
+          </div>
+        </section>
+
+      </section>
+
+      <!-- Rodapé (igual ao estilo do InfoAlunos) -->
+      <footer class="footer" role="contentinfo">
+        <div class="footer__left">
+          © Universidade da Madeira - Gabinete de Desenvolvimento de Aplicações Informáticas -
+          <a href="#">Proteção de Dados</a> e <a href="#">Termos de Utilização</a><br>
+          Colégio dos Jesuítas, 9000-081 Funchal | Tel: +351 291 209400 | Fax: +351 291 209410<br>
+          Processado em 0.03 segundos - powered by Hydra framework
+        </div>
+        <div class="footer__right" aria-hidden="true">
+          <div class="footer__logo"></div>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+</body>
+</html>

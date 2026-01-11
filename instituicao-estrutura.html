@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>InfoAlunos - Instituição / Estrutura</title>
+  <link rel="stylesheet" href="instituicao-estrutura.css" />
+  <link rel="stylesheet" href="ui-shell.css" />
+</head>
+
+<body>
+  <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+
+  <!-- TOPBAR -->
+  <header class="topbar">
+    <div class="topbar__left">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="topbar__title">
+        <strong>InfoAlunos</strong> - Serviço de Informação dos Alunos - <strong>v3.1.4</strong>
+      </div>
+    </div>
+
+    <div class="topbar__right">
+      <span class="topbar__lang">PT | EN</span>
+      <div class="user__avatar" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <!-- LAYOUT -->
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Menu lateral">
+      <nav class="menu">
+        <a class="menu__item" href="#">Início</a>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#">Geral <span class="chev">›</span></a>
+          <div class="menu__flyout" role="menu" aria-label="Geral">
+            <a class="menu__flyitem" href="#">Processos</a>
+            <a class="menu__flyitem" href="#">Dados Pessoais</a>
+            <a class="menu__flyitem" href="#">Privacidade</a>
+            <a class="menu__flyitem" href="#">Ajuda</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#">Serviços <span class="chev">›</span></a>
+          <div class="menu__flyout" role="menu" aria-label="Serviços">
+            <a class="menu__flyitem" href="#">Pagamentos</a>
+            <a class="menu__flyitem" href="#">Matrículas</a>
+            <a class="menu__flyitem" href="#">Inscrições</a>
+            <a class="menu__flyitem" href="#">Requerimentos</a>
+            <a class="menu__flyitem" href="#">Cartão</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#">Concursos <span class="chev">›</span></a>
+          <div class="menu__flyout" role="menu" aria-label="Concursos">
+            <a class="menu__flyitem" href="#">Candidaturas</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#">Avaliação <span class="chev">›</span></a>
+          <div class="menu__flyout" role="menu" aria-label="Avaliação">
+            <a class="menu__flyitem" href="#">Pautas</a>
+            <a class="menu__flyitem" href="#">Reclamação</a>
+            <a class="menu__flyitem" href="#">Inquérito</a>
+            <a class="menu__flyitem" href="#">Resultado Inquérito</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#">Creditações <span class="chev">›</span></a>
+          <div class="menu__flyout" role="menu" aria-label="Creditações">
+            <a class="menu__flyitem" href="#">Lista</a>
+            <a class="menu__flyitem" href="#">Novo</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#">Documentos <span class="chev">›</span></a>
+          <div class="menu__flyout" role="menu" aria-label="Documentos">
+            <a class="menu__flyitem" href="#">Académicos</a>
+            <a class="menu__flyitem" href="#">Declarações</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#">Aula <span class="chev">›</span></a>
+          <div class="menu__flyout" role="menu" aria-label="Aula">
+            <a class="menu__flyitem" href="#">Presença</a>
+            <a class="menu__flyitem" href="#">Calendário</a>
+            <a class="menu__flyitem" href="#">Sumários</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#">Disciplina <span class="chev">›</span></a>
+          <div class="menu__flyout" role="menu" aria-label="Disciplina">
+            <a class="menu__flyitem" href="#">Fichas</a>
+            <a class="menu__flyitem" href="#">Ficheiros</a>
+          </div>
+        </div>
+
+        <a class="menu__item" href="#">Curso</a>
+
+        <div class="menu__group">
+          <a class="menu__item is-active" href="#">
+            Instituição <span class="chev">›</span>
+          </a>
+          <div class="menu__flyout" role="menu" aria-label="Instituição">
+            <a class="menu__flyitem" href="#">Estrutura</a>
+          </div>
+        </div>
+
+        <a class="menu__item" href="#">Eleições</a>
+      </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <main id="conteudo" class="main">
+      <!-- Pesquisa -->
+      <section class="panel panel--tight">
+        <div class="panel__body">
+          <div class="topline">
+            <div class="section__title">Pesquisa Instituições/Unidades da UMa</div>
+            <a class="help" href="#">? &nbsp;Ajuda/Help</a>
+          </div>
+
+          <div class="form__grid form__grid--inst">
+            <div class="form__row form__row--full">
+              <div class="form__label">Instituição/Unidade da UMa:</div>
+              <div class="form__field">
+                <div class="ctlgroup ctlgroup--wide">
+                  <select class="ctl ctl--wide">
+                    <option>Universidade da Madeira</option>
+                    <option>Escola Superior de Tecnologias e Gestão</option>
+                    <option>Escola Superior de Saúde</option>
+                  </select>
+                  <span class="ctlgroup__addon" aria-hidden="true">▾</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form__row form__row--full">
+              <div class="form__label">Pesquisa Instituições Externas ou Outras</div>
+              <div class="form__field">
+                <div class="marker" aria-hidden="true"></div>
+              </div>
+            </div>
+
+            <div class="form__row">
+              <div class="form__label"></div>
+              <div class="form__field checks">
+                <label class="chk">
+                  <input type="checkbox" checked />
+                  <span>Ver Sub-Instituições/Unidades</span>
+                </label>
+
+                <label class="chk">
+                  <input type="checkbox" />
+                  <span>Ver Cargos/Pessoas</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form__row form__row--right">
+              <button class="btn btn--wide" type="button">Carregar</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conteúdo (lista à esquerda + abas à direita) -->
+      <section class="panel mt10">
+        <div class="panel__body">
+          <div class="split">
+            <!-- Lista -->
+            <section class="panel panel--inner split__left">
+              <div class="panel__body">
+                <div class="section__title">Lista de Instituições/Unidades</div>
+
+                <div class="listbar">
+                  <div class="listbar__right">
+                    <a href="#" class="link-action">expandir lista</a> |
+                    <a href="#" class="link-action">fechar lista</a>
+                  </div>
+                </div>
+
+                <div class="tree">
+                  <div class="tree__row">
+                    <span class="tree__toggle" aria-hidden="true">+</span>
+                    <span class="tree__text">Universidade da Madeira</span>
+                    <a class="tree__link" href="#">[ Detalhe ]</a>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Abas -->
+            <section class="panel panel--inner split__right">
+              <div class="panel__body">
+                <div class="tabs tabs--inst">
+                  <!-- radios (sem JS) -->
+                  <input class="tabs__radio" type="radio" name="insttabs" id="itab-gerais" checked />
+                  <input class="tabs__radio" type="radio" name="insttabs" id="itab-cargos" />
+                  <input class="tabs__radio" type="radio" name="insttabs" id="itab-ficheiros" />
+                  <input class="tabs__radio" type="radio" name="insttabs" id="itab-areas" />
+
+                  <!-- barra -->
+                  <div class="tabs__bar" role="tablist" aria-label="Abas da instituição">
+                    <label class="tabs__tab" for="itab-gerais" role="tab">Dados Gerais</label>
+                    <label class="tabs__tab" for="itab-cargos" role="tab">Cargos</label>
+                    <label class="tabs__tab" for="itab-ficheiros" role="tab">Ficheiros</label>
+                    <label class="tabs__tab" for="itab-areas" role="tab">Áreas</label>
+                  </div>
+
+                  <!-- conteúdos -->
+                  <div class="tabs__content">
+                    <!-- Dados Gerais -->
+                    <div class="tabs__panel" data-panel="gerais">
+                      <div class="subttl">Dados da Instituição/Unidade</div>
+
+                      <div class="kv">
+                        <div class="kv__row">
+                          <div class="kv__k">Designação:</div>
+                          <div class="kv__v"><div class="bar bar--long"></div></div>
+                          <div class="kv__k kv__k--mini">Abrv:</div>
+                          <div class="kv__v"><div class="bar bar--mini"></div></div>
+                        </div>
+
+                        <div class="kv__row">
+                          <div class="kv__k">Sigla:</div>
+                          <div class="kv__v"><div class="bar bar--long"></div></div>
+                          <div class="kv__k kv__k--mini"></div>
+                          <div class="kv__v"></div>
+                        </div>
+
+                        <div class="kv__row">
+                          <div class="kv__k">Cód. MCTES:</div>
+                          <div class="kv__v"><div class="bar bar--long"></div></div>
+                          <div class="kv__k kv__k--mini"></div>
+                          <div class="kv__v"></div>
+                        </div>
+
+                        <div class="kv__row">
+                          <div class="kv__k">Data Início (AAAA-MM-DD):</div>
+                          <div class="kv__v"><div class="bar bar--long"></div></div>
+                          <div class="kv__k kv__k--mini">Data Fim (AAAA-MM-DD):</div>
+                          <div class="kv__v"><div class="bar bar--mini"></div></div>
+                        </div>
+
+                        <div class="kv__row">
+                          <div class="kv__k">Missão:</div>
+                          <div class="kv__v kv__v--wide"><div class="bar bar--full"></div></div>
+                        </div>
+                      </div>
+
+                      <div class="subttl mt10">Contactos da Instituição/Unidade</div>
+
+                      <div class="kv">
+                        <div class="kv__row">
+                          <div class="kv__k">Tel:</div>
+                          <div class="kv__v"><div class="bar bar--long"></div></div>
+                          <div class="kv__k kv__k--mini">eMail:</div>
+                          <div class="kv__v"><div class="bar bar--mini"></div></div>
+                        </div>
+
+                        <div class="kv__row">
+                          <div class="kv__k">Página Web:</div>
+                          <div class="kv__v"><div class="bar bar--long"></div></div>
+                          <div class="kv__k kv__k--mini">Fax:</div>
+                          <div class="kv__v"><div class="bar bar--mini"></div></div>
+                        </div>
+
+                        <div class="kv__row">
+                          <div class="kv__k">Cod. Postal:</div>
+                          <div class="kv__v"><div class="bar bar--long"></div></div>
+                          <div class="kv__k kv__k--mini">Localidade:</div>
+                          <div class="kv__v"><div class="bar bar--mini"></div></div>
+                        </div>
+
+                        <div class="kv__row">
+                          <div class="kv__k">Morada:</div>
+                          <div class="kv__v kv__v--wide"><div class="bar bar--full"></div></div>
+                        </div>
+                      </div>
+
+                      <div class="subttl mt10">Dados da Instituição/Unidade em Inglês <span class="flag" aria-hidden="true"></span></div>
+
+                      <div class="kv">
+                        <div class="kv__row">
+                          <div class="kv__k">Designação (EN):</div>
+                          <div class="kv__v kv__v--wide"><div class="bar bar--full"></div></div>
+                        </div>
+                        <div class="kv__row">
+                          <div class="kv__k">Abrv (EN):</div>
+                          <div class="kv__v kv__v--wide"><div class="bar bar--full"></div></div>
+                        </div>
+                        <div class="kv__row">
+                          <div class="kv__k">Missão (EN):</div>
+                          <div class="kv__v kv__v--wide"><div class="bar bar--full"></div></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Cargos -->
+                    <div class="tabs__panel" data-panel="cargos">
+                      <div class="subttl">Lista de Pessoas com Cargos na Instituição/Unidade</div>
+
+                      <div class="filters">
+                        <div class="filters__left">
+                          <span class="ficon" aria-hidden="true">⟱</span>
+                          <label class="filters__lbl">Cargo</label>
+                          <input class="ctl ctl--mini" type="text" />
+
+                          <span class="ficon" aria-hidden="true">⟱</span>
+                          <label class="filters__lbl">Nome</label>
+                          <input class="ctl ctl--wide2" type="text" />
+                        </div>
+
+                        <button class="btn btn--wide" type="button">Filtrar...</button>
+                      </div>
+
+                      <div class="subttl mt10">Lista de Pessoas com Cargos na Instituição/Unidade</div>
+
+                      <div class="msg">
+                        <span class="msg__icon" aria-hidden="true">ℹ️</span>
+                        Sem resultados. Seleccione a instituição/unidade a editar.
+                      </div>
+                    </div>
+
+                    <!-- Ficheiros -->
+                    <div class="tabs__panel" data-panel="ficheiros">
+                      <div class="subttl">Lista de Ficheiros Associados à Instituição/Unidade</div>
+
+                      <div class="msg">
+                        <span class="msg__icon" aria-hidden="true">ℹ️</span>
+                        Não foram encontrados ficheiros para a selecção efectuada, escolha editar uma instituição.
+                      </div>
+                    </div>
+
+                    <!-- Áreas -->
+                    <div class="tabs__panel" data-panel="areas">
+                      <div class="subttl">Lista de Áreas Científicas da Instituição/Unidade</div>
+
+                      <div class="msg">
+                        <span class="msg__icon" aria-hidden="true">ℹ️</span>
+                        Sem resultados.
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /tabs__content -->
+                </div>
+                <!-- /tabs -->
+              </div>
+            </section>
+          </div>
+          <!-- /split -->
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__left">
+      <div>© Universidade da Madeira - Gabinete de Desenvolvimento de Aplicações Informáticas - <a href="#">Proteção de Dados e Termos de Utilização</a></div>
+      <div>Colégio dos Jesuítas, 9000-081 Funchal | Tel: +351 291 209400 | Fax: +351 291 209410</div>
+      <div>Processado em 0.13 segundos - powered by hydra framework</div>
+    </div>
+
+    <div class="footer__right">
+      <div class="footer__logo" aria-hidden="true"></div>
+      <div class="footer__badge" aria-hidden="true"></div>
+      <div class="footer__badge" aria-hidden="true"></div>
+    </div>
+  </footer>
+</body>
+</html>

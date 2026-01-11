@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InfoAlunos - Documentos / Declarações Sociais</title>
+  <link rel="stylesheet" href="documentos-declaracoes.css">
+  <link rel="stylesheet" href="ui-shell.css" />
+</head>
+
+<body>
+  <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+
+  <header class="topbar">
+    <div class="topbar__left">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="topbar__title">
+        <strong>InfoAlunos</strong> - Serviço de Informação dos Alunos - <strong>v3.1.4</strong>
+      </div>
+    </div>
+
+    <div class="topbar__right">
+      <span class="topbar__lang">PT | EN</span>
+      <div class="user__avatar" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" aria-label="Menu principal">
+      <nav class="menu" aria-label="Navegação principal">
+        <a class="menu__item" href="index.html">Início</a>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">Geral <span class="chev" aria-hidden="true">›</span></a>
+          <div class="menu__flyout">
+            <a class="menu__flyitem" href="geral-processos.html">Processos</a>
+            <a class="menu__flyitem" href="geral-dados-pessoais.html">Dados Pessoais</a>
+            <a class="menu__flyitem" href="geral-privacidade.html">Privacidade</a>
+            <a class="menu__flyitem" href="geral-ajuda.html">Ajuda</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">Serviços <span class="chev" aria-hidden="true">›</span></a>
+          <div class="menu__flyout">
+            <a class="menu__flyitem" href="servicos-pagamentos.html">Pagamentos</a>
+            <a class="menu__flyitem" href="servicos-matriculas.html">Matrículas</a>
+            <a class="menu__flyitem" href="servicos-inscricoes.html">Inscrição em Turmas</a>
+            <a class="menu__flyitem" href="servicos-requerimentos.html">Requerimentos</a>
+            <a class="menu__flyitem" href="servicos-cartao.html">Cartão Universitário</a>
+          </div>
+        </div>
+
+        <a class="menu__item" href="concursos-candidaturas.html">Concursos</a>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">Avaliação <span class="chev" aria-hidden="true">›</span></a>
+          <div class="menu__flyout">
+            <a class="menu__flyitem" href="avaliacao-pautas.html">Pautas</a>
+            <a class="menu__flyitem" href="avaliacao-reclamacao.html">Reclamação de Notas</a>
+            <a class="menu__flyitem" href="avaliacao-inquerito.html">Inquéritos</a>
+            <a class="menu__flyitem" href="avaliacao-resultado-inquerito.html">Resultado de Inquéritos</a>
+            <a class="menu__flyitem" href="avaliacao-inquerito-raides.html">Inquérito RAIDES</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">Creditações <span class="chev" aria-hidden="true">›</span></a>
+          <div class="menu__flyout">
+            <a class="menu__flyitem" href="creditacoes-lista.html">Lista Processos</a>
+            <a class="menu__flyitem" href="creditacoes-novo.html">Novo Processo</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item is-active" href="#" aria-haspopup="true">Documentos <span class="chev" aria-hidden="true">›</span></a>
+          <div class="menu__flyout">
+            <a class="menu__flyitem" href="documentos-academicos.html">Académicos</a>
+            <a class="menu__flyitem is-subactive" href="documentos-declaracoes.html">Declarações</a>
+          </div>
+        </div>
+
+        <a class="menu__item" href="#">Aula</a>
+        <a class="menu__item" href="#">Disciplina</a>
+        <a class="menu__item" href="#">Curso</a>
+        <a class="menu__item" href="#">Instituição</a>
+        <a class="menu__item" href="#">Eleições</a>
+      </nav>
+    </aside>
+
+    <main id="conteudo" class="main main--new" role="main" tabindex="-1">
+
+      <section class="course-select" aria-label="Seleção de curso">
+        <select class="course-select__input">
+          <option>2025/26 - CTeSP - Tecnologias e Programação de Sistemas de Informação</option>
+          <option>2024/25 - CTeSP - Tecnologias e Programação de Sistemas de Informação</option>
+        </select>
+      </section>
+
+      <h1 class="title-blue">Documentos / Declarações Sociais</h1>
+
+      <p class="intro">
+        A emissão dos documentos relativos a declarações sociais é imediata, sendo gerada pelo sistema de forma automática.
+        Outro tipo de declarações devem ser solicitadas através do menu Serviços&gt;Requerimentos&gt;Submeter novo/Detalhe.
+        Poderá também consultar documentos relativos a atos académicos através do menu Documentos&gt;Académicos.
+      </p>
+
+      <section class="cards" aria-label="Declarações disponíveis">
+        <article class="card">
+          <div class="doc-ico" aria-hidden="true"></div>
+          <div class="card__text">Declaração de aproveitamento<br>para fins sociais</div>
+          <button class="btn-soft" type="button" disabled>Emitir</button>
+        </article>
+
+        <article class="card">
+          <div class="doc-ico" aria-hidden="true"></div>
+          <div class="card__text">Declaração de matrícula para fins<br>sociais</div>
+          <button class="btn-primary" type="button">Emitir</button>
+        </article>
+      </section>
+
+      <section class="alert" role="status" aria-live="polite">
+        <div class="alert__icon" aria-hidden="true">!</div>
+        <div class="alert__text">
+          Não é possível emitir a Declaração de aproveitamento para fins sociais.
+          Só é possível emitir a declaração quando não tiver pagamentos em falta no ano letivo 2025/26.
+        </div>
+        <button class="alert__close" type="button" aria-label="Fechar">×</button>
+      </section>
+
+      <h2 class="history">
+        <span class="clock" aria-hidden="true"></span>
+        Histórico de Declarações Sociais Emitidas
+      </h2>
+
+      <div class="history-space" aria-hidden="true"></div>
+
+      <footer class="footer" role="contentinfo">
+        <div class="footer__left">
+          © Universidade da Madeira - Gabinete de Desenvolvimento de Aplicações Informáticas -
+          <a href="#">Proteção de Dados</a> e <a href="#">Termos de Utilização</a><br>
+          Colégio dos Jesuítas, 9000-081 Funchal | Tel: +351 291 209400 | Fax: +351 291 209410<br>
+          Processado em 0.06 segundos - powered by Hydra framework
+        </div>
+        <div class="footer__right" aria-hidden="true">
+          <div class="footer__logo"></div>
+        </div>
+      </footer>
+
+    </main>
+  </div>
+</body>
+</html>

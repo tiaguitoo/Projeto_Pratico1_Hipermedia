@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InfoAlunos - Geral / Dados Pessoais</title>
+  <link rel="stylesheet" href="geral-dadospessoais.css">
+  <link rel="stylesheet" href="ui-shell.css" />
+</head>
+
+<body>
+  <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+
+  <!-- TOPO AZUL -->
+  <header class="topbar">
+    <div class="topbar__left">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="topbar__title">
+        <strong>InfoAlunos</strong> - Serviço de Informação dos Alunos - <strong>v3.1.4</strong>
+      </div>
+    </div>
+
+    <div class="topbar__right">
+      <span class="topbar__lang">PT | EN</span>
+      <div class="user__avatar" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Menu principal">
+      <nav class="menu" aria-label="Navegação principal">
+        <a class="menu__item" href="index.html">Início</a>
+
+        <!-- Geral -->
+        <div class="menu__group">
+          <a class="menu__item is-active" href="#" aria-haspopup="true">
+            Geral <span class="chev" aria-hidden="true">›</span>
+          </a>
+
+          <div class="menu__flyout" role="menu" aria-label="Submenu Geral">
+            <a class="menu__flyitem" href="geral-processos.html">Processos</a>
+            <a class="menu__flyitem is-subactive" href="geral-dados-pessoais.html">Dados Pessoais</a>
+            <a class="menu__flyitem" href="#">Privacidade</a>
+            <a class="menu__flyitem" href="#">Ajuda</a>
+          </div>
+        </div>
+
+        <!-- Serviços -->
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">
+            Serviços <span class="chev" aria-hidden="true">›</span>
+          </a>
+          <div class="menu__flyout" role="menu" aria-label="Submenu Serviços">
+            <a class="menu__flyitem" href="#">Pagamentos</a>
+            <a class="menu__flyitem" href="#">Matrículas</a>
+            <a class="menu__flyitem" href="#">Inscrição em Turmas</a>
+            <a class="menu__flyitem" href="#">Requerimentos</a>
+            <a class="menu__flyitem" href="#">Cartão Universitário</a>
+            <a class="menu__flyitem" href="#">SASUMa - Bolsas</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">
+            Concursos <span class="chev" aria-hidden="true">›</span>
+          </a>
+          <div class="menu__flyout"><a class="menu__flyitem" href="#">Candidaturas</a></div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">
+            Avaliação <span class="chev" aria-hidden="true">›</span>
+          </a>
+          <div class="menu__flyout">
+            <a class="menu__flyitem" href="#">Pautas</a>
+            <a class="menu__flyitem" href="#">Reclamação de Notas</a>
+            <a class="menu__flyitem" href="#">Inquéritos</a>
+            <a class="menu__flyitem" href="#">Resultado de Inquéritos</a>
+            <a class="menu__flyitem" href="#">Inquérito RAIDES</a>
+          </div>
+        </div>
+
+        <a class="menu__item" href="#">Creditações</a>
+        <a class="menu__item" href="#">Documentos</a>
+        <a class="menu__item" href="#">Aula</a>
+        <a class="menu__item" href="#">Disciplina</a>
+        <a class="menu__item" href="#">Curso</a>
+        <a class="menu__item" href="#">Instituição</a>
+        <a class="menu__item" href="#">Eleições</a>
+      </nav>
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <main id="conteudo" class="main" role="main" tabindex="-1">
+      <section class="dp-grid" aria-label="Dados pessoais">
+
+        <!-- COLUNA ESQUERDA -->
+        <div class="dp-col">
+          <!-- Nome e Informação Biográfica -->
+          <section class="dp-card" aria-label="Nome e Informação Biográfica">
+            <div class="dp-card__head">
+              <div class="dp-card__title">Nome e Informação Biográfica</div>
+              <a class="dp-card__action" href="#">Alterar</a>
+            </div>
+
+            <div class="dp-card__body">
+              <div class="bio">
+                <div class="bio__avatar" aria-hidden="true"></div>
+
+                <div class="bio__fields" role="list">
+                  <div class="row" role="listitem">
+                    <div class="row__label">Nome Completo</div>
+                    <div class="row__value">Nome Completo do Aluno</div>
+                  </div>
+
+                  <div class="row" role="listitem">
+                    <div class="row__label">Nome Abreviado</div>
+                    <div class="row__value">Nome Abreviado</div>
+                  </div>
+
+                  <div class="row" role="listitem">
+                    <div class="row__label">Nomes Próprios</div>
+                    <div class="row__value">Nomes Próprios</div>
+                  </div>
+
+                  <div class="row" role="listitem">
+                    <div class="row__label">Apelidos</div>
+                    <div class="row__value">Apelidos</div>
+                  </div>
+
+                  <div class="row" role="listitem">
+                    <div class="row__label">Data de Nascimento</div>
+                    <div class="row__value">2000-01-01</div>
+                  </div>
+
+                  <div class="row" role="listitem">
+                    <div class="row__label">Sexo</div>
+                    <div class="row__value">Masculino</div>
+                  </div>
+
+                  <div class="row" role="listitem">
+                    <div class="row__label">Estado Civil</div>
+                    <div class="row__value">Solteiro(a)</div>
+                  </div>
+
+                  <div class="row" role="listitem">
+                    <div class="row__label">Naturalidade</div>
+                    <div class="row__value">Portugal (Região Autónoma da Madeira)</div>
+                  </div>
+
+                  <div class="row" role="listitem">
+                    <div class="row__label">Nacionalidade</div>
+                    <div class="row__value">Portuguesa</div>
+                  </div>
+
+                  <div class="row" role="listitem">
+                    <div class="row__label">Pai - Nome Completo</div>
+                    <div class="row__value">Nome do Pai</div>
+                  </div>
+
+                  <div class="row" role="listitem">
+                    <div class="row__label">Mãe - Nome Completo</div>
+                    <div class="row__value">Nome da Mãe</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Morada -->
+          <section class="dp-card" aria-label="Morada">
+            <div class="dp-card__head">
+              <div class="dp-card__title">Morada</div>
+              <span class="dp-card__action" aria-hidden="true"></span>
+            </div>
+
+            <div class="dp-card__body">
+              <div class="dp-subtitle">Morada de Correspondência</div>
+
+              <div class="box">
+                <div class="box__head">
+                  <span></span>
+                  <a class="dp-card__action" href="#">Alterar</a>
+                </div>
+
+                <div class="box__body">
+                  <p class="addr">
+                    Rua Exemplo, n.º 27<br>
+                    9000-000 Funchal<br>
+                    Portugal
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- COLUNA DIREITA -->
+        <div class="dp-col">
+          <!-- Documentos -->
+          <section class="dp-card" aria-label="Documentos de Identificação">
+            <div class="dp-card__head">
+              <div class="dp-card__title">Documentos de Identificação</div>
+              <a class="dp-card__action" href="#">Adicionar</a>
+            </div>
+
+            <div class="dp-card__body">
+              <div class="doc-section">
+                <div class="doc-section__head">
+                  <div class="dp-subtitle">Número de Identificação Fiscal</div>
+                  <a class="dp-card__action" href="#">Alterar</a>
+                </div>
+
+                <div class="box">
+                  <div class="box__body box__body--cols2">
+                    <div class="mini">
+                      <div class="mini__label">Número</div>
+                      <div class="mini__value">123456789</div>
+                    </div>
+                    <div class="mini">
+                      <div class="mini__label">País de Emissão</div>
+                      <div class="mini__value">Portugal</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="doc-section">
+                <div class="doc-section__head">
+                  <div class="dp-subtitle">Número de Identificação Civil</div>
+                  <a class="dp-card__action" href="#">Alterar</a>
+                </div>
+
+                <div class="box">
+                  <div class="box__body box__body--cols3">
+                    <div class="mini">
+                      <div class="mini__label">Número</div>
+                      <div class="mini__value">00000000 0 ZZ0</div>
+                    </div>
+                    <div class="mini">
+                      <div class="mini__label">País de Emissão</div>
+                      <div class="mini__value">Portugal</div>
+                    </div>
+                    <div class="mini">
+                      <div class="mini__label">Validade</div>
+                      <div class="mini__value">2030-01-01</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Contactos -->
+          <section class="dp-card" aria-label="Contactos">
+            <div class="dp-card__head">
+              <div class="dp-card__title">Contactos</div>
+              <a class="dp-card__action" href="#">Alterar</a>
+            </div>
+
+            <div class="dp-card__body">
+              <div class="row">
+                <div class="row__label">Número de telefone</div>
+                <div class="row__value">291 000 000</div>
+              </div>
+              <div class="row">
+                <div class="row__label">Número de telemóvel</div>
+                <div class="row__value">9xx xxx xxx</div>
+              </div>
+              <div class="row">
+                <div class="row__label">Email Pessoal</div>
+                <div class="row__value">email.pessoal@exemplo.com</div>
+              </div>
+              <div class="row">
+                <div class="row__label">Email Institucional</div>
+                <div class="row__value">aluno@uma.pt</div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+      </section>
+    </main>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer__left">
+      <div>© Universidade da Madeira - Gabinete de Desenvolvimento de Aplicações Informáticas - <a href="#">Proteção de Dados e Termos de Utilização</a></div>
+      <div>Colégio dos Jesuítas, 9000-081 Funchal | Tel: +351 291 209400 | Fax: +351 291 209410</div>
+      <div>Processado em 0.38 segundos - powered by hydra framework</div>
+    </div>
+
+    <div class="footer__right">
+      <div class="footer__logo" aria-hidden="true"></div>
+      <div class="footer__badge" aria-hidden="true"></div>
+      <div class="footer__badge" aria-hidden="true"></div>
+    </div>
+  </footer>
+</body>
+</html>

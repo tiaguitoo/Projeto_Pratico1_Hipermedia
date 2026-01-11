@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InfoAlunos - Aula / Calendário</title>
+  <link rel="stylesheet" href="aula-calendario.css">
+  <link rel="stylesheet" href="ui-shell.css" />
+</head>
+
+<body>
+  <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+
+  <header class="topbar">
+    <div class="topbar__left">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="topbar__title">
+        <strong>InfoAlunos</strong> - Serviço de Informação dos Alunos - <strong>v3.1.4</strong>
+      </div>
+    </div>
+
+    <div class="topbar__right">
+      <span class="topbar__lang">PT | EN</span>
+      <div class="user__avatar" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" aria-label="Menu principal">
+      <nav class="menu" aria-label="Navegação principal">
+        <a class="menu__item" href="index.html">Início</a>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">Geral <span class="chev" aria-hidden="true">›</span></a>
+          <div class="menu__flyout">
+            <a class="menu__flyitem" href="geral-processos.html">Processos</a>
+            <a class="menu__flyitem" href="geral-dados-pessoais.html">Dados Pessoais</a>
+            <a class="menu__flyitem" href="geral-privacidade.html">Privacidade</a>
+            <a class="menu__flyitem" href="geral-ajuda.html">Ajuda</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">Serviços <span class="chev" aria-hidden="true">›</span></a>
+          <div class="menu__flyout">
+            <a class="menu__flyitem" href="servicos-pagamentos.html">Pagamentos</a>
+            <a class="menu__flyitem" href="servicos-matriculas.html">Matrículas</a>
+            <a class="menu__flyitem" href="servicos-inscricoes.html">Inscrição em Turmas</a>
+            <a class="menu__flyitem" href="servicos-requerimentos.html">Requerimentos</a>
+            <a class="menu__flyitem" href="servicos-cartao.html">Cartão Universitário</a>
+          </div>
+        </div>
+
+        <a class="menu__item" href="concursos-candidaturas.html">Concursos</a>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">Avaliação <span class="chev" aria-hidden="true">›</span></a>
+          <div class="menu__flyout">
+            <a class="menu__flyitem" href="avaliacao-pautas.html">Pautas</a>
+            <a class="menu__flyitem" href="avaliacao-reclamacao.html">Reclamação de Notas</a>
+            <a class="menu__flyitem" href="avaliacao-inquerito.html">Inquéritos</a>
+            <a class="menu__flyitem" href="avaliacao-resultado-inquerito.html">Resultado de Inquéritos</a>
+            <a class="menu__flyitem" href="avaliacao-inquerito-raides.html">Inquérito RAIDES</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">Creditações <span class="chev" aria-hidden="true">›</span></a>
+          <div class="menu__flyout">
+            <a class="menu__flyitem" href="creditacoes-lista.html">Lista Processos</a>
+            <a class="menu__flyitem" href="creditacoes-novo.html">Novo Processo</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">Documentos <span class="chev" aria-hidden="true">›</span></a>
+          <div class="menu__flyout">
+            <a class="menu__flyitem" href="documentos-academicos.html">Académicos</a>
+            <a class="menu__flyitem" href="documentos-declaracoes.html">Declarações</a>
+          </div>
+        </div>
+
+        <a class="menu__item is-active" href="aula-calendario.html">Aula</a>
+        <a class="menu__item" href="#">Disciplina</a>
+        <a class="menu__item" href="#">Curso</a>
+        <a class="menu__item" href="#">Instituição</a>
+        <a class="menu__item" href="#">Eleições</a>
+      </nav>
+    </aside>
+
+    <main id="conteudo" class="main" role="main" tabindex="-1">
+
+      <!-- Pesquisa de Disciplinas -->
+      <section class="panel">
+        <div class="panel__title">Pesquisa de Disciplinas</div>
+        <div class="panel__body">
+          <div class="formgrid formgrid--search">
+            <label class="lbl" for="ano">Ano Letivo</label>
+            <div class="field">
+              <select id="ano" class="ctrl ctrl--select">
+                <option>2025/26</option>
+                <option>2024/25</option>
+                <option>2023/24</option>
+              </select>
+            </div>
+            <div class="rightbtn">
+              <button class="btn-classic" type="button">Pesquisar…</button>
+            </div>
+
+            <label class="lbl" for="disc">Disciplina</label>
+            <div class="field">
+              <select id="disc" class="ctrl ctrl--select">
+                <option></option>
+                <option>Desenvolvimento Web</option>
+                <option>Programação</option>
+              </select>
+            </div>
+            <div class="rightbtn"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Calendário -->
+      <section class="panel panel--calendar">
+        <div class="panel__title">Calendário</div>
+        <div class="panel__body">
+
+          <div class="cal-top">
+            <select class="ctrl ctrl--select cal-top__select" aria-label="Selecionar mês">
+              <option>Janeiro 2026</option>
+              <option>Fevereiro 2026</option>
+              <option>Março 2026</option>
+            </select>
+
+            <button class="btn-classic" type="button">Calendário</button>
+          </div>
+
+          <div class="cal-wrap" role="region" aria-label="Calendário mensal">
+            <div class="cal-head">
+              <div class="cal-head__cell">Domingo</div>
+              <div class="cal-head__cell">Segunda</div>
+              <div class="cal-head__cell">Terça</div>
+              <div class="cal-head__cell">Quarta</div>
+              <div class="cal-head__cell">Quinta</div>
+              <div class="cal-head__cell">Sexta</div>
+              <div class="cal-head__cell">Sábado</div>
+            </div>
+
+            <!-- grelha (5 semanas x 7) -->
+            <div class="cal-grid">
+              <!-- semana 1 -->
+              <div class="day day--empty"></div>
+              <div class="day day--empty"></div>
+              <div class="day day--empty"></div>
+              <div class="day day--empty"></div>
+              <div class="day"><span class="day__num">1</span></div>
+              <div class="day"><span class="day__num">2</span></div>
+              <div class="day"><span class="day__num">3</span></div>
+
+              <!-- semana 2 -->
+              <div class="day"><span class="day__num">4</span></div>
+              <div class="day"><span class="day__num">5</span></div>
+              <div class="day"><span class="day__num">6</span></div>
+              <div class="day"><span class="day__num">7</span></div>
+              <div class="day"><span class="day__num">8</span></div>
+              <div class="day"><span class="day__num">9</span></div>
+              <div class="day"><span class="day__num">10</span></div>
+
+              <!-- semana 3 -->
+              <div class="day"><span class="day__num">11</span></div>
+              <div class="day"><span class="day__num">12</span></div>
+              <div class="day"><span class="day__num">13</span></div>
+              <div class="day"><span class="day__num">14</span></div>
+              <div class="day"><span class="day__num">15</span></div>
+              <div class="day"><span class="day__num">16</span></div>
+              <div class="day"><span class="day__num">17</span></div>
+
+              <!-- semana 4 -->
+              <div class="day"><span class="day__num">18</span></div>
+              <div class="day"><span class="day__num">19</span></div>
+              <div class="day"><span class="day__num">20</span></div>
+              <div class="day"><span class="day__num">21</span></div>
+              <div class="day"><span class="day__num">22</span></div>
+              <div class="day"><span class="day__num">23</span></div>
+              <div class="day"><span class="day__num">24</span></div>
+
+              <!-- semana 5 -->
+              <div class="day"><span class="day__num">25</span></div>
+              <div class="day"><span class="day__num">26</span></div>
+              <div class="day"><span class="day__num">27</span></div>
+              <div class="day"><span class="day__num">28</span></div>
+              <div class="day"><span class="day__num">29</span></div>
+              <div class="day"><span class="day__num">30</span></div>
+              <div class="day"><span class="day__num">31</span></div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <footer class="footer" role="contentinfo">
+        <div class="footer__left">
+          © Universidade da Madeira - Gabinete de Desenvolvimento de Aplicações Informáticas -
+          <a href="#">Proteção de Dados</a> e <a href="#">Termos de Utilização</a><br>
+          Colégio dos Jesuítas, 9000-081 Funchal | Tel: +351 291 209400 | Fax: +351 291 209410<br>
+          Processado em 0.12 segundos - powered by Hydra framework
+        </div>
+        <div class="footer__right" aria-hidden="true">
+          <div class="footer__logo"></div>
+        </div>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>

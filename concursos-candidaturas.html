@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InfoAlunos - Concursos / Candidaturas</title>
+  <link rel="stylesheet" href="concursos-candidaturas.css">
+  <link rel="stylesheet" href="ui-shell.css" />
+</head>
+
+<body>
+  <a class="skip" href="#conteudo">Saltar para o conteúdo</a>
+
+  <!-- TOPO AZUL -->
+  <header class="topbar">
+    <div class="topbar__left">
+      <div class="logo" aria-hidden="true"></div>
+      <div class="topbar__title">
+        <strong>InfoAlunos</strong> - Serviço de Informação dos Alunos - <strong>v3.1.4</strong>
+      </div>
+    </div>
+
+    <div class="topbar__right">
+      <span class="topbar__lang">PT | EN</span>
+      <div class="user__avatar" aria-hidden="true"></div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar" aria-label="Menu principal">
+      <nav class="menu" aria-label="Navegação principal">
+        <a class="menu__item" href="index.html">Início</a>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">Geral <span class="chev" aria-hidden="true">›</span></a>
+          <div class="menu__flyout">
+            <a class="menu__flyitem" href="geral-processos.html">Processos</a>
+            <a class="menu__flyitem" href="geral-dados-pessoais.html">Dados Pessoais</a>
+            <a class="menu__flyitem" href="geral-privacidade.html">Privacidade</a>
+            <a class="menu__flyitem" href="geral-ajuda.html">Ajuda</a>
+          </div>
+        </div>
+
+        <div class="menu__group">
+          <a class="menu__item" href="#" aria-haspopup="true">Serviços <span class="chev" aria-hidden="true">›</span></a>
+          <div class="menu__flyout">
+            <a class="menu__flyitem" href="servicos-pagamentos.html">Pagamentos</a>
+            <a class="menu__flyitem" href="servicos-matriculas.html">Matrículas</a>
+            <a class="menu__flyitem" href="servicos-inscricoes.html">Inscrição em Turmas</a>
+            <a class="menu__flyitem" href="servicos-requerimentos.html">Requerimentos</a>
+            <a class="menu__flyitem" href="servicos-cartao.html">Cartão Universitário</a>
+            <a class="menu__flyitem" href="#">SASUMa - Bolsas</a>
+          </div>
+        </div>
+
+        <!-- Concursos ativo -->
+        <div class="menu__group">
+          <a class="menu__item is-active" href="#" aria-haspopup="true">
+            Concursos <span class="chev" aria-hidden="true">›</span>
+          </a>
+          <div class="menu__flyout" role="menu" aria-label="Submenu Concursos">
+            <a class="menu__flyitem is-subactive" href="concursos-candidaturas.html">Candidaturas</a>
+          </div>
+        </div>
+
+        <a class="menu__item" href="#">Avaliação</a>
+        <a class="menu__item" href="#">Creditações</a>
+        <a class="menu__item" href="#">Documentos</a>
+        <a class="menu__item" href="#">Aula</a>
+        <a class="menu__item" href="#">Disciplina</a>
+        <a class="menu__item" href="#">Curso</a>
+        <a class="menu__item" href="#">Instituição</a>
+        <a class="menu__item" href="#">Eleições</a>
+      </nav>
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <main id="conteudo" class="main" role="main" tabindex="-1">
+
+      <!-- filtros topo -->
+      <section class="cand-filter" aria-label="Filtros de pesquisa">
+        <div class="cand-filter__row">
+          <label for="f-concurso">Concurso</label>
+          <select id="f-concurso" name="concurso">
+            <option></option>
+            <option>Doutoramento 2025/26</option>
+            <option>Microcredencial Segurança Informática I</option>
+          </select>
+        </div>
+
+        <div class="cand-filter__row">
+          <label for="f-curso">Curso</label>
+          <select id="f-curso" name="curso">
+            <option></option>
+            <option>Engenharia Informática</option>
+            <option>Engenharia Eletrotécnica</option>
+            <option>Química</option>
+            <option>Física</option>
+          </select>
+        </div>
+
+        <div class="cand-filter__actions">
+          <button class="btn-search" type="button">Pesquisar</button>
+        </div>
+      </section>
+
+      <!-- tabela lista -->
+      <section class="panel cand-table" aria-label="Lista de concursos">
+        <div class="panel__body cand-table__body">
+          <table class="tbl tbl--striped tbl--salmon" aria-label="Tabela de concursos e candidaturas">
+            <thead>
+              <tr>
+                <th class="w-icon"></th>
+                <th>Concurso</th>
+                <th>Fase</th>
+                <th>Tipo Curso</th>
+                <th>Curso</th>
+                <th>Vagas</th>
+                <th>Candidatura</th>
+                <th>Cand. Aluno</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="w-icon"><a href="#" class="plus">[+]</a></td>
+                <td>Microcredencial Segurança Informática I</td>
+                <td>1ª Fase</td>
+                <td>Micro</td>
+                <td><strong>Segurança Informática I</strong></td>
+                <td>200</td>
+                <td>De 2025-12-20 a 2026-01-20</td>
+                <td></td>
+                <td><a class="link-fill" href="#">Preencher Candidatura</a></td>
+              </tr>
+              <tr>
+                <td class="w-icon"><a href="#" class="plus">[+]</a></td>
+                <td>Doutoramento 2025/26</td>
+                <td>1ª Fase</td>
+                <td>3º Ciclo</td>
+                <td><strong>Engenharia Eletrotécnica</strong></td>
+                <td>5</td>
+                <td>De 2025-05-16 a 2026-06-11</td>
+                <td></td>
+                <td><a class="link-fill" href="#">Preencher Candidatura</a></td>
+              </tr>
+              <tr>
+                <td class="w-icon"><a href="#" class="plus">[+]</a></td>
+                <td>Doutoramento 2025/26</td>
+                <td>1ª Fase</td>
+                <td>3º Ciclo</td>
+                <td><strong>Engenharia Informática</strong></td>
+                <td>10</td>
+                <td>De 2025-05-16 a 2026-06-11</td>
+                <td></td>
+                <td><a class="link-fill" href="#">Preencher Candidatura</a></td>
+              </tr>
+              <tr>
+                <td class="w-icon"><a href="#" class="plus">[+]</a></td>
+                <td>Doutoramento 2025/26</td>
+                <td>1ª Fase</td>
+                <td>3º Ciclo</td>
+                <td><strong>Física</strong></td>
+                <td>5</td>
+                <td>De 2025-05-16 a 2026-06-11</td>
+                <td></td>
+                <td><a class="link-fill" href="#">Preencher Candidatura</a></td>
+              </tr>
+              <tr>
+                <td class="w-icon"><a href="#" class="plus">[+]</a></td>
+                <td>Doutoramento 2025/26</td>
+                <td>1ª Fase</td>
+                <td>3º Ciclo</td>
+                <td><strong>Química</strong></td>
+                <td>10</td>
+                <td>De 2025-05-16 a 2026-06-11</td>
+                <td></td>
+                <td><a class="link-fill" href="#">Preencher Candidatura</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="info-row">
+            <span class="info-dot" aria-hidden="true">i</span>
+            <span>Sem resultados.</span>
+          </div>
+
+          <!-- linha “inputs” (mock) -->
+          <div class="mini-inputs" aria-label="Campos de introdução (mock)">
+            <input type="text" aria-label="Campo 1">
+            <input type="text" aria-label="Campo 2">
+            <input type="text" aria-label="Campo 3">
+            <textarea rows="2" aria-label="Campo observações"></textarea>
+            <input type="text" aria-label="Campo 5">
+            <input type="text" aria-label="Campo 6">
+            <input type="text" aria-label="Campo 7">
+            <input type="text" aria-label="Campo 8">
+            <input type="file" aria-label="Anexo">
+            <button class="btn-save" type="button">Guardar</button>
+          </div>
+
+          <div class="info-row">
+            <span class="info-dot" aria-hidden="true">i</span>
+            <span>Sem resultados.</span>
+          </div>
+
+          <!-- secção candidatura -->
+          <div class="cand-section">
+            <div class="cand-section__title">Candidatura</div>
+            <div class="info-row">
+              <span class="info-dot" aria-hidden="true">i</span>
+              <span>Sem resultados.</span>
+            </div>
+          </div>
+
+          <!-- botões finais -->
+          <div class="submit-area" aria-label="Submissão">
+            <div class="submit-help">
+              Click on "Submit Application" and then on "Confirm Submission"<br>
+              Clique em "Submeter Candidatura" e depois em "Confirmar Submissão"
+            </div>
+            <div class="submit-buttons">
+              <button class="btn-classic" type="button">Submeter Candidatura</button>
+              <button class="btn-classic" type="button">Confirmar Submissão</button>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <span class="info-dot" aria-hidden="true">i</span>
+            <span>Sem resultados.</span>
+          </div>
+
+          <div class="info-row">
+            <span class="info-dot" aria-hidden="true">i</span>
+            <span>Sem Resultados na Lista de Emails.</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Rodapé -->
+      <footer class="footer" role="contentinfo">
+        <div class="footer__left">
+          © Universidade da Madeira - Gabinete de Desenvolvimento de Aplicações Informáticas -
+          <a href="#">Proteção de Dados</a> e <a href="#">Termos de Utilização</a><br>
+          Colégio dos Jesuítas, 9000-081 Funchal | Tel: +351 291 209400 | Fax: +351 291 209410<br>
+          Processado em 0.31 segundos - powered by Hydra framework
+        </div>
+        <div class="footer__right" aria-hidden="true">
+          <div class="footer__logo"></div>
+        </div>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>

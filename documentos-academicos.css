@@ -1,0 +1,251 @@
+/* ===== BASE (igual aos teus CSS anteriores) ===== */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  background: #f2f2f2;
+}
+
+a { color: #0000ee; }
+
+.skip {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: #fff;
+  border: 1px solid #999;
+  padding: 5px;
+  transform: translateY(-150%);
+}
+.skip:focus { transform: translateY(0); }
+
+.topbar {
+  height: 60px;
+  background: #0a78b8;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.topbar__left{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 40px;
+  height: 30px;
+  background: rgba(255,255,255,0.4);
+}
+
+.user__avatar {
+  width: 32px;
+  height: 32px;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+}
+
+.topbar__right{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.topbar__lang{
+  color: #fff;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.topbar__sep{ opacity: .9; }
+
+.layout {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  min-height: calc(100vh - 60px);
+}
+
+.sidebar {
+  background: #e6e6e6;
+  border-right: 1px solid #bdbdbd;
+}
+
+.menu__item {
+  display: block;
+  padding: 6px 10px;
+  border-bottom: 1px solid #ccc;
+  text-decoration: none;
+  color: #000;
+}
+
+.menu__item:hover { background: #ddd; }
+.menu__item.is-active { font-weight: bold; }
+
+.menu__group { position: relative; }
+.chev { float: right; }
+
+.menu__flyout {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: #e6e6e6;
+  border: 1px solid #bdbdbd;
+  min-width: 180px;
+  display: none;
+  z-index: 5;
+}
+
+.menu__group:hover .menu__flyout,
+.menu__group:focus-within .menu__flyout {
+  display: block;
+}
+
+.menu__flyitem {
+  display: block;
+  padding: 6px 10px;
+  border-bottom: 1px solid #ccc;
+  text-decoration: none;
+  color: #000;
+}
+
+.menu__flyitem:hover { background: #ddd; }
+
+.main { padding: 10px; }
+
+/* Footer estilo InfoAlunos */
+.footer {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  border-top: 1px solid #bdbdbd;
+  background: #ffffff;
+  padding: 8px 10px;
+  font-size: 11px;
+  color: #000;
+}
+
+.footer__left a {
+  color: #0000ee;
+  text-decoration: underline;
+}
+
+.footer__right { display: flex; align-items: flex-end; }
+
+.footer__logo {
+  width: 110px;
+  height: 32px;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+}
+
+/* ===== COMPONENTES “clássicos” ===== */
+.panel {
+  background: #fff;
+  border: 1px solid #bdbdbd;
+}
+
+.panel + .panel { margin-top: 10px; }
+
+.panel__body { padding: 10px; }
+.panel__body--tight { padding: 8px; }
+
+.btn-classic{
+  padding: 4px 10px;
+  border: 1px solid #999;
+  background: linear-gradient(#f8f8f8, #dcdcdc);
+  cursor: pointer;
+  font-size: 12px;
+  min-width: 90px;
+}
+.btn-classic:hover{ background: linear-gradient(#ffffff, #d0d0d0); }
+
+.input-blue{
+  height: 20px;
+  border: 1px solid #7f9db9;
+  background: #d7ebff;
+  font-size: 12px;
+  padding: 2px 4px;
+}
+
+/* tabela */
+.tbl {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+
+.tbl th, .tbl td {
+  border: 1px solid #e7d2b8;
+  padding: 4px 6px;
+  vertical-align: top;
+}
+
+.tbl th {
+  background: #fdebd5; /* bege do print */
+  font-weight: bold;
+}
+
+.center { text-align: center; }
+.underline { text-decoration: underline; }
+
+/* ===== PÁGINA: Documentos / Académicos ===== */
+.page-title{
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.filter-row{
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.filter-label{ font-size: 12px; }
+
+.filter-controls{
+  display: grid;
+  grid-template-columns: 1fr 110px;
+  gap: 10px;
+  align-items: center;
+}
+
+.tbl--docs td { background: #fff; }
+
+/* ícone pequeno ao lado do link (simples, para parecer “pdf”) */
+.file-ico{
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+  border: 1px solid #888;
+  background:
+    linear-gradient(#fff, #f0f0f0);
+  position: relative;
+  top: 2px;
+}
+
+.file-ico::after{
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-top: 6px solid #d33; /* cantinho vermelho */
+}
+
+/* Responsivo */
+@media (width < 980px){
+  .layout { grid-template-columns: 1fr; }
+  .menu__flyout { position: static; border-left: none; border-right: none; }
+
+  .filter-row{ grid-template-columns: 1fr; }
+  .filter-controls{ grid-template-columns: 1fr; }
+}
