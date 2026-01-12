@@ -1,4 +1,3 @@
-/* ===== BASE (igual aos teus CSS anteriores) ===== */
 * { box-sizing: border-box; }
 body {
   margin: 0;
@@ -37,9 +36,12 @@ a { color: #0000ee; }
 }
 
 .logo {
-  width: 40px;
-  height: 30px;
-  background: rgba(255,255,255,0.4);
+  width: 48px;
+  height: 36px;
+  background-image: ("imagem_uma.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .user__avatar {
@@ -241,11 +243,64 @@ a { color: #0000ee; }
   border-top: 6px solid #d33; /* cantinho vermelho */
 }
 
-/* Responsivo */
-@media (width < 980px){
-  .layout { grid-template-columns: 1fr; }
-  .menu__flyout { position: static; border-left: none; border-right: none; }
+/* =========================================================
+   RESPONSIVO (CORRIGIDO)
+   - sidebar não desaparece no telemóvel
+   - sem JS (flyouts desligados em touch)
+========================================================= */
 
+/* Evita “rebentar” horizontalmente */
+html, body { max-width: 100%; overflow-x: hidden; }
+.layout, .main, .sidebar { min-width: 0; }
+.main { overflow-x: auto; }
+
+.table-wrap{
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Em ecrãs pequenos: sidebar vira barra horizontal */
+@media (max-width: 980px){
+  .layout { grid-template-columns: 1fr; }
+
+  /* Sidebar continua visível */
+  .sidebar{
+    border-right: none;
+    border-bottom: 1px solid #bdbdbd;
+  }
+
+  /* Menu em linha (scroll horizontal) */
+  .menu{
+    display: flex;
+    gap: 6px;
+    padding: 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .menu__item,
+  .menu__group > .menu__item{
+    flex: 0 0 auto;
+    white-space: nowrap;
+    border-bottom: 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #e6e6e6;
+    padding: 8px 10px;
+  }
+
+  .menu__item:hover{ background:#ddd; }
+
+  /* Flyouts não funcionam bem no toque -> desativa */
+  .menu__flyout{
+    display: none !important;
+  }
+
+  /* Ajustes dos filtros para caber */
   .filter-row{ grid-template-columns: 1fr; }
   .filter-controls{ grid-template-columns: 1fr; }
+
+  /* Topbar cabe melhor */
+  .topbar{ flex-wrap: wrap; row-gap: 6px; height: auto; padding: 8px 12px; }
 }
