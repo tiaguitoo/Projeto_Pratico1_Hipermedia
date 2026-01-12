@@ -146,17 +146,15 @@ a { color: #0000ee; }
 
 .aviso-list { padding-left: 20px; }
 
-/* =========================
-   EXTRAS — GERAL / PRIVACIDADE
-========================= */
 
-/* marcar submenu ativo (opcional) */
+
+
 .menu__flyitem.is-subactive {
   font-weight: bold;
   background: #ddd;
 }
 
-/* cabeçalho centrado */
+
 .privacy-head {
   text-align: center;
   padding: 14px 0 6px;
@@ -174,7 +172,7 @@ a { color: #0000ee; }
   color: #333;
 }
 
-/* wrapper central (como no print, tudo ao centro com espaço nas laterais) */
+
 .privacy-wrap {
   max-width: 720px;
   margin: 18px auto 0;
@@ -182,7 +180,7 @@ a { color: #0000ee; }
   gap: 16px;
 }
 
-/* cartões grandes */
+
 .consent-card {
   background: #fff;
   border: 1px solid #dcdcdc;
@@ -210,7 +208,7 @@ a { color: #0000ee; }
   font-size: 12px;
 }
 
-/* ícones (simples em CSS para não precisares imagens) */
+
 .consent-icon {
   width: 34px;
   height: 34px;
@@ -227,7 +225,7 @@ a { color: #0000ee; }
   place-items: center;
   font-size: 18px;
 }
-/* FOOTER */
+
 .footer {
   min-height: 60px;
   background: #fff;

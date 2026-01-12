@@ -146,16 +146,14 @@ a { color: #0000ee; }
 
 .aviso-list { padding-left: 20px; }
 
-/* =========================
-   EXTRAS — SERVIÇOS / INSCRIÇÕES
-========================= */
+
 
 .menu__flyitem.is-subactive {
   font-weight: bold;
   background: #ddd;
 }
 
-/* cartão branco grande centrado */
+
 .empty-card {
   background: #fff;
   border: 1px solid #e0e0e0;
@@ -167,7 +165,7 @@ a { color: #0000ee; }
   padding: 18px;
 }
 
-/* texto como no print */
+
 .empty-card__text {
   max-width: 520px;
 }
@@ -184,7 +182,7 @@ a { color: #0000ee; }
   font-size: 12px;
 }
 
-/* Footer estilo InfoAlunos */
+
 .footer {
   margin-top: 14px;
   display: flex;
@@ -211,7 +209,7 @@ a { color: #0000ee; }
   background: #fff;
 }
 
-/* Responsivo */
+
 @media (width < 980px) {
   .empty-card { min-height: 300px; }
 }

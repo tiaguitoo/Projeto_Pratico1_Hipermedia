@@ -1,4 +1,4 @@
-/* ===== BASE (igual aos teus CSS anteriores) ===== */
+
 * { box-sizing: border-box; }
 body {
   margin: 0;
@@ -120,7 +120,7 @@ a { color: #0000ee; }
 
 .main { padding: 10px; }
 
-/* Footer estilo InfoAlunos */
+
 .footer {
   margin-top: 14px;
   display: flex;
@@ -174,7 +174,7 @@ a { color: #0000ee; }
   border-bottom-color: #fff;
 }
 
-/* Barra amarela */
+
 .infobar{
   background: #fff1a8;
   border: 1px solid #d8c86f;
@@ -188,7 +188,7 @@ a { color: #0000ee; }
 
 .infobar__right a{ margin-left: 12px; }
 
-/* Mostrar apenas a pane ativa */
+
 .tabpanes .pane { display: none; }
 #tab-novo:checked ~ .tabpanes .pane--novo { display: block; }
 #tab-plano:checked ~ .tabpanes .pane--plano { display: block; }
@@ -196,7 +196,7 @@ a { color: #0000ee; }
 
 .req{ color: #c00000; font-weight: bold; }
 
-/* Inputs azul */
+
 .input-blue{
   height: 20px;
   border: 1px solid #7f9db9;
@@ -248,7 +248,7 @@ textarea.input-blue{
 
 .lock{ font-size: 12px; }
 
-/* Secções */
+
 .section-table{
   border: 1px solid #bdbdbd;
   background: #fff;
@@ -305,7 +305,7 @@ textarea.input-blue{
 
 .prog{ width: 100%; height: 20px; }
 
-/* Nota */
+
 .note{
   padding: 6px 8px;
   font-size: 11px;
@@ -314,7 +314,7 @@ textarea.input-blue{
 }
 .warn{ color: #c00000; font-weight: bold; }
 
-/* Ficheiros + botões */
+
 .files-row{
   display: grid;
   grid-template-columns: 1fr 360px;
@@ -375,7 +375,7 @@ textarea.input-blue{
   margin-top: 10px;
 }
 
-/* Responsivo */
+
 @media (width < 980px){
   .layout { grid-template-columns: 1fr; }
   .menu__flyout { position: static; border-left: none; border-right: none; }

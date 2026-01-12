@@ -107,16 +107,14 @@ a { color: #0000ee; }
 
 .tbl th { background: #f3f3f3; }
 
-/* =========================
-   EXTRAS — AVALIAÇÃO / INQUÉRITOS
-========================= */
+
 
 .menu__flyitem.is-subactive {
   font-weight: bold;
   background: #ddd;
 }
 
-/* caixas brancas com borda */
+
 .box {
   background: #fff;
   border: 1px solid #bdbdbd;
@@ -130,7 +128,7 @@ a { color: #0000ee; }
   margin: 0 0 8px;
 }
 
-/* grelha: label + select longo + botão */
+
 .inq-grid {
   display: grid;
   grid-template-columns: 240px 1fr 200px;
@@ -147,7 +145,7 @@ a { color: #0000ee; }
   font-size: 12px;
 }
 
-/* botão cinza “Pesquisar...” */
+
 .btn-classic {
   padding: 4px 10px;
   border: 1px solid #999;
@@ -157,7 +155,7 @@ a { color: #0000ee; }
 }
 .btn-classic:hover { background: linear-gradient(#ffffff, #d0d0d0); }
 
-/* mensagem com bolinha i */
+
 .msg {
   display: flex;
   align-items: center;
@@ -179,10 +177,10 @@ a { color: #0000ee; }
   font-weight: bold;
 }
 
-/* deixa o detalhe com “muito espaço branco” como no print */
+
 .box--detail { min-height: 280px; }
 
-/* Footer estilo InfoAlunos */
+
 .footer {
   margin-top: 14px;
   display: flex;
@@ -209,7 +207,7 @@ a { color: #0000ee; }
   background: #fff;
 }
 
-/* Responsivo */
+
 @media (width < 980px) {
   .inq-grid { grid-template-columns: 1fr; }
 }

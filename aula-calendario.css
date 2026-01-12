@@ -1,4 +1,4 @@
-/* ===== BASE (igual aos teus CSS anteriores) ===== */
+
 * { box-sizing: border-box; }
 body {
   margin: 0;
@@ -116,7 +116,7 @@ a { color: #0000ee; }
 
 .main { padding: 10px; }
 
-/* Footer estilo InfoAlunos */
+
 .footer {
   margin-top: 14px;
   display: flex;
@@ -143,7 +143,7 @@ a { color: #0000ee; }
   background: #fff;
 }
 
-/* ===== COMPONENTES (painéis/títulos como no InfoAlunos) ===== */
+
 .panel{
   background: #fff;
   border: 1px solid #bdbdbd;
@@ -161,7 +161,7 @@ a { color: #0000ee; }
   padding: 8px;
 }
 
-/* inputs como no print */
+
 .ctrl{
   width: 100%;
   height: 20px;
@@ -174,7 +174,7 @@ a { color: #0000ee; }
   padding: 0 2px;
 }
 
-/* botão cinza clássico */
+
 .btn-classic{
   height: 22px;
   min-width: 210px;
@@ -189,7 +189,7 @@ a { color: #0000ee; }
   filter: brightness(0.98);
 }
 
-/* grelha do formulário (igual disposição do print: labels à esquerda, campos longos e botão na direita) */
+
 .formgrid{
   display: grid;
   grid-template-columns: 260px 1fr 230px;
@@ -210,7 +210,7 @@ a { color: #0000ee; }
   justify-content: flex-end;
 }
 
-/* ===== CALENDÁRIO ===== */
+
 .panel--calendar .panel__body{
   padding-top: 6px;
 }
@@ -227,13 +227,13 @@ a { color: #0000ee; }
   width: 100%;
 }
 
-/* moldura grande do calendário */
+
 .cal-wrap{
   border: 1px solid #bdbdbd;
   background: #ffffff;
 }
 
-/* cabeçalho com dias da semana (faixa bege) */
+
 .cal-head{
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -250,7 +250,7 @@ a { color: #0000ee; }
 
 .cal-head__cell:last-child{ border-right: none; }
 
-/* grelha dos dias */
+
 .cal-grid{
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -270,7 +270,7 @@ a { color: #0000ee; }
   background: #ffffff;
 }
 
-/* número grande no canto inferior direito, cinza e com “sombra” */
+
 .day__num{
   position: absolute;
   right: 10px;
@@ -281,7 +281,7 @@ a { color: #0000ee; }
   text-shadow: 1px 1px 0 rgba(255,255,255,0.9);
 }
 
-/* Responsivo */
+
 @media (width < 980px){
   .layout { grid-template-columns: 1fr; }
   .menu__flyout { position: static; border-left: none; border-right: none; }

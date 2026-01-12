@@ -146,16 +146,14 @@ a { color: #0000ee; }
 
 .aviso-list { padding-left: 20px; }
 
-/* =========================
-   EXTRAS — SERVIÇOS / CARTÃO
-========================= */
+
 
 .menu__flyitem.is-subactive {
   font-weight: bold;
   background: #ddd;
 }
 
-/* título centrado */
+
 .card-head { text-align: center; padding: 18px 0 10px; }
 .card-title {
   margin: 0;
@@ -164,7 +162,7 @@ a { color: #0000ee; }
   color: #222;
 }
 
-/* caixa grande ao centro */
+
 .card-wrap {
   display: flex;
   justify-content: center;
@@ -182,7 +180,7 @@ a { color: #0000ee; }
   gap: 18px;
 }
 
-/* campos estilo “linha” */
+
 .linefield {
   padding: 12px 0 10px;
   border-bottom: 1px solid #bcbcbc;
@@ -202,7 +200,7 @@ a { color: #0000ee; }
 .linefield--morada .lf-value { line-height: 1.35; }
 .linefield--estado { margin-top: 16px; }
 
-/* mock do cartão */
+
 .uni-card {
   width: 320px;
   max-width: 100%;
@@ -267,7 +265,7 @@ a { color: #0000ee; }
 .uni-card__role { font-weight: bold; }
 .uni-card__name { font-size: 11px; color: #333; }
 
-/* Footer estilo InfoAlunos */
+
 .footer {
   margin-top: 14px;
   display: flex;
@@ -294,7 +292,7 @@ a { color: #0000ee; }
   background: #fff;
 }
 
-/* Responsivo */
+
 @media (width < 980px) {
   .card-box { grid-template-columns: 1fr; }
   .card-title { font-size: 26px; }

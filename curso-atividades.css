@@ -6,8 +6,8 @@
   --text:#111;
   --link:#0b55ff;
 
-  --field:#d9ecff; /* azul claro dos inputs */
-  --rowalt:#f3fdff; /* bloco 2 com fundo azulado */
+  --field:#d9ecff; 
+  --rowalt:#f3fdff; 
 }
 
 *{ box-sizing:border-box; }
@@ -25,7 +25,7 @@ body{
   flex-direction:column;
 }
 
-/* Topo */
+
 .topbar{
   height:72px;
   background:var(--blue);
@@ -56,14 +56,14 @@ body{
 }
 .lang{ opacity:.95; }
 
-/* Layout */
+
 .layout{
   flex:1;
   display:flex;
   min-height:0;
 }
 
-/* Menu */
+
 .sidebar{
   width:170px;
   background:var(--side);
@@ -85,7 +85,7 @@ body{
   font-weight:700;
 }
 
-/* Conteúdo */
+
 .content{
   flex:1;
   padding:10px 10px 78px;
@@ -113,7 +113,7 @@ body{
 
 a{ color:var(--link); text-decoration:underline; }
 
-/* Blocos actividade */
+
 .activity{
   border-top:1px solid var(--border);
   padding:10px 12px 14px;
@@ -146,7 +146,7 @@ a{ color:var(--link); text-decoration:underline; }
   grid-column:1 / 2;
 }
 
-/* inputs */
+
 .input, .textarea{
   width:100%;
   border:1px solid #9d9d9d;
@@ -160,7 +160,7 @@ a{ color:var(--link); text-decoration:underline; }
   resize:vertical;
 }
 
-/* dropdown fake */
+
 .input-row{
   display:flex;
   gap:0;
@@ -174,7 +174,7 @@ a{ color:var(--link); text-decoration:underline; }
   font-weight:700;
 }
 
-/* bandeiras simples */
+
 .flag{
   display:inline-block;
   width:14px;
@@ -194,7 +194,7 @@ a{ color:var(--link); text-decoration:underline; }
   background-size:100% 100%;
 }
 
-/* Responsivo leve */
+
 @media (max-width: 1180px){
   .activity-grid{
     grid-template-columns: 1fr 1fr;
@@ -202,7 +202,7 @@ a{ color:var(--link); text-decoration:underline; }
   .field-wide{ grid-column:1 / -1; }
 }
 
-/* Footer */
+
 .footer{
   border-top:1px solid var(--border);
   background:#f7f7f7;

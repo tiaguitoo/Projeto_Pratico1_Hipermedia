@@ -146,16 +146,14 @@ a { color: #0000ee; }
 
 .aviso-list { padding-left: 20px; }
 
-/* =========================
-   EXTRAS — AVALIAÇÃO / PAUTAS
-========================= */
+
 
 .menu__flyitem.is-subactive {
   font-weight: bold;
   background: #ddd;
 }
 
-/* caixas grandes brancas com borda (como no print) */
+
 .box {
   background: #fff;
   border: 1px solid #bdbdbd;
@@ -173,7 +171,7 @@ a { color: #0000ee; }
   margin-top: 10px;
 }
 
-/* grelha do formulário: label + select longo + botão */
+
 .form-grid {
   display: grid;
   grid-template-columns: 240px 1fr 200px;
@@ -194,7 +192,7 @@ a { color: #0000ee; }
   font-size: 12px;
 }
 
-/* botão cinza “Pesquisar...” */
+
 .btn-classic {
   padding: 4px 10px;
   border: 1px solid #999;
@@ -204,7 +202,7 @@ a { color: #0000ee; }
 }
 .btn-classic:hover { background: linear-gradient(#ffffff, #d0d0d0); }
 
-/* mensagens com icon i */
+
 .msg {
   display: flex;
   align-items: center;
@@ -228,7 +226,7 @@ a { color: #0000ee; }
   font-weight: bold;
 }
 
-/* caixa interna “Alunos associados às pautas” */
+
 .inner {
   border: 1px solid #cfcfcf;
   background: #fff;
@@ -243,14 +241,14 @@ a { color: #0000ee; }
   margin-bottom: 6px;
 }
 
-/* Responsivo */
+
 @media (width < 980px) {
   .form-grid,
   .form-grid--one {
     grid-template-columns: 1fr;
   }
 }
-/* FOOTER */
+
 .footer {
   min-height: 60px;
   background: #fff;

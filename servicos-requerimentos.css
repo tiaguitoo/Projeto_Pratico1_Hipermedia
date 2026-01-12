@@ -151,14 +151,14 @@ a { color: #0000ee; }
   background: #ddd;
 }
 
-/* “shell” grande branco que ocupa a página */
+
 .req-shell {
   background: #fff;
   border: 1px solid #bdbdbd;
   min-height: 640px;
 }
 
-/* tabs (barras no topo) */
+
 .req-tabs {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -182,19 +182,19 @@ a { color: #0000ee; }
   text-decoration: underline;
 }
 
-/* área interna */
+
 .req-body {
   border-top: 1px solid #bdbdbd;
   padding: 10px 12px;
 }
 
-/* nota */
+
 .req-note {
   margin: 8px 0 18px;
   font-size: 12px;
 }
 
-/* filtros (linha comprida, como no print) */
+
 .req-filters {
   display: grid;
   grid-template-columns: 1fr 1fr auto;
@@ -222,7 +222,7 @@ a { color: #0000ee; }
   font-size: 12px;
 }
 
-/* botão “Filtrar Lista” estilo clássico */
+
 .btn-filter {
   padding: 3px 10px;
   border: 1px solid #999;
@@ -234,7 +234,7 @@ a { color: #0000ee; }
   background: linear-gradient(#ffffff, #d0d0d0);
 }
 
-/* lista */
+
 .req-list {
   padding: 12px 0 0;
 }
@@ -265,7 +265,7 @@ a { color: #0000ee; }
   font-weight: bold;
 }
 
-/* Footer estilo InfoAlunos */
+
 .footer {
   margin-top: 14px;
   display: flex;
@@ -292,7 +292,7 @@ a { color: #0000ee; }
   background: #fff;
 }
 
-/* Responsivo */
+
 @media (width < 980px) {
   .req-tabs { grid-template-columns: 1fr; }
   .req-filters { grid-template-columns: 1fr; }

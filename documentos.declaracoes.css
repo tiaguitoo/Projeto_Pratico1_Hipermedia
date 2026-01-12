@@ -1,4 +1,4 @@
-/* ===== BASE (igual aos teus CSS anteriores) ===== */
+
 * { box-sizing: border-box; }
 body {
   margin: 0;
@@ -116,7 +116,7 @@ a { color: #0000ee; }
 
 .main { padding: 10px; }
 
-/* Footer estilo InfoAlunos */
+
 .footer {
   margin-top: 14px;
   display: flex;
@@ -143,7 +143,7 @@ a { color: #0000ee; }
   background: #fff;
 }
 
-/* ===== COMPONENTES “clássicos” ===== */
+
 .panel {
   background: #fff;
   border: 1px solid #bdbdbd;
@@ -172,7 +172,7 @@ a { color: #0000ee; }
   padding: 2px 4px;
 }
 
-/* tabela */
+
 .tbl {
   width: 100%;
   border-collapse: collapse;
@@ -186,14 +186,14 @@ a { color: #0000ee; }
 }
 
 .tbl th {
-  background: #fdebd5; /* bege do print */
+  background: #fdebd5; 
   font-weight: bold;
 }
 
 .center { text-align: center; }
 .underline { text-decoration: underline; }
 
-/* ===== PÁGINA: Documentos / Académicos ===== */
+
 .page-title{
   font-weight: bold;
   margin-bottom: 6px;
@@ -217,7 +217,7 @@ a { color: #0000ee; }
 
 .tbl--docs td { background: #fff; }
 
-/* ícone pequeno ao lado do link (simples, para parecer “pdf”) */
+
 .file-ico{
   display: inline-block;
   width: 14px;
@@ -238,10 +238,10 @@ a { color: #0000ee; }
   width: 0;
   height: 0;
   border-left: 6px solid transparent;
-  border-top: 6px solid #d33; /* cantinho vermelho */
+  border-top: 6px solid #d33; 
 }
 
-/* Responsivo */
+
 @media (width < 980px){
   .layout { grid-template-columns: 1fr; }
   .menu__flyout { position: static; border-left: none; border-right: none; }

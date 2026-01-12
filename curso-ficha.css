@@ -1,9 +1,6 @@
-/* =========================================================
-   curso-ficha.css
-   (igual ao look clássico das páginas anteriores)
-   ========================================================= */
 
-/* Base */
+
+
 *{ box-sizing:border-box; }
 html, body{ height:100%; }
 body{
@@ -16,9 +13,7 @@ body{
 a{ color:#00f; text-decoration:underline; }
 a:hover{ text-decoration:none; }
 
-/* =========================================================
-   TOPBAR (igual)
-   ========================================================= */
+
 .topbar{
   height:78px;
   background:#0a77a8;
@@ -65,15 +60,13 @@ a:hover{ text-decoration:none; }
   border:2px solid rgba(255,255,255,.35);
 }
 
-/* =========================================================
-   LAYOUT
-   ========================================================= */
+
 .layout{
   min-height:calc(100vh - 78px - 64px);
   display:flex;
 }
 
-/* Sidebar */
+
 .sidebar{
   width:175px;
   background:#e6e6e6;
@@ -94,22 +87,20 @@ a:hover{ text-decoration:none; }
 .menu__item.is-active{ background:#d0d0d0; font-weight:bold; }
 .chev{ font-size:14px; line-height:1; }
 
-/* Main */
+
 .main{
   flex:1;
   padding:14px;
   background:#fff;
 }
 
-/* =========================================================
-   HEADERS / SECTIONS
-   ========================================================= */
+
 .section-title{
   font-weight:bold;
   margin:2px 0 8px;
 }
 
-/* Barra topo da tabela (com botão imprimir à direita) */
+
 .headbar{
   display:flex;
   align-items:center;
@@ -125,7 +116,7 @@ a:hover{ text-decoration:none; }
   justify-content:flex-end;
 }
 
-/* Botões (igual ao clássico) */
+
 .btn{
   height:22px;
   padding:0 14px;
@@ -138,9 +129,7 @@ a:hover{ text-decoration:none; }
 .btn:hover{ background:linear-gradient(#ffffff, #e5e5e5); }
 .btn--print{ min-width:120px; }
 
-/* =========================================================
-   TABLE (header pêssego + zebra + bordas)
-   ========================================================= */
+
 .table-wrap{
   border:1px solid #cfcfcf;
   background:#fff;
@@ -158,7 +147,7 @@ th, td{
   word-wrap:break-word;
 }
 th{
-  background:#fde6d5; /* pêssego */
+  background:#fde6d5; 
   font-weight:bold;
   text-align:center;
 }
@@ -169,7 +158,7 @@ tr:nth-child(odd) td{
   background:#fff;
 }
 
-/* Linhas de “nota/legenda” por baixo da tabela */
+
 .legend{
   padding:6px 8px;
   font-size:11px;
@@ -177,9 +166,7 @@ tr:nth-child(odd) td{
 }
 .legend b{ font-weight:bold; }
 
-/* =========================================================
-   BLOCO “Unidades Curriculares Inscrito/Aprovadas”
-   ========================================================= */
+
 .block{
   margin-top:14px;
 }
@@ -190,19 +177,19 @@ tr:nth-child(odd) td{
 .block__subheader{
   border:1px solid #cfcfcf;
   border-bottom:none;
-  background:#eaf6ff;              /* azul clarinho do header da caixa */
+  background:#eaf6ff;              
   padding:6px 8px;
   font-weight:bold;
 }
 
-/* caixa grande azul clarinho (como na imagem) */
+
 .block__body{
   border:1px solid #cfcfcf;
   background:#eaf6ff;
   padding:10px;
 }
 
-/* tabela dentro do bloco (mantém header pêssego) */
+
 .block__body .table-wrap{
   border:1px solid #cfcfcf;
 }
@@ -210,9 +197,7 @@ tr:nth-child(odd) td{
 .block__body tr:nth-child(even) td{ background:#e9e9e9; }
 .block__body tr:nth-child(odd) td{ background:#fff; }
 
-/* =========================================================
-   FOOTER (sempre no fundo)
-   ========================================================= */
+
 .footer{
   height:64px;
   border-top:1px solid #cfcfcf;

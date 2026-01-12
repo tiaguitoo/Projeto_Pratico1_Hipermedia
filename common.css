@@ -118,7 +118,7 @@ a { color: #0000ee; }
 
 .main { padding: 10px; }
 
-/* Footer estilo InfoAlunos */
+
 .footer {
   margin-top: 14px;
   display: flex;
@@ -145,7 +145,7 @@ a { color: #0000ee; }
   background: #fff;
 }
 
-/* ===== COMPONENTES “clássicos” ===== */
+
 .panel {
   background: #fff;
   border: 1px solid #bdbdbd;
@@ -174,7 +174,7 @@ a { color: #0000ee; }
   padding: 2px 4px;
 }
 
-/* tabela */
+
 .tbl {
   width: 100%;
   border-collapse: collapse;
@@ -188,14 +188,14 @@ a { color: #0000ee; }
 }
 
 .tbl th {
-  background: #fdebd5; /* bege do print */
+  background: #fdebd5; 
   font-weight: bold;
 }
 
 .center { text-align: center; }
 .underline { text-decoration: underline; }
 
-/* ===== PÁGINA: Documentos / Académicos ===== */
+
 .page-title{
   font-weight: bold;
   margin-bottom: 6px;
@@ -219,7 +219,7 @@ a { color: #0000ee; }
 
 .tbl--docs td { background: #fff; }
 
-/* ícone pequeno ao lado do link (simples, para parecer “pdf”) */
+
 .file-ico{
   display: inline-block;
   width: 14px;
@@ -240,16 +240,12 @@ a { color: #0000ee; }
   width: 0;
   height: 0;
   border-left: 6px solid transparent;
-  border-top: 6px solid #d33; /* cantinho vermelho */
+  border-top: 6px solid #d33; 
 }
 
-/* =========================================================
-   RESPONSIVO (CORRIGIDO)
-   - sidebar não desaparece no telemóvel
-   - sem JS (flyouts desligados em touch)
-========================================================= */
 
-/* Evita “rebentar” horizontalmente */
+
+
 html, body { max-width: 100%; overflow-x: hidden; }
 .layout, .main, .sidebar { min-width: 0; }
 .main { overflow-x: auto; }
@@ -260,17 +256,17 @@ html, body { max-width: 100%; overflow-x: hidden; }
   -webkit-overflow-scrolling: touch;
 }
 
-/* Em ecrãs pequenos: sidebar vira barra horizontal */
+
 @media (max-width: 980px){
   .layout { grid-template-columns: 1fr; }
 
-  /* Sidebar continua visível */
+  
   .sidebar{
     border-right: none;
     border-bottom: 1px solid #bdbdbd;
   }
 
-  /* Menu em linha (scroll horizontal) */
+  
   .menu{
     display: flex;
     gap: 6px;
@@ -292,15 +288,15 @@ html, body { max-width: 100%; overflow-x: hidden; }
 
   .menu__item:hover{ background:#ddd; }
 
-  /* Flyouts não funcionam bem no toque -> desativa */
+  
   .menu__flyout{
     display: none !important;
   }
 
-  /* Ajustes dos filtros para caber */
+  
   .filter-row{ grid-template-columns: 1fr; }
   .filter-controls{ grid-template-columns: 1fr; }
 
-  /* Topbar cabe melhor */
+  
   .topbar{ flex-wrap: wrap; row-gap: 6px; height: auto; padding: 8px 12px; }
 }

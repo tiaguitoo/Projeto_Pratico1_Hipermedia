@@ -107,16 +107,14 @@ a { color: #0000ee; }
 
 .tbl th { background: #f3f3f3; }
 
-/* =========================
-   EXTRAS — RESULTADO DE INQUÉRITOS
-========================= */
+
 
 .menu__flyitem.is-subactive {
   font-weight: bold;
   background: #ddd;
 }
 
-/* caixas brancas com borda */
+
 .box {
   background: #fff;
   border: 1px solid #bdbdbd;
@@ -130,7 +128,7 @@ a { color: #0000ee; }
   margin: 0 0 8px;
 }
 
-/* grelha como no print: label + campo + botão */
+
 .res-grid {
   display: grid;
   grid-template-columns: 240px 1fr 200px;
@@ -155,7 +153,7 @@ a { color: #0000ee; }
   padding: 3px 4px;
 }
 
-/* botão cinza “Carregar” */
+
 .btn-classic {
   padding: 4px 10px;
   border: 1px solid #999;
@@ -165,7 +163,7 @@ a { color: #0000ee; }
 }
 .btn-classic:hover { background: linear-gradient(#ffffff, #d0d0d0); }
 
-/* mensagem com bolinha i */
+
 .msg {
   display: flex;
   align-items: center;
@@ -187,10 +185,10 @@ a { color: #0000ee; }
   font-weight: bold;
 }
 
-/* muito espaço em branco como no print */
+
 .box--empty { min-height: 300px; }
 
-/* Footer estilo InfoAlunos */
+
 .footer {
   margin-top: 14px;
   display: flex;
@@ -217,7 +215,7 @@ a { color: #0000ee; }
   background: #fff;
 }
 
-/* Responsivo */
+
 @media (width < 980px) {
   .res-grid { grid-template-columns: 1fr; }
 }

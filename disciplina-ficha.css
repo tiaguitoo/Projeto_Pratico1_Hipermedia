@@ -21,7 +21,7 @@ a { color: #0000ee; }
 }
 .skip:focus { transform: translateY(0); }
 
-/* TOPBAR */
+
 .topbar {
   height: 60px;
   background: #0a78b8;
@@ -70,11 +70,11 @@ a { color: #0000ee; }
   border-radius: 50%;
 }
 
-/* LAYOUT */
+
 .layout {
   display: grid;
   grid-template-columns: 180px 1fr;
-  min-height: calc(100vh - 60px - 60px); /* tira topbar + footer */
+  min-height: calc(100vh - 60px - 60px); 
 }
 
 .sidebar {
@@ -122,7 +122,7 @@ a { color: #0000ee; }
 
 .menu__flyitem:hover { background: #ddd; }
 
-/* MAIN */
+
 .main { padding: 10px; }
 .mt10 { margin-top: 10px; }
 
@@ -139,7 +139,7 @@ a { color: #0000ee; }
   margin-bottom: 6px;
 }
 
-/* CONTROLS (estilo “barra azul” dos inputs) */
+
 .ctl {
   height: 20px;
   border: 1px solid #888;
@@ -206,7 +206,7 @@ a { color: #0000ee; }
 
 .inline__lbl { min-width: 190px; }
 
-/* TABLE */
+
 .tbl {
   width: 100%;
   border-collapse: collapse;
@@ -224,7 +224,7 @@ a { color: #0000ee; }
 
 .tbl a { color: #0000ee; }
 
-/* TABS (6 abas clicáveis) */
+
 .tabs { margin-top: 2px; }
 
 .tabs__radio {
@@ -261,7 +261,7 @@ a { color: #0000ee; }
 
 .tabs__panel { display: none; }
 
-/* painel ativo (sem JS) */
+
 #tab-obj:checked ~ .tabs__bar label[for="tab-obj"],
 #tab-bib:checked ~ .tabs__bar label[for="tab-bib"],
 #tab-prog:checked ~ .tabs__bar label[for="tab-prog"],
@@ -279,7 +279,7 @@ a { color: #0000ee; }
 #tab-doc:checked ~ .tabs__content .tabs__panel[data-panel="doc"] { display: block; }
 #tab-arq:checked ~ .tabs__content .tabs__panel[data-panel="arq"] { display: block; }
 
-/* blocos cinzentos grandes (como “caixas” do sistema) */
+
 .grid2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -311,7 +311,7 @@ a { color: #0000ee; }
   font-size: 12px;
 }
 
-/* Documentos tab layout */
+
 .docrow {
   display: flex;
   align-items: center;
@@ -339,7 +339,7 @@ a { color: #0000ee; }
 
 .msg__icon { font-size: 14px; }
 
-/* FOOTER */
+
 .footer {
   min-height: 60px;
   background: #fff;
@@ -373,7 +373,7 @@ a { color: #0000ee; }
   border: 1px solid #d5d5d5;
 }
 
-/* Responsivo básico (não altera “look” desktop, só evita rebentar) */
+
 @media (max-width: 1100px) {
   .form__grid--2 { grid-template-columns: 1fr; }
   .form__row--right { justify-items: start; }

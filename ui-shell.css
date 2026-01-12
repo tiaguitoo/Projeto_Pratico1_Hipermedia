@@ -23,7 +23,7 @@
   z-index:9999;
 }
 
-/* TOPBAR */
+
 .topbar{
   height:64px;
   background:var(--blue);
@@ -63,7 +63,7 @@
   background:#ffffff33;
 }
 
-/* LAYOUT */
+
 .layout{
   display:grid;
   grid-template-columns:150px 1fr;
@@ -78,7 +78,7 @@
   background:#fff;
 }
 
-/* SIDEBAR MENU (hover flyouts, sem JS) */
+
 .menu{
   font-size:13px;
   line-height:1;
@@ -129,7 +129,7 @@
 }
 .chev{ opacity:.8; }
 
-/* FOOTER */
+
 .footer{
   height:60px;
   border-top:1px solid var(--line);
@@ -162,9 +162,7 @@
 =======
  HEAD
 >>>>>>> 8cf72ff3875cf9749b6a59cd4064dc620a8910c9
-  /* Em ecrãs pequenos a sidebar não deve desaparecer (sem JS).
-     Fazemos layout em coluna e mantemos a navegação visível.
-     Também mostramos as sub-opções para não depender de hover (que não existe no telemóvel). */
+  
 
   .layout{ grid-template-columns: 1fr; grid-template-rows: auto 1fr; }
 
@@ -174,7 +172,7 @@
     border-bottom: 1px solid var(--line);
   }
 
-  /* Submenus sempre visíveis no mobile */
+  
   .menu__flyout{
     position: static;
     left: 0;

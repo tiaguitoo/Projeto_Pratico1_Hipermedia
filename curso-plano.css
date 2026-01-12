@@ -1,4 +1,4 @@
-/* curso-plano.css — estilo clássico InfoAlunos (tabelas + blocos como no screenshot) */
+
 
 :root{
   --blue:#0b77a8;
@@ -8,8 +8,8 @@
   --text:#111;
   --link:#0b55ff;
 
-  --thead:#fde6d4;      /* cabeçalhos salmão claro */
-  --rowalt:#efefef;     /* linhas alternadas */
+  --thead:#fde6d4;      
+  --rowalt:#efefef;     
   --hr:#d7d7d7;
   --orange:#d96600;
   --x:#b00000;
@@ -31,7 +31,7 @@ body{
   flex-direction:column;
 }
 
-/* Topo */
+
 .topbar{
   height:72px;
   background:var(--blue);
@@ -71,14 +71,14 @@ body{
   background:rgba(255,255,255,.18);
 }
 
-/* Layout */
+
 .layout{
   flex:1;
   display:flex;
   min-height:0;
 }
 
-/* Sidebar */
+
 .sidebar{
   width:170px;
   background:var(--side);
@@ -100,7 +100,7 @@ body{
   font-weight:700;
 }
 
-/* Content */
+
 .content{
   flex:1;
   padding:10px 10px 78px;
@@ -113,7 +113,7 @@ body{
   padding:10px;
 }
 
-/* Linhas topo */
+
 .row{
   display:grid;
   grid-template-columns: 220px 1fr 220px;
@@ -160,7 +160,7 @@ select{
   margin:8px 0;
 }
 
-/* Relatórios: grid com 3 blocos */
+
 .grid-3{
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -178,7 +178,7 @@ select{
   font-size:11px;
 }
 
-/* Aviso */
+
 .alert-row{
   display:flex;
   align-items:center;
@@ -197,7 +197,7 @@ select{
   margin-left:4px;
 }
 
-/* Subheaders */
+
 .subheader{
   margin:6px 0 6px;
   color:var(--orange);
@@ -208,7 +208,7 @@ select{
   font-size:11px;
 }
 
-/* Tabelas */
+
 .table-wrap{
   border:1px solid #d6d6d6;
 }
@@ -240,7 +240,7 @@ select{
   font-weight:900;
 }
 
-/* larguras aproximadas como no screenshot */
+
 .w-regra{ width:60px; }
 .w-nivel{ width:220px; }
 .w-ects{ width:55px; }
@@ -258,11 +258,11 @@ select{
   background:#fff;
 }
 
-/* tabelas compactas (parte inferior) */
+
 .tbl.compact thead th{ padding:5px 6px; }
 .tbl.compact td{ padding:5px 6px; }
 
-/* duas colunas no fim */
+
 .two-cols{
   display:grid;
   grid-template-columns: 1fr 1.2fr;
@@ -275,7 +275,7 @@ select{
   margin:6px 0;
 }
 
-/* Footer */
+
 .footer{
   border-top:1px solid var(--border);
   background:#f7f7f7;

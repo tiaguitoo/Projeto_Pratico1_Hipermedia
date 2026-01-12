@@ -107,9 +107,7 @@ a { color: #0000ee; }
 
 .tbl th { background: #f3f3f3; }
 
-/* =========================
-   EXTRAS — AVALIAÇÃO / RECLAMAÇÃO (abas + detalhe)
-========================= */
+
 
 .menu__flyitem.is-subactive {
   font-weight: bold;
@@ -122,13 +120,13 @@ a { color: #0000ee; }
   min-height: 520px;
 }
 
-/* esconder radios */
+
 .tab-radio {
   position: absolute;
   left: -9999px;
 }
 
-/* tabs */
+
 .req-tabs {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -148,14 +146,14 @@ a { color: #0000ee; }
   cursor: pointer;
 }
 
-/* estado visual: tab ativa */
+
 #tab-lista:checked ~ .req-tabs label[for="tab-lista"],
 #tab-detalhe:checked ~ .req-tabs label[for="tab-detalhe"] {
   background: #ffffff;
   text-decoration: underline;
 }
 
-/* painéis */
+
 .req-panel {
   border-top: 1px solid #bdbdbd;
   padding: 12px 12px 16px;
@@ -166,7 +164,7 @@ a { color: #0000ee; }
 #tab-lista:checked ~ #painel-lista { display: block; }
 #tab-detalhe:checked ~ #painel-detalhe { display: block; }
 
-/* lista */
+
 .req-note {
   margin: 6px 0 10px;
   font-size: 12px;
@@ -180,7 +178,7 @@ a { color: #0000ee; }
   font-size: 12px;
 }
 
-/* bolinha i */
+
 .info-dot {
   width: 14px;
   height: 14px;
@@ -194,7 +192,7 @@ a { color: #0000ee; }
   font-weight: bold;
 }
 
-/* ===== Detalhe (form) ===== */
+
 
 .blk { margin-bottom: 12px; }
 .blk__title {
@@ -243,7 +241,7 @@ a { color: #0000ee; }
   border: 1px solid #7f9db9 !important;
 }
 
-/* pedido layout */
+
 .pedido-grid {
   background: #efefef;
   padding: 10px;
@@ -262,7 +260,7 @@ a { color: #0000ee; }
   align-items: start;
 }
 
-/* botões */
+
 .btnbar {
   display: flex;
   justify-content: space-between;
@@ -280,7 +278,7 @@ a { color: #0000ee; }
 }
 .btn-classic:hover { background: linear-gradient(#ffffff, #d0d0d0); }
 
-/* labels em baixo */
+
 .bottom-labels {
   display: flex;
   justify-content: space-between;
@@ -289,7 +287,7 @@ a { color: #0000ee; }
   padding-top: 8px;
 }
 
-/* Footer estilo InfoAlunos */
+
 .footer {
   margin-top: 14px;
   display: flex;
@@ -316,7 +314,7 @@ a { color: #0000ee; }
   background: #fff;
 }
 
-/* Responsivo */
+
 @media (width < 980px) {
   .req-tabs { grid-template-columns: 1fr; }
   .grid-2 { grid-template-columns: 1fr; }

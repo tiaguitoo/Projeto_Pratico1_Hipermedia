@@ -8,7 +8,7 @@ body {
 
 a { color: #0000ee; }
 
-/* Acessibilidade */
+
 .skip {
   position: absolute;
   top: 5px;
@@ -28,7 +28,7 @@ a { color: #0000ee; }
   border:0;
 }
 
-/* Topbar e layout base */
+
 .topbar {
   height: 60px;
   background: #0a78b8;
@@ -108,9 +108,7 @@ a { color: #0000ee; }
 
 .main { padding: 12px; }
 
-/* =========================
-   RAIDES (moderno como no print)
-========================= */
+
 
 .raides-top {
   display: flex;
@@ -143,7 +141,7 @@ a { color: #0000ee; }
   line-height: 1.4;
 }
 
-/* Card */
+
 .card {
   max-width: 980px;
   margin: 0 auto 14px;
@@ -185,7 +183,7 @@ a { color: #0000ee; }
   color: #555;
 }
 
-/* 2 colunas (secção 1) */
+
 .card__grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -195,7 +193,7 @@ a { color: #0000ee; }
 .pair__label { color: #222; margin-bottom: 2px; }
 .pair__value { color: #333; }
 
-/* opções radio com “caixa” */
+
 .choice {
   border: 1px solid #e1e7f0;
   border-radius: 6px;
@@ -227,7 +225,7 @@ a { color: #0000ee; }
   margin: 12px 0;
 }
 
-/* linhas label + select */
+
 .form-rows {
   display: grid;
   gap: 12px;
@@ -251,7 +249,7 @@ a { color: #0000ee; }
   font-size: 14px;
 }
 
-/* botão submit (verde) */
+
 .actions {
   max-width: 980px;
   margin: 0 auto;
@@ -271,7 +269,7 @@ a { color: #0000ee; }
 }
 .btn-submit:hover { filter: brightness(1.03); }
 
-/* Footer estilo InfoAlunos */
+
 .footer {
   margin-top: 14px;
   display: flex;
@@ -298,7 +296,7 @@ a { color: #0000ee; }
   background: #fff;
 }
 
-/* Responsivo */
+
 @media (width < 980px) {
   .card__grid-2 { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }

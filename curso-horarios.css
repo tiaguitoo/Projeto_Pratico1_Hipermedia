@@ -1,6 +1,4 @@
-/* =========================================================
-   BASE (igual ao “look” geral)
-========================================================= */
+
 * { box-sizing: border-box; }
 html, body { height: 100%; }
 body{
@@ -10,7 +8,7 @@ body{
   background: #f2f2f2;
 }
 
-/* TOPBAR */
+
 .topbar{
   height: 64px;
   background: #0676a8;
@@ -32,13 +30,13 @@ body{
   border-radius: 3px;
 }
 
-/* LAYOUT */
+
 .layout{
   min-height: calc(100vh - 64px);
   display:flex;
 }
 
-/* SIDEBAR */
+
 .sidebar{
   width: 180px;
   background: #e6e6e6;
@@ -62,13 +60,13 @@ body{
 }
 .chev{ color:#333; }
 
-/* MAIN */
+
 .main{
   flex:1;
   padding: 18px 18px 0 18px;
 }
 
-/* FOOTER */
+
 .footer{
   background:#fff;
   border-top: 1px solid #cfcfcf;
@@ -94,9 +92,7 @@ body{
   border: 1px solid #d4ddff;
 }
 
-/* =========================================================
-   BOTÕES (simples e coerentes)
-========================================================= */
+
 .btn{
   border: 1px solid #bdbdbd;
   background: linear-gradient(#ffffff,#e9e9e9);
@@ -125,7 +121,7 @@ body{
   width: 120px;
 }
 
-/* Icon small buttons */
+
 .icon-btn{
   width: 30px;
   height: 30px;
@@ -139,9 +135,7 @@ body{
 }
 .icon-btn:hover{ background:#f3f3f3; }
 
-/* =========================================================
-   CARD
-========================================================= */
+
 .card{
   background:#fff;
   border-radius: 6px;
@@ -150,9 +144,7 @@ body{
   padding: 12px;
 }
 
-/* =========================================================
-   SCHEDULE
-========================================================= */
+
 .schedule{
   padding: 14px;
 }
@@ -174,18 +166,14 @@ body{
 .schedule__spacer{ flex:1; }
 .schedule__actions{ display:flex; align-items:center; gap: 10px; }
 
-/* =========================================================
-   TIMETABLE GRID
-   - 5 dias
-   - slots de 30 minutos
-========================================================= */
+
 .timetable{
   border: 1px solid #e1e1e1;
   border-radius: 8px;
   overflow: hidden;
 }
 
-/* Header (dias) */
+
 .timetable__head{
   display:grid;
   grid-template-columns: 72px repeat(5, 1fr);
@@ -209,21 +197,21 @@ body{
 .day__num{ font-weight: 800; font-size: 16px; }
 .day__name{ font-size: 9px; letter-spacing: .4px; color:#333; font-weight:700; }
 
-/* Body */
+
 .timetable__body{
   display:grid;
   grid-template-columns: 72px 1fr;
   min-height: 760px;
 }
 
-/* Left time column */
+
 .times{
   border-right: 1px solid #ededed;
   background:#fff;
   padding-top: 8px;
 }
 .time{
-  height: 24px;            /* 30 min slot */
+  height: 24px;            
   font-size: 10px;
   color:#222;
   display:flex;
@@ -233,11 +221,11 @@ body{
   padding-top: 2px;
 }
 
-/* Canvas */
+
 .canvas{
   position: relative;
   background:
-    /* horizontal lines each 30 min */
+    
     repeating-linear-gradient(
       to bottom,
       #f0f0f0 0px,
@@ -245,17 +233,14 @@ body{
       transparent 1px,
       transparent 24px
     ),
-    /* vertical day separators */
+    
     linear-gradient(to right, #ededed 1px, transparent 1px);
   background-size: 100% 24px, calc(100% / 5) 100%;
   background-position: 0 0, 0 0;
   padding-top: 8px;
 }
 
-/* Event positioning helper
-   slotHeight = 24px
-   start index and duration in slots (30m)
-*/
+
 .event{
   position:absolute;
   left: calc((var(--day) - 1) * (100% / 5) + 10px);
@@ -291,7 +276,7 @@ body{
   text-align:center;
 }
 
-/* Colors (aproximados aos do screenshot) */
+
 .event--teal{ background: #2bb7b3; }
 .event--teal2{ background: #2aa7a5; }
 
@@ -307,7 +292,7 @@ body{
 .event--orange{ background:#f3b24d; color:#fff; }
 .event--orange2{ background:#f0a93c; color:#fff; }
 
-/* Bottom actions */
+
 .bottom-actions{
   display:flex;
   justify-content:center;

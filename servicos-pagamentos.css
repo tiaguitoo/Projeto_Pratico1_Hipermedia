@@ -146,16 +146,14 @@ a { color: #0000ee; }
 
 .aviso-list { padding-left: 20px; }
 
-/* =========================
-   EXTRAS — SERVIÇOS / PAGAMENTOS
-========================= */
+
 
 .menu__flyitem.is-subactive {
   font-weight: bold;
   background: #ddd;
 }
 
-/* topo: filtros + total */
+
 .pay-top {
   display: grid;
   grid-template-columns: 1fr 320px;
@@ -176,7 +174,7 @@ a { color: #0000ee; }
   font-weight: bold;
 }
 
-/* formulário filtros */
+
 .filter-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -207,7 +205,7 @@ a { color: #0000ee; }
   background: #d7ebff;
 }
 
-/* botão pesquisar estilo clássico */
+
 .btn-search {
   min-width: 200px;
   padding: 4px 10px;
@@ -220,16 +218,16 @@ a { color: #0000ee; }
   background: linear-gradient(#ffffff, #d0d0d0);
 }
 
-/* tabela pagamentos */
+
 .pay-table__body { padding: 0; }
 .tbl--striped thead th {
-  background: #fbe6d6; /* ligeiro salmão como no print */
+  background: #fbe6d6; 
 }
 .tbl--striped tbody tr:nth-child(even) td {
   background: #f3f3f3;
 }
 
-/* opções em baixo */
+
 .pay-options {
   margin-top: 10px;
   display: grid;
@@ -251,7 +249,7 @@ a { color: #0000ee; }
   margin-bottom: 8px;
 }
 
-/* logos simples (sem imagens) */
+
 .mb-logo {
   width: 72px;
   height: 60px;
@@ -275,7 +273,7 @@ a { color: #0000ee; }
 
 .red { color: #c40000; font-weight: bold; }
 
-/* Footer estilo InfoAlunos */
+
 .footer {
   margin-top: 14px;
   display: flex;
@@ -302,7 +300,7 @@ a { color: #0000ee; }
   background: #fff;
 }
 
-/* Responsivo */
+
 @media (width < 1050px) {
   .pay-top { grid-template-columns: 1fr; }
   .pay-total__body { justify-content: flex-start; padding-right: 6px; }

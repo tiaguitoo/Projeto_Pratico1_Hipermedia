@@ -146,16 +146,14 @@ a { color: #0000ee; }
 
 .aviso-list { padding-left: 20px; }
 
-/* =========================
-   EXTRAS — GERAL / AJUDA
-========================= */
+
 
 .menu__flyitem.is-subactive {
   font-weight: bold;
   background: #ddd;
 }
 
-/* layout 2 colunas como no print */
+
 .help-grid {
   display: grid;
   grid-template-columns: 1.6fr 1fr;
@@ -163,7 +161,7 @@ a { color: #0000ee; }
   align-items: start;
 }
 
-/* textos grandes azuis (títulos de contactos) */
+
 .c-h2 {
   margin: 14px 0 6px;
   font-size: 24px;
@@ -181,7 +179,7 @@ a { color: #0000ee; }
   font-size: 11px;
 }
 
-/* formulário estilo "old school" */
+
 .form { margin-top: 6px; }
 
 .form-row {
@@ -201,8 +199,8 @@ input, select, textarea {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   padding: 2px 4px;
-  border: 1px solid #7f9db9;     /* borda azulada típica */
-  background: #d7ebff;           /* azul clarinho como no print */
+  border: 1px solid #7f9db9;     
+  background: #d7ebff;           
 }
 
 textarea { width: 100%; resize: vertical; }
@@ -215,7 +213,7 @@ textarea { width: 100%; resize: vertical; }
   font-weight: bold;
 }
 
-/* botão "Enviar" com look clássico */
+
 .form-actions {
   display: flex;
   justify-content: center;
@@ -235,7 +233,7 @@ textarea { width: 100%; resize: vertical; }
   background: linear-gradient(#ffffff, #d0d0d0);
 }
 
-/* Footer estilo InfoAlunos */
+
 .footer {
   margin-top: 14px;
   display: flex;
@@ -262,7 +260,7 @@ textarea { width: 100%; resize: vertical; }
   background: #fff;
 }
 
-/* Responsivo */
+
 @media (width < 980px) {
   .help-grid { grid-template-columns: 1fr; }
 }

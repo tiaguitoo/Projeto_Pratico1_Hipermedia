@@ -1,4 +1,4 @@
-/* ===== BASE (igual aos teus CSS anteriores) ===== */
+
 * { box-sizing: border-box; }
 body {
   margin: 0;
@@ -116,7 +116,7 @@ a { color: #0000ee; }
 
 .main { padding: 10px; }
 
-/* Footer estilo InfoAlunos */
+
 .footer {
   margin-top: 14px;
   display: flex;
@@ -143,7 +143,7 @@ a { color: #0000ee; }
   background: #fff;
 }
 
-/* ===== ACESSIBILIDADE ===== */
+
 .sr-only{
   position:absolute;
   width:1px;
@@ -156,14 +156,14 @@ a { color: #0000ee; }
   border:0;
 }
 
-/* ===== PÁGINA: Aula / Presença ===== */
+
 .main--presence{
   background: #f2f2f2;
 }
 
-/* centro como no print */
+
 .presence{
-  min-height: calc(100vh - 60px - 14px - 70px); /* espaço aproximado antes do footer */
+  min-height: calc(100vh - 60px - 14px - 70px); 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -206,7 +206,7 @@ a { color: #0000ee; }
   box-shadow: 0 0 0 3px rgba(143,184,255,0.35);
 }
 
-/* botão “outline” claro como no print */
+
 .btn-outline{
   border: 1px solid #8fb8ff;
   background: #f3f7ff;
@@ -221,7 +221,7 @@ a { color: #0000ee; }
   background: #eaf2ff;
 }
 
-/* Responsivo */
+
 @media (width < 980px){
   .layout { grid-template-columns: 1fr; }
   .menu__flyout { position: static; border-left: none; border-right: none; }

@@ -99,9 +99,7 @@ a { color: #0000ee; }
 
 .main { padding: 10px; }
 
-/* =========================
-   Creditações / Lista (área cinzenta grande)
-========================= */
+
 
 .workarea {
   background: #efefef;
@@ -127,7 +125,7 @@ a { color: #0000ee; }
   line-height: 1;
 }
 
-/* Footer estilo InfoAlunos */
+
 .footer {
   margin-top: 14px;
   display: flex;
@@ -154,7 +152,7 @@ a { color: #0000ee; }
   background: #fff;
 }
 
-/* Responsivo */
+
 @media (width < 980px) {
   .layout { grid-template-columns: 1fr; }
   .menu__flyout { position: static; border-left: none; border-right: none; }

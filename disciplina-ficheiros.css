@@ -1,9 +1,6 @@
-/* =========================================================
-   disciplina-ficheiros.css
-   (layout e look & feel igual às páginas anteriores)
-   ========================================================= */
 
-/* Base */
+
+
 * { box-sizing: border-box; }
 html, body { height: 100%; }
 body{
@@ -36,9 +33,7 @@ a:hover{ text-decoration:none; }
   z-index:9999;
 }
 
-/* =========================================================
-   TOPBAR
-   ========================================================= */
+
 .topbar{
   height:78px;
   background:#0a77a8;
@@ -85,15 +80,13 @@ a:hover{ text-decoration:none; }
   border:2px solid rgba(255,255,255,.35);
 }
 
-/* =========================================================
-   LAYOUT (sidebar + main)
-   ========================================================= */
+
 .layout{
   min-height:calc(100vh - 78px - 64px);
   display:flex;
 }
 
-/* Sidebar */
+
 .sidebar{
   width:175px;
   background:#e6e6e6;
@@ -123,7 +116,7 @@ a:hover{ text-decoration:none; }
 .menu__group{ position:relative; }
 .chev{ font-size:14px; line-height:1; }
 
-/* Flyout (opcional – fica igual às anteriores: só aparece no hover) */
+
 .menu__flyout{
   display:none;
   position:absolute;
@@ -147,16 +140,14 @@ a:hover{ text-decoration:none; }
   text-decoration:none;
 }
 
-/* Main */
+
 .main{
   flex:1;
   padding:14px 14px 10px;
   background:#fff;
 }
 
-/* =========================================================
-   PANEL / BOX (estilo “moldura” clássico)
-   ========================================================= */
+
 .panel{
   border:1px solid #cfcfcf;
   background:#fff;
@@ -170,13 +161,11 @@ a:hover{ text-decoration:none; }
   margin-bottom:8px;
 }
 
-/* =========================================================
-   FORM CONTROLS (inputs azuis claros)
-   ========================================================= */
+
 .ctl{
   height:20px;
   border:1px solid #bfbfbf;
-  background:#cfe4ff;            /* azul claro típico */
+  background:#cfe4ff;            
   padding:0 4px;
   font-size:12px;
 }
@@ -199,7 +188,7 @@ select.ctl{
 }
 .btn--wide{ min-width:140px; }
 
-/* Grid para o formulário do topo */
+
 .form__grid{
   display:grid;
   grid-template-columns: 240px 1fr;
@@ -231,9 +220,7 @@ select.ctl{
 
 .mt10{ margin-top:10px; }
 
-/* =========================================================
-   TABS (2 abas: Docentes / Aluno)
-   ========================================================= */
+
 .tabs{ position:relative; }
 .tabs__radio{ display:none; }
 
@@ -245,7 +232,7 @@ select.ctl{
   align-items:end;
 }
 
-/* Aba */
+
 .tabs__tab{
   user-select:none;
   text-align:center;
@@ -258,29 +245,27 @@ select.ctl{
 }
 .tabs__tab--orange{ color:#d97a00; }
 
-/* Painel que “recebe” as abas */
+
 .tabs__content{
   border:1px solid #cfcfcf;
   background:#fff;
   padding:0;
 }
 
-/* Mostrar o conteúdo consoante o rádio */
+
 .tabs__panel{ display:none; padding:14px 12px 12px; }
 #tab-docentes:checked ~ .tabs__content .tabs__panel[data-panel="docentes"]{ display:block; }
 #tab-aluno:checked ~ .tabs__content .tabs__panel[data-panel="aluno"]{ display:block; }
 
-/* Aba ativa: fica “branca” e encaixada */
+
 #tab-docentes:checked ~ .tabs__bar label[for="tab-docentes"],
 #tab-aluno:checked ~ .tabs__bar label[for="tab-aluno"]{
   background:#fff;
   position:relative;
-  top:1px; /* dá aquele encaixe na borda */
+  top:1px; 
 }
 
-/* =========================================================
-   File Filter (linha “Filtrar por Categoria / Filtrar Lista”)
-   ========================================================= */
+
 .filefilter{
   display:flex;
   align-items:center;
@@ -297,13 +282,11 @@ select.ctl{
 .filefilter__ctl{
   width:520px;
   max-width:100%;
-  background:#f1f1f1;            /* na imagem fica mais “cinza” */
+  background:#f1f1f1;            
   border-color:#cfcfcf;
 }
 
-/* =========================================================
-   Mensagens info (ícone + texto)
-   ========================================================= */
+
 .msg{
   display:flex;
   align-items:flex-start;
@@ -318,9 +301,7 @@ select.ctl{
   font-size:14px;
 }
 
-/* =========================================================
-   FOOTER (igual ao clássico das páginas)
-   ========================================================= */
+
 .footer{
   height:64px;
   border-top:1px solid #cfcfcf;

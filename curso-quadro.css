@@ -1,4 +1,4 @@
-/* curso-quadro.css — página simples (texto + aviso) no estilo clássico InfoAlunos */
+
 
 :root{
   --blue:#0b77a8;
@@ -27,7 +27,7 @@ body{
   flex-direction:column;
 }
 
-/* Topo */
+
 .topbar{
   height:72px;
   background:var(--blue);
@@ -57,14 +57,14 @@ body{
   font-size:11px;
 }
 
-/* Layout */
+
 .layout{
   flex:1;
   display:flex;
   min-height:0;
 }
 
-/* Menu */
+
 .sidebar{
   width:170px;
   background:var(--side);
@@ -86,7 +86,7 @@ body{
   font-weight:700;
 }
 
-/* Conteúdo */
+
 .content{
   flex:1;
   padding:10px 10px 78px;
@@ -97,7 +97,7 @@ body{
   border:1px solid var(--border);
   background:#fff;
   padding:10px 12px;
-  min-height:420px; /* dá “ar” como no screenshot */
+  min-height:420px; 
 }
 
 .title{
@@ -115,7 +115,7 @@ a{
   text-decoration:underline;
 }
 
-/* Aviso info */
+
 .info{
   display:flex;
   gap:8px;
@@ -133,7 +133,7 @@ a{
   max-width:1180px;
 }
 
-/* Footer */
+
 .footer{
   border-top:1px solid var(--border);
   background:#f7f7f7;

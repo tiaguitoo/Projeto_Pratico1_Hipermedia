@@ -146,18 +146,15 @@ a { color: #0000ee; }
 
 .aviso-list { padding-left: 20px; }
 
-/* =========================
-   EXTRAS — GERAL / DADOS PESSOAIS
-   (mantém a template acima; isto só adiciona o layout desta página)
-========================= */
 
-/* destacar submenu ativo (opcional) */
+
+
 .menu__flyitem.is-subactive {
   font-weight: bold;
   background: #ddd;
 }
 
-/* grid 2 colunas para o conteúdo */
+
 .dp-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -165,7 +162,7 @@ a { color: #0000ee; }
   align-items: start;
 }
 
-/* em telas menores, empilha */
+
 @media (width < 900px) {
   .dp-grid { grid-template-columns: 1fr; }
 }
@@ -175,7 +172,7 @@ a { color: #0000ee; }
   gap: 18px;
 }
 
-/* cards brancos (como no print) */
+
 .dp-card {
   background: #fff;
   border: 1px solid #ddd;
@@ -199,7 +196,7 @@ a { color: #0000ee; }
   padding: 14px;
 }
 
-/* avatar + campos */
+
 .bio {
   display: grid;
   grid-template-columns: 90px 1fr;
@@ -218,7 +215,7 @@ a { color: #0000ee; }
 
 .bio__fields { width: 100%; }
 
-/* linhas tipo formulário */
+
 .row {
   display: grid;
   grid-template-columns: 180px 1fr;
@@ -238,14 +235,14 @@ a { color: #0000ee; }
   color: #111;
 }
 
-/* subtítulo (secções dentro do card) */
+
 .dp-subtitle {
   font-weight: bold;
   margin: 2px 0 10px;
   color: #000;
 }
 
-/* caixas cinza claras dentro dos cards (como nos documentos/morada) */
+
 .box {
   background: #f5f7f9;
   border-radius: 6px;
@@ -266,7 +263,7 @@ a { color: #0000ee; }
   line-height: 1.5;
 }
 
-/* documentos: cabeçalho com "Alterar" */
+
 .doc-section { margin-bottom: 14px; }
 .doc-section:last-child { margin-bottom: 0; }
 
@@ -277,7 +274,7 @@ a { color: #0000ee; }
   margin-bottom: 8px;
 }
 
-/* mini campos (número / país / validade) */
+
 .box__body--cols2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -306,7 +303,7 @@ a { color: #0000ee; }
   color: #111;
   font-weight: bold;
 }
-/* FOOTER */
+
 .footer {
   min-height: 60px;
   background: #fff;

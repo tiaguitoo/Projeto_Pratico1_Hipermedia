@@ -1,4 +1,4 @@
-/* curso-trasicao.css — a imitar o aspeto clássico das imagens (InfoAlunos) */
+
 
 :root{
   --blue:#0b77a8;
@@ -27,7 +27,7 @@ body{
   flex-direction:column;
 }
 
-/* Topo */
+
 .topbar{
   height:72px;
   background:var(--blue);
@@ -58,14 +58,14 @@ body{
   opacity:.95;
 }
 
-/* Layout */
+
 .layout{
   flex:1;
   display:flex;
   min-height:0;
 }
 
-/* Sidebar */
+
 .sidebar{
   width:170px;
   background:var(--side);
@@ -92,26 +92,26 @@ body{
   font-weight:700;
 }
 
-/* Content */
+
 .content{
   flex:1;
   padding:10px 10px 80px;
   min-width:0;
 }
 
-/* Tabs shell */
+
 .tabs-shell{
   border:1px solid var(--border);
   background:#fff;
 }
 
-/* Radios escondidos */
+
 .tab-radio{
   position:absolute;
   left:-9999px;
 }
 
-/* Barra das abas */
+
 .tabs-bar{
   display:flex;
   gap:2px;
@@ -131,7 +131,7 @@ body{
   user-select:none;
 }
 .tab-left{
-  color:var(--orange);   /* no screenshot, o título da esquerda aparece a laranja */
+  color:var(--orange);   
   text-decoration:none;
 }
 .tab-right{
@@ -139,7 +139,7 @@ body{
   text-decoration:underline;
 }
 
-/* Tab ativa fica branca e “por cima” */
+
 #tabListagem:checked ~ .tabs-bar label[for="tabListagem"],
 #tabRelatorios:checked ~ .tabs-bar label[for="tabRelatorios"]{
   background:#fff;
@@ -147,7 +147,7 @@ body{
   top:1px;
 }
 
-/* Painéis */
+
 .panel{
   border-top:none;
 }
@@ -158,7 +158,7 @@ body{
 #tabListagem:checked ~ #panelListagem{ display:block; }
 #tabRelatorios:checked ~ #panelRelatorios{ display:block; }
 
-/* Conteúdo listagem */
+
 .listagem-title{
   font-weight:700;
   margin-bottom:10px;
@@ -179,7 +179,7 @@ body{
   margin-top:6px;
 }
 
-/* Conteúdo relatórios */
+
 .relatorios-wrap{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -195,7 +195,7 @@ body{
   margin-bottom:10px;
 }
 
-/* grid de formulário (como na imagem) */
+
 .form-grid{
   display:grid;
   grid-template-columns: 120px 1fr;
@@ -209,7 +209,7 @@ select{
   width:100%;
   height:20px;
   border:1px solid #a9a9a9;
-  background:#bfbfbf; /* cinza como no screenshot */
+  background:#bfbfbf; 
   padding:0 6px;
   font-size:12px;
 }
@@ -218,7 +218,7 @@ select{
   justify-content:flex-end;
 }
 
-/* Botão cinza clássico */
+
 .btn{
   height:22px;
   border:1px solid #9b9b9b;
@@ -230,7 +230,7 @@ select{
 }
 .btn:active{ transform:translateY(1px); }
 
-/* Footer */
+
 .footer{
   border-top:1px solid var(--border);
   background:#f7f7f7;
